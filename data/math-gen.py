@@ -71,8 +71,8 @@ for idx in range(start_id, end_id):
     with torch.inference_mode():
         outputs = model.generate(
             **inputs,
-            max_new_tokens=512,
-            temperature=0.0,
+            max_new_tokens=2048,
+            temperature=0.1,
             do_sample=False,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.eos_token_id,
