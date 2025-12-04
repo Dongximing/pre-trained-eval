@@ -9,7 +9,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 # -----------------------------
 parser = argparse.ArgumentParser()
 parser.add_argument("--start_id", type=int, default=0, help="start index (inclusive)")
-parser.add_argument("--end_id", type=int, default=10, help="end index (exclusive)")
+parser.add_argument("--end_id", type=int, default=100, help="end index (exclusive)")
 parser.add_argument("--output", type=str, default="Qwen2.5-Math7B-Instruct-math500.json")
 args = parser.parse_args()
 
