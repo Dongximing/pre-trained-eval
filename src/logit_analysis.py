@@ -12,14 +12,14 @@ model_pairs = {
     "vicuna": {"i2b": "meta-llama/Llama-2-7b-hf", "i2i":"lmsys/vicuna-7b-v1.5"},
     "llama2": {"i2b": "meta-llama/Llama-2-7b-hf", "i2i":"meta-llama/Llama-2-7b-chat-hf"},
     "mistral": {"i2b": "mistralai/Mistral-7B-v0.1", "i2i":"mistralai/Mistral-7B-Instruct-v0.1"},
-    "llama2-13b": {"base": "meta-llama/Llama-2-13b-hf", "instruct":"meta-llama/Llama-2-13b-chat-hf"},
+    "qwen-math": {"base": "Qwen/Qwen2.5-Math-7B", "instruct":"Qwen/Qwen2.5-Math-7B-Instruct"},
 }
 
 
 
 def parse_args():
     parser = argparse.ArgumentParser()  
-    parser.add_argument('--pair', default="llama2", type=str)
+    parser.add_argument('--pair', default="qwen-math", type=str)
     parser.add_argument('--mode', default="i2i", type=str) # i2i or i2b
     # parser.add_argument('--probe', default="self", type=str)
     parser.add_argument('--top_k', default=30, type=int)
