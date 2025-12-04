@@ -105,7 +105,7 @@ def main():
     output_texts = [] 
     for ind in range(len(instruct_data)): 
         item = instruct_data[ind] 
-        ids.append(item["id"])
+        ids.append(item["current_id"])
         if args.mode == "i2i":
             input_texts.append(item["input"]) 
         elif args.mode == "i2b":
