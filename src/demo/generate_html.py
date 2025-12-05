@@ -164,7 +164,7 @@ with open(index_file) as f:
     index_template = f.read()
 
 rows = []
-for ind in tqdm(range(3), desc="Generating HTMLs"):
+for ind in tqdm(range(100), desc="Generating HTMLs"):
     ind, prompt = genertate_page(ind, template)
     rows.append(f'<tr><td>ID: <a href="{ind}.html">{ind}</a></td><td><a href="{ind}.html">{prompt[:100]+" ..."}</a></td></tr>')
 
