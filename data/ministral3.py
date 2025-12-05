@@ -2,7 +2,7 @@ import json
 import torch
 import argparse
 from datasets import load_dataset
-from transformers import Mistral3ForConditionalGeneration, MistralCommonBackend, FineGrainedFP8Config
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 # -----------------------------
@@ -11,7 +11,7 @@ from transformers import Mistral3ForConditionalGeneration, MistralCommonBackend,
 parser = argparse.ArgumentParser()
 parser.add_argument("--start_id", type=int, default=0, help="start index (inclusive)")
 parser.add_argument("--end_id", type=int, default=100, help="end index (exclusive)")
-parser.add_argument("--output", type=str, default="ministral-3-8B-Instruct-math500.json")
+parser.add_argument("--output", type=str, default="Mistral-7B-Instruct-v0.3-math500.json")
 args = parser.parse_args()
 
 start_id = args.start_id
@@ -23,15 +23,15 @@ print(f"▶ Running from {start_id} to {end_id - 1}")
 # -----------------------------
 # Load model
 # -----------------------------
-model_name = "mistralai/Ministral-3-3B-Instruct-2512-BF16"
+model_name = "mistralai/Mistral-7B-Instruct-v0.3"
 device = "cuda:2"
 
-model = Mistral3ForConditionalGeneration.from_pretrained(
+model = AutoModelForCausalLM.from_pretrained(
     model_name,
     torch_dtype="auto",
     device_map={"": device},
 )
-tokenizer = MistralCommonBackend.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 model.eval()
 
 # -----------------------------
