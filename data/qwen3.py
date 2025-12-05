@@ -23,7 +23,7 @@ print(f"▶ Running from {start_id} to {end_id - 1}")
 # Load model
 # -----------------------------
 model_name = "Qwen/Qwen3-8B"
-device = "cuda:1"
+device = "cuda:3"
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
