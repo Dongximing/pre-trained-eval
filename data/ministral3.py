@@ -23,7 +23,7 @@ print(f"▶ Running from {start_id} to {end_id - 1}")
 # -----------------------------
 # Load model
 # -----------------------------
-model_name = "mistralai/Ministral-3-8B-Instruct-2512"
+model_name = "mistralai/Ministral-3-3B-Instruct-2512-BF16"
 device = "cuda:2"
 
 model = Mistral3ForConditionalGeneration.from_pretrained(
