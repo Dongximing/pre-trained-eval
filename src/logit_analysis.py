@@ -11,7 +11,7 @@ import pickle
 model_pairs = { 
     "vicuna": {"i2b": "meta-llama/Llama-2-7b-hf", "i2i":"lmsys/vicuna-7b-v1.5"},
     "llama2": {"i2b": "meta-llama/Llama-2-7b-hf", "i2i":"meta-llama/Llama-2-7b-chat-hf"},
-    "mistral": {"i2b": "mistralai/Mistral-7B-v0.1", "i2i":"mistralai/Mistral-7B-Instruct-v0.1"},
+    "mistral": {"i2b": "mistralai/Mistral-7B-v0.3", "i2i":"mistralai/Mistral-7B-Instruct-v0.3"},
     "qwen-math": {"i2b": "Qwen/Qwen2.5-Math-7B", "i2i":"Qwen/Qwen2.5-Math-7B-Instruct"},
     "llama3": {"i2b": "meta-llama/Meta-Llama-3-8B", "i2i":"meta-llama/Meta-Llama-3-8B-Instruct"},
 }
