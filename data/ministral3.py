@@ -63,7 +63,7 @@ for idx in range(start_id, end_id):
 
     text = tokenizer.apply_chat_template(
         messages,
-        tokenize=False,
+        tokenize=True,
         add_generation_prompt=True
     )
 
