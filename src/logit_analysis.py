@@ -15,6 +15,7 @@ model_pairs = {
     "qwen-math": {"i2b": "Qwen/Qwen2.5-Math-7B", "i2i":"Qwen/Qwen2.5-Math-7B-Instruct"},
     "llama3": {"i2b": "meta-llama/Meta-Llama-3-8B", "i2i":"meta-llama/Meta-Llama-3-8B-Instruct"},
     "deepseek": {"i2b": "deepseek-ai/deepseek-math-7b-base", "i2i":"deepseek-ai/deepseek-math-7b-instruct"},
+    "gemma2": {"i2b": "google/gemma-2-9b", "i2i":"google/gemma-2-9b-it"}
 }
 
 
