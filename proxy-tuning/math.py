@@ -4,7 +4,8 @@ import torch
 import pandas as pd
 import numpy as np
 import json
-from eval.utils import (
+from datasets import load_dataset
+from generation import (
     ensure_dir,
     generate_completions,
     load_lm_and_tokenizer,
@@ -32,33 +33,28 @@ def main(args):
         model, tokenizer = load_dexperts_model_and_tokenizer(
             args.base_model_name_or_path,
             args.expert_model_name_or_path,
+            args.antiexpert_model_name_or_path,
             load_in_8bit=args.load_in_8bit,
             use_fast_tokenizer=not args.use_slow_tokenizer,
         )
 
-    # use dev set because test set answers are hidden
-    test_df = pd.read_json(os.path.join(args.data_dir, "dev.jsonl"), lines=True)
-    if args.max_examples and args.max_examples < test_df.shape[0]:
-        test_df = test_df.sample(args.max_examples, random_state=42)
+    ds = load_dataset("HuggingFaceH4/MATH-500")['test']
 
-    # Create prompts
+
+    ds = ds.select(range(0, 1))
     prompts = []
-    for i, row in test_df.iterrows():
-        prompts.append(create_prompt(row))
+    problems_and_answers = [item["problem"] for item in ds]
+    print(problems_and_answers[0])
+    print('--------\n')
+   
 
-    with open(os.path.join(args.save_dir, "example_prompt.txt"), 'w') as fout:
-        fout.write(prompts[0])
-    print(prompts[0], flush=True)
-
-    new_line_token = tokenizer.encode("\n\n", add_special_tokens=False)[-1]
     outputs = generate_completions(
         model,
         tokenizer,
-        prompts,
+        problems_and_answers,
         batch_size=args.eval_batch_size,
         do_sample=False,
-        max_new_tokens=20,
-        stop_id_sequences=[[new_line_token]],
+        max_new_tokens=400,
     )
 
     test_df['output'] = [o.strip() for o in outputs]
@@ -88,12 +84,12 @@ if __name__ == "__main__":
     parser.add_argument(
         "--data_dir",
         type=str,
-        default="data/eval/triviaqa"
+        default="math-500"
     )
     parser.add_argument(
         "--save_dir",
         type=str,
-        default="results/triviaqa/llama-7B/"
+        default="qwen_dexperts_math-500_results"
     )
     parser.add_argument(
         "--model_name_or_path",
@@ -131,12 +127,17 @@ if __name__ == "__main__":
     parser.add_argument(
         "--base_model_name_or_path",
         type=str,
-        default='',
+        default='/home/original_models/Qwen2.5-14B',
     )
     parser.add_argument(
         "--expert_model_name_or_path",
         type=str,
-        default='models/llama2-triviaqa-7b',
+        default='/home/original_models/Qwen2.5-7B-Instruct',
+    )
+    parser.add_argument(
+        "--antiexpert_model_name_or_path",
+        type=str,
+        default='/home/original_models/Qwen2.5-7B',
     )
     args = parser.parse_args()
 

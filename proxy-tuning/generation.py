@@ -69,23 +69,11 @@ def generate_completions(
             else:
                 batch_input_ids = batch_input_ids.cuda()
                 attention_mask = attention_mask.cuda()
-
+        stop_id_sequences = [[tokenizer.eos_token_id]]
         stopping_criteria = StoppingCriteriaList([KeyWordsCriteria(stop_id_sequences)]) if stop_id_sequences else None
 
-        # create logit processors
-        if banned_id_sequences or banned_begin_ids:
-            logit_processors = []
-            if banned_id_sequences:
-                logit_processors.append(
-                    NoBadWordsLogitsProcessor(banned_id_sequences, eos_token_id=tokenizer.eos_token_id)
-                )
-            if banned_begin_ids:
-                logit_processors.append(
-                    SuppressTokensAtBeginLogitsProcessor(banned_begin_ids, begin_index=batch_input_ids.shape[1])
-                )
-            logits_processor = LogitsProcessorList(logit_processors)
-        else:
-            logits_processor = None
+
+        logits_processor = None
 
         batch_outputs = model.generate(
             input_ids=batch_input_ids,
@@ -129,7 +117,7 @@ def generate_completions(
 
         if not disable_tqdm:
             progress.update(len(batch_prompts)//num_return_sequences)
-
+    print(generations)
     assert len(generations) == len(prompts) * num_return_sequences, "number of generations should be equal to number of prompts * num_return_sequences"
     return generations
 
@@ -188,7 +176,7 @@ def load_dexperts_model_and_tokenizer(
     padding_side: str = "left",
 ):
     from transformers import AutoTokenizer
-    from modeling.dexperts import DExpertsLlama
+    from dexperts import DExpertsLlama
 
     model_kwargs = {
         'device_map': device_map,
