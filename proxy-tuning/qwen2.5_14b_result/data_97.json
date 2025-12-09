@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A figure skater is facing north when she begins to spin to her right. She spins 2250 degrees. Which direction (north, south, east or west) is she facing when she finishes her spin?"
+    ],
+    "answer": "\\text{east}",
+    "output": [
+      "To determine the direction the figure skater is facing after spinning 2250 degrees to her right, we need to follow these steps:\n\n1. **Understand the initial direction and the spin direction:**\n   - The skater starts facing north.\n   - She spins to her right, which means she is spinning clockwise.\n\n2. **Convert the total spin angle to a standard angle within one full rotation (360 degrees):**\n   - A full rotation is 360 degrees.\n   - We need to find the equivalent angle within one full rotation by taking the remainder of 2250 divided by 360.\n\n3. **Perform the division:**\n   \\[\n   2250 \\div 360 = 6.25\n   \\]\n   - The quotient is 6, and the remainder is:\n   \\[\n   2250 - (6 \\times 360) = 2250 - 2160 = 90\n   \\]\n   - Therefore, 2250 degrees is equivalent to 90 degrees within one full rotation.\n\n4. **Determine the final direction after spinning 90 degrees clockwise:**\n   - Starting from north and spinning 90 degrees clockwise:\n     - 0 degrees: North\n     - 90 degrees: East\n\n5. **Conclusion:**\n   - After spinning 2250 degrees to her right, the skater is facing east.\n\nThus, the direction she is facing when she finishes her spin is \\boxed{east}."
+    ]
+  }
+]

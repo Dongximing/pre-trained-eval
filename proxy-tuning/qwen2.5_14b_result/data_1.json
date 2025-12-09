@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Define\n\\[p = \\sum_{k = 1}^\\infty \\frac{1}{k^2} \\quad \\text{and} \\quad q = \\sum_{k = 1}^\\infty \\frac{1}{k^3}.\\]Find a way to write\n\\[\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}\\]in terms of $p$ and $q.$"
+    ],
+    "answer": "p - q",
+    "output": [
+      "To find the value of the double sum \\(\\sum_{j=1}^\\infty \\sum_{k=1}^\\infty \\frac{1}{(j+k)^3}\\) in terms of \\(p\\) and \\(q\\), we start by rewriting the sum in a more convenient form. We can change the order of summation by considering the sum over all positive integers \\(n = j + k\\). For a fixed \\(n\\), \\(j\\) can range from 1 to \\(n-1\\) (since \\(k = n - j\\) and \\(k \\geq 1\\)). Therefore, we can rewrite the double sum as:\n\n\\[\n\\sum_{j=1}^\\infty \\sum_{k=1}^\\infty \\frac{1}{(j+k)^3} = \\sum_{n=2}^\\infty \\sum_{j=1}^{n-1} \\frac{1}{n^3}.\n\\]\n\nThe inner sum \\(\\sum_{j=1}^{n-1} \\frac{1}{n^3}\\) is simply \\(\\frac{n-1}{n^3}\\), so we have:\n\n\\[\n\\sum_{n=2}^\\infty \\sum_{j=1}^{n-1} \\frac{1}{n^3} = \\sum_{n=2}^\\infty \\frac{n-1}{n^3} = \\sum_{n=2}^\\infty \\left( \\frac{1}{n^2} - \\frac{1}{n^3} \\right).\n\\]\n\nWe can split this into two separate sums:\n\n\\[\n\\sum_{n=2}^\\infty \\left( \\frac{1}{n^2} - \\frac{1}{n^3} \\right) = \\sum_{n=2}^\\infty \\frac{1}{n^2} - \\sum_{n=2}^\\infty \\frac{1}{n^3}.\n\\]\n\nWe know that the sum \\(\\sum_{n=1}^\\infty \\frac{1}{n^2} = p\\) and \\(\\sum_{n=1}^\\infty \\frac{1}{n^3} = q\\). Therefore, we can write:\n\n\\[\n\\sum_{n=2}^\\infty \\frac{1}{n^2} = p - 1 \\quad \\text{and} \\quad \\sum_{n=2}^\\infty \\frac{1}{n^3} = q - 1.\n\\]\n\nSubstituting these into our expression, we get:\n\n\\[\n\\sum_{n=2}^\\infty \\left( \\frac{1}{n^2} - \\frac{1}{n^3} \\right) = (p - 1) - (q - 1) = p - q.\n\\]\n\nThus, the value of the double sum is:\n\n\\[\n\\boxed{p - q}.\n\\]"
+    ]
+  }
+]

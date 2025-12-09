@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The binary number $10101001110_{2}$ is equal to what number in base eight?"
+    ],
+    "answer": "2516_8",
+    "output": [
+      "To convert a binary number to base eight (octal), we can group the digits into sets of three, starting from the rightmost digit, and then convert each group to its octal equivalent. Here's how we do it:\n\n$$\n10101001110_{2}\n$$\n\nStarting from the right:\n- $010$ in binary is $2$ in octal (since $2^2 = 4$ and $2^1 = 2$, but the first digit is zero, so we just get $2$).\n- $101$ in binary is $5$ in octal (since $2^2 = 4$, $2^1 = 2$, and $2^0 = 1$, so $4 + 2 + 1 = 7$, but we drop the leftmost digit because it's 1, so we get $5$).\n- $110$ in binary is $6$ in octal (since $2^2 = 4$, $2^1 = 2$, and $2^0 = 1$, so $4 + 2 = 6$).\n\nNow, we put the octal digits together, from right to left:\n\n$$\n\\boxed{256_{8}}\n$$\n\nSo, the binary number $10101001110_{2}$ is equal to $256_{8}$ in base eight."
+    ]
+  }
+]

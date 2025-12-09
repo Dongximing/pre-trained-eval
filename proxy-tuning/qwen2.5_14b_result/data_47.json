@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The graph of $f(x)=\\frac{2x}{x^2-5x-14}$ has vertical asymptotes $x=a$ and $x=b$, and horizontal asymptote $y=c$.  Find $a+b+c$."
+    ],
+    "answer": "5",
+    "output": [
+      "To determine the vertical and horizontal asymptotes of the function \\( f(x) = \\frac{2x}{x^2 - 5x - 14} \\), we need to analyze the denominator and the behavior of the function as \\( x \\) approaches infinity.\n\n### Step 1: Find the vertical asymptotes\nVertical asymptotes occur where the denominator is zero, as long as the numerator is not zero at those points. So, we need to solve the equation:\n\\[ x^2 - 5x - 14 = 0. \\]\nThis is a quadratic equation, and we can factor it as follows:\n\\[ x^2 - 5x - 14 = (x - 7)(x + 2) = 0. \\]\nSetting each factor equal to zero gives us the solutions:\n\\[ x = 7 \\quad \\text{and} \\quad x = -2. \\]\nThus, the vertical asymptotes are at \\( x = 7 \\) and \\( x = -2 \\). So, \\( a = 7 \\) and \\( b = -2 \\).\n\n### Step 2: Find the horizontal asymptote\nTo find the horizontal asymptote, we need to consider the behavior of the function as \\( x \\) approaches infinity. For the function \\( f(x) = \\frac{2x}{x^2 - 5x - 14} \\), we compare the degrees of the numerator and the denominator. The degree of the numerator is 1 and the degree of the denominator is 2. Since the degree of the numerator is less than the degree of the denominator, the horizontal asymptote is \\( y = 0 \\). So, \\( c = 0 \\).\n\n### Step 3: Calculate \\( a + b + c \\)\nNow, we sum the values of \\( a \\), \\( b \\), and \\( c \\):\n\\[ a + b + c = 7 + (-2) + 0 = 5. \\]\n\nThus, the final answer is:\n\\[ \\boxed{5} \\]"
+    ]
+  }
+]

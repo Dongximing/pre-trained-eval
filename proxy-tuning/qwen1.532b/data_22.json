@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Denali and Nate work for a dog walking business and are paid for each dog they walk. Denali is responsible for $16$ dogs and Nate is responsible for $12$ dogs. Under the company's new policy, they will be assigned or unassigned new dogs in groups of $x$ dogs. The ratio of Denali's pay to Nate's pay would be the same if Denali started walking $4x$ more dogs and Nate stayed at $12$ dogs or if $x$ of Nate's dogs were reassigned to Denali. Find $x$ if $x\\neq0$."
+    ],
+    "answer": "5",
+    "output": [
+      "Let's break down the information given and set up the problem step by step.\n\n1. Denali is currently walking 16 dogs.\n2. Nate is currently walking 12 dogs.\n3. They will be assigned or reassigned dogs in groups of $x$.\n\nUnder the new policy, we have two scenarios:\n\nScenario 1: Denali gets 4x more dogs, and Nate stays at 12 dogs.\n- Denali's new total = 16 + 4x\n- Nate's total remains 12\n\nScenario 2: x of Nate's dogs are reassigned to Denali.\n- Denali's new total = 16 + x (since x dogs are added)\n- Nate's new total = 12 - x (since x dogs are taken away)\n\nThe ratio of Denali's pay to Nate's pay is the same in both scenarios, which means the total number of dogs they each walk is proportional to their pay. We can express this as a ratio:\n\nDenali's pay : Nate's pay = (Denali's total dogs) : (Nate's total dogs)\n\nSo we have:\n(16 + 4x) : 12 = (16 + x) : (12 - x)\n\nSince the ratio is the same, the cross-products must be equal:\n\n(16 + 4x) * (12 - x) = 12 * (16 + x)\n\nNow we'll solve for x:\n\n192 - 16x + 48x - 4x^2 = 192 + 12x\n\nRearrange the equation to a quadratic form:\n48x - 16x - 12x = 4x^2\n20x = 4x^2\n\nNow, divide both sides by 20 to simplify:\nx = x^2 / 5\n\nSince $x \\neq 0$, we can divide both sides by x:\n1 = x / 5\n\nNow, multiply both sides by 5 to solve for x:\n5 = x\n\nSo, the value of x is 5. We'll put the answer in the \\boxed{} format:\n\n\\( x = \\boxed{5} \\)"
+    ]
+  }
+]

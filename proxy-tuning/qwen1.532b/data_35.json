@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "If $n \\equiv 2 \\pmod{7}$, then find the remainder when $(n + 2)(n + 4)(n + 6)$ is divided by 7."
+    ],
+    "answer": "3",
+    "output": [
+      "To find the remainder when $(n + 2)(n + 4)(n + 6)$ is divided by 7, we can use the property that modular arithmetic distributes over multiplication. Since $n \\equiv 2 \\pmod{7}$, we can substitute $n$ with $2$ in the expression and then simplify each term modulo 7.\n\nLet's do this step by step:\n\n1. First, replace $n$ with $2$ in the expression:\n   $$(2 + 2)(2 + 4)(2 + 6)$$\n2. Simplify each term inside the parentheses:\n   $$(4)(6)(8)$$\n3. Now, we need to find the remainders of these numbers when divided by 7:\n   $$4 \\equiv 4 \\pmod{7}$$\n   $$6 \\equiv 6 \\pmod{7}$$\n   $$8 \\equiv 1 \\pmod{7}$$\n   (8 is congruent to 1 because $8 = 7 \\times 1 + 1$)\n4. Multiply these remainders together:\n   $$4 \\times 6 \\times 1 \\equiv 24 \\times 1 \\equiv 1 \\pmod{7}$$\n5. The product of these remainders gives us the remainder when the original expression is divided by 7.\n\nSo, the remainder when $(n + 2)(n + 4)(n + 6)$ is divided by 7 is 1.\n\n\\boxed{1}"
+    ]
+  }
+]

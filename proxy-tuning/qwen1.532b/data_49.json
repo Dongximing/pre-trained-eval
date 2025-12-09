@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Half the value of $3x-9$ is $x+37$. What is the value of $x$?"
+    ],
+    "answer": "83",
+    "output": [
+      "Let's solve the equation step by step.\n\nGiven the statement \"Half the value of $3x - 9$ is $x + 37$\", we can write it as an equation:\n\n\\[\n\\frac{1}{2}(3x - 9) = x + 37\n\\]\n\nTo find $x$, we'll first distribute the $\\frac{1}{2}$ to both terms inside the parentheses:\n\n\\[\n\\frac{3x}{2} - \\frac{9}{2} = x + 37\n\\]\n\nNow, let's get all the terms containing $x$ on one side and the constant terms on the other side. To do this, subtract $\\frac{3x}{2}$ from both sides:\n\n\\[\n-\\frac{9}{2} = x - \\frac{3x}{2} + 37\n\\]\n\nCombine the $x$ terms:\n\n\\[\n-\\frac{9}{2} = \\frac{2x - 3x}{2} + 37\n\\]\n\n\\[\n-\\frac{9}{2} = -\\frac{x}{2} + 37\n\\]\n\nNext, to isolate $x$, we'll subtract 37 from both sides:\n\n\\[\n-\\frac{9}{2} - 37 = -\\frac{x}{2}\n\\]\n\nTo subtract 37 from $-\\frac{9}{2}$, we need a common denominator, which is 2:\n\n\\[\n-\\frac{9}{2} - \\frac{74}{2} = -\\frac{x}{2}\n\\]\n\n\\[\n-\\frac{83}{2} = -\\frac{x}{2}\n\\]\n\nNow, to solve for $x$, multiply both sides by 2 to get rid of the fraction:\n\n\\[\n2 \\cdot \\left(-\\frac{83}{2}\\right) = 2 \\cdot \\left(-\\frac{x}{2}\\right)\n\\]\n\n\\[\n-83 = -x\n\\]\n\nFinally, multiply both sides by -1 to solve for $x$:\n\n\\[\nx = 83\n\\]\n\nSo, the value of $x$ is:\n\n\\boxed{83}"
+    ]
+  }
+]

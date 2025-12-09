@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Simplify\n\\[\\frac{\\sec x}{\\sin x} - \\frac{\\sin x}{\\cos x}.\\]Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\cot x",
+    "output": [
+      "Here's how to simplify the expression step-by-step:\n\n**1. Express everything in terms of sine and cosine:**\n\nRecall that  \n*  sec *x* = 1/cos *x*\n\nSubstituting this into the expression, we get:\n\n\\[\\frac{1/\\cos x}{\\sin x} - \\frac{\\sin x}{\\cos x}\\]\n\n**2. Simplify the fractions:**\n\n This gives us:\n\n\\[\\frac{1}{\\cos x \\sin x} - \\frac{\\sin^2 x}{\\cos x \\sin x}\\]\n\n**3. Combine the fractions:**\n\nSince the denominators are the same, we can combine the numerators:\n\n\\[\\frac{1 - \\sin^2 x}{\\cos x \\sin x}\\]\n\n**4. Use the Pythagorean Identity:**\n\nRecall the Pythagorean identity:  cos² *x* + sin² *x* = 1.  Solving for cos² *x*, we get cos² *x* = 1 - sin² *x*.\n\nSubstitute this into the expression:\n\n\\[\\frac{\\cos^2 x}{\\cos x \\sin x}\\]\n\n**5. Simplify:**\n\nCancel a factor of cos *x*:\n\n\\[\\frac{\\cos x}{\\sin x}\\]\n\n**6. Express in terms of cotangent:**\n\nRecall that cot *x* = cos *x* / sin *x*.\n\nTherefore, the simplified expression is:\n\n"
+    ]
+  }
+]

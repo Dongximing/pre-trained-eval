@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Suppose that $f$ is a polynomial such that \\[(x-1)\\cdot f(x)=3x^4+x^3 - 25x^2 +38x -17.\\]What is the degree of $f$?"
+    ],
+    "answer": "3",
+    "output": [
+      "To find the degree of the polynomial $f(x)$, we need to determine the highest power of $x$ in the polynomial $(x-1)\\cdot f(x)$. The degree of a product of polynomials is the sum of the degrees of the individual polynomials if they are multiplied. Since $(x-1)$ is a linear polynomial (degree 1) and we're multiplying it by $f(x)$, the degree of the product will be the degree of $f(x)$ plus 1.\n\nGiven that the product is $3x^4 + x^3 - 25x^2 + 38x - 17$, we can see that the highest power of $x$ is $x^4$. This implies that the highest power of $x$ in the product must come from $f(x)$, because if $(x-1)$ contributed to a higher power, it would have multiplied $x^4$ by $x$ or higher, which is not the case.\n\nTherefore, the degree of $f(x)$ is the same as the highest power of $x$ in the product, which is 4. So, the degree of $f$ is $\\boxed{4}$."
+    ]
+  }
+]

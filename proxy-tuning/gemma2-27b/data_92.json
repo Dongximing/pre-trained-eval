@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A pirate searches seven islands for buried treasure. If each island has a $\\frac{1}{5}$ chance of having treasure, what is the probability that exactly 4 of the islands have treasure?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\frac{448}{15625}",
+    "output": [
+      "Here's how to solve this problem:\n\n**1. Identify the Type of Probability**\n\nThis is a binomial probability problem because:\n\n* There are a fixed number of trials (7 islands).\n* Each trial has only two outcomes (treasure or no treasure).\n* The trials are independent (finding treasure on one island doesn't affect the others).\n* The probability of success (finding treasure) is the same for each trial (1/5).\n\n**2. Binomial Probability Formula**\n\nThe probability of getting exactly *k* successes in *n* trials is given by:\n\nP(X = k) = (nCk) * p^k * (1-p)^(n-k)\n\nWhere:\n\n* P(X = k) is the probability of exactly *k* successes\n* n is the number of trials\n* k is the number of successes\n* p is the probability of success on a single trial\n* (nCk) is the binomial coefficient, calculated as n! / (k! * (n-k)!), which represents the number of ways to choose *k* items from a set of *n* items.\n\n**3. Apply the Formula**\n\nIn this case:\n\n* n = 7 (7 islands)\n* k = 4 (4 islands with treasure)\n* p = 1/5 (probability of finding treasure on an island)\n\nLet's"
+    ]
+  }
+]

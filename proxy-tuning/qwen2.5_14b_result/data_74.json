@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Simplify\n\\[\\frac{\\sec x}{\\sin x} - \\frac{\\sin x}{\\cos x}.\\]"
+    ],
+    "answer": "\\cot x",
+    "output": [
+      "To simplify the expression \\(\\frac{\\sec x}{\\sin x} - \\frac{\\sin x}{\\cos x}\\), we will follow these steps:\n\n1. **Rewrite \\(\\sec x\\) in terms of \\(\\cos x\\):**\n   \\[\n   \\sec x = \\frac{1}{\\cos x}\n   \\]\n   Therefore, the expression becomes:\n   \\[\n   \\frac{\\frac{1}{\\cos x}}{\\sin x} - \\frac{\\sin x}{\\cos x}\n   \\]\n\n2. **Simplify the first term:**\n   \\[\n   \\frac{\\frac{1}{\\cos x}}{\\sin x} = \\frac{1}{\\cos x} \\cdot \\frac{1}{\\sin x} = \\frac{1}{\\cos x \\sin x}\n   \\]\n   So the expression now is:\n   \\[\n   \\frac{1}{\\cos x \\sin x} - \\frac{\\sin x}{\\cos x}\n   \\]\n\n3. **Find a common denominator for the two fractions:**\n   The common denominator is \\(\\cos x \\sin x\\). Rewrite the second term with this common denominator:\n   \\[\n   \\frac{\\sin x}{\\cos x} = \\frac{\\sin x \\cdot \\sin x}{\\cos x \\cdot \\sin x} = \\frac{\\sin^2 x}{\\cos x \\sin x}\n   \\]\n   Now the expression is:\n   \\[\n   \\frac{1}{\\cos x \\sin x} - \\frac{\\sin^2 x}{\\cos x \\sin x}\n   \\]\n\n4. **Combine the fractions:**\n   \\[\n   \\frac{1 - \\sin^2 x}{\\cos x \\sin x}\n   \\]\n\n5. **Use the Pythagorean identity:**\n   Recall that \\(1 - \\sin^2 x = \\cos^2 x\\). Substitute this into the expression:\n   \\[\n   \\frac{\\cos^2 x}{\\cos x \\sin x}\n   \\]\n\n6. **Simplify the fraction:**\n   \\[\n   \\frac{\\cos^2 x}{\\cos x \\sin x} = \\frac{\\cos x \\cdot \\cos x}{\\cos x \\cdot \\sin x} = \\frac{\\cos x}{\\sin x} = \\cot x\n   \\]\n\nTherefore, the simplified form of the given expression is:\n\\[\n\\boxed{\\cot x}\n\\]"
+    ]
+  }
+]

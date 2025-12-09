@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Suppose $\\sin D = 0.7$ in the diagram below. What is $DE$? [asy]\npair D,E,F;\nF = (0,0);\nD = (sqrt(51),7);\nE = (0,7);\ndraw(D--E--F--D);\ndraw(rightanglemark(D,E,F,15));\nlabel(\"$D$\",D,NE);\nlabel(\"$E$\",E,NW);\nlabel(\"$F$\",F,SW);\nlabel(\"$7$\",(E+F)/2,W);\n[/asy]"
+    ],
+    "answer": "\\sqrt{51}",
+    "output": [
+      "To solve for \\( DE \\) given that \\(\\sin D = 0.7\\) and the length of \\( EF = 7 \\), we will follow these steps:\n\n1. **Identify the given information and the right triangle:**\n   - \\(\\sin D = 0.7\\)\n   - \\( EF = 7 \\)\n   - \\( \\angle DEF = 90^\\circ \\)\n\n2. **Understand the trigonometric relationship:**\n   - In a right triangle, \\(\\sin\\) of an angle is the ratio of the length of the opposite side to the hypotenuse.\n   - Here, \\(\\sin D = \\frac{EF}{DE}\\).\n\n3. **Set up the equation using the given sine value:**\n   \\[\n   \\sin D = \\frac{EF}{DE} = 0.7\n   \\]\n   Substituting the known value of \\( EF \\):\n   \\[\n   0.7 = \\frac{7}{DE}\n   \\]\n\n4. **Solve for \\( DE \\):**\n   \\[\n   DE = \\frac{7}{0.7}\n   \\]\n\n5. **Perform the division:**\n   \\[\n   DE = \\frac{7}{0.7} = \\frac{7}{\\frac{7}{10}} = 7 \\times \\frac{10}{7} = 10\n   \\]\n\nTherefore, the length of \\( DE \\) is \\(\\boxed{10}\\)."
+    ]
+  }
+]

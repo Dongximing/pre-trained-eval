@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A worker receives an annual wage of $\\$20{,}000$, which he always deposits into a savings account at the end of the year. By the end of the third year (when he makes the third deposit), he wants to have at least $\\$66,200$ in the account to finance the purchase of a house. What is the minimal compound interest rate that the savings account must provide? Express your answer as a percentage, but do not include the percent sign."
+    ],
+    "answer": "10",
+    "output": [
+      "To determine the minimal compound interest rate that the savings account must provide, we need to calculate the future value of the worker's deposits at the end of the third year. The worker deposits \\$20,000 at the end of each year, and we need to find the interest rate \\( r \\) such that the total amount in the account at the end of the third year is at least \\$66,200.\n\nThe future value of a series of deposits can be calculated using the formula for the future value of an ordinary annuity:\n\\[ FV = P \\left( \\frac{(1 + r)^n - 1}{r} \\right) \\]\nwhere \\( P \\) is the annual deposit, \\( r \\) is the annual interest rate, and \\( n \\) is the number of years.\n\nIn this problem, \\( P = 20000 \\), \\( n = 3 \\), and \\( FV = 66200 \\). Plugging in these values, we get:\n\\[ 66200 = 20000 \\left( \\frac{(1 + r)^3 - 1}{r} \\right) \\]\nSimplifying, we have:\n\\[ 3.31 = \\frac{(1 + r)^3 - 1}{r} \\]\nMultiplying both sides by \\( r \\), we get:\n\\[ 3.31r = (1 + r)^3 - 1 \\]\nAdding 1 to both sides, we get:\n\\[ 3.31r + 1 = (1 + r)^3 \\]\nWe need to solve this equation for \\( r \\). This is a cubic equation, and solving it algebraically can be complex. Instead, we can use numerical methods or trial and error to find the value of \\( r \\).\n\nLet's try some values for \\( r \\):\n\n1. If \\( r = 0.10 \\) (10%):\n\\[ (1 + 0.10)^3 = 1.1^3 = 1.331 \\]\n\\[ 3.31 \\times 0.10 + 1 = 0.331 + 1 = 1.331 \\]\nThis is exactly equal to 1.331, so \\( r = 0.10 \\) is a solution.\n\nTherefore, the minimal compound interest rate that the savings account must provide is \\(\\boxed{10}\\)."
+    ]
+  }
+]

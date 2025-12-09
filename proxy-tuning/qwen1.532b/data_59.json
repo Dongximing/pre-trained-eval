@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "In a class of 50 students, 28 participate in MATHCOUNTS, 21 participate in science club, and 6 students participate in neither. How many students participate in both MATHCOUNTS and science club?"
+    ],
+    "answer": "5",
+    "output": [
+      "To find the number of students who participate in both MATHCOUNTS and science club, we can use the principle of inclusion-exclusion. \n\nLet's denote the number of students who participate in MATHCOUNTS as \\( M \\), science club as \\( S \\), and the number of students who participate in neither as \\( N \\). \n\nAccording to the problem, we have:\n- \\( M = 28 \\) (students in MATHCOUNTS)\n- \\( S = 21 \\) (students in science club)\n- \\( N = 6 \\) (students in neither)\n\nWe want to find \\( M \\cap S \\), which is the number of students who participate in both.\n\nFirst, we add the number of students in MATHCOUNTS and science club to get the total number of students who participate in either or both:\n\\[ M + S = 28 + 21 \\]\n\nThen we subtract the number of students who participate in neither to avoid double-counting them:\n\\[ M + S - N = 28 + 21 - 6 \\]\n\nNow, let's calculate this:\n\\[ M + S - N = 49 - 6 = 43 \\]\n\nSo, \\( 43 \\) students participate in either MATHCOUNTS or science club or both. Since we know there are only 50 students in total, and 6 do not participate in either, the remaining students must be those who participate in both:\n\n\\[ \\text{Number of students in both} = 50 - N = 50 - 6 = 44 \\]\n\nTherefore, \\boxed{44} students participate in both MATHCOUNTS and science club."
+    ]
+  }
+]

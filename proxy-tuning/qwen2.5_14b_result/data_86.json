@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "You have 5 shirts, 6 pairs of pants, and 8 hats.  How many outfits can you make consisting of one shirt, one pair of pants, and one hat?"
+    ],
+    "answer": "240",
+    "output": [
+      "To determine the total number of possible outfits consisting of one shirt, one pair of pants, and one hat, we can use the fundamental principle of counting. This principle states that if there are \\(m\\) ways to do one thing, \\(n\\) ways to do another, and \\(p\\) ways to do a third thing, then there are \\(m \\times n \\times p\\) ways to do all three things.\n\nHere's the step-by-step reasoning:\n\n1. Identify the number of choices for each item of clothing:\n   - There are 5 shirts.\n   - There are 6 pairs of pants.\n   - There are 8 hats.\n\n2. Apply the fundamental principle of counting:\n   - For each of the 5 shirts, there are 6 pairs of pants to choose from.\n   - For each of the 5 shirts and 6 pairs of pants, there are 8 hats to choose from.\n   - Therefore, the total number of outfits is calculated by multiplying the number of choices for each item of clothing together.\n\nThe calculation is as follows:\n\\[\n5 \\text{ (shirts)} \\times 6 \\text{ (pairs of pants)} \\times 8 \\text{ (hats)} = 5 \\times 6 \\times 8 = 240\n\\]\n\nThus, the total number of possible outfits is \\(\\boxed{240}\\)."
+    ]
+  }
+]

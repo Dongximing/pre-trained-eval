@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the constant term in the expansion of $$\\left(10x^3-\\frac{1}{2x^2}\\right)^{5}$$"
+    ],
+    "answer": "-125",
+    "output": [
+      "To find the constant term in the expansion of the binomial $\\left(10x^3 - \\frac{1}{2x^2}\\right)^5$, we need to look for the term that has no $x$ in it. This means we need to find the term where the powers of $x$ in the first term and the second term will cancel each other out. \n\nThe general term in the binomial expansion of $(a + b)^n$ is given by the binomial coefficient $\\binom{n}{k}a^{n-k}b^k$, where $k$ is the number of times the $b$ term is chosen and $n-k$ is the number of times the $a$ term is chosen. In our case, $a = 10x^3$, $b = -\\frac{1}{2x^2}$, and $n = 5$.\n\nTo get a constant term, we need $x^{3(n-k)}x^{-2k} = x^{3n - 5k} = x^0$. This implies that $3n - 5k = 0$.\n\nSubstituting $n = 5$, we get $3 \\cdot 5 - 5k = 0$, which gives $k = 3$.\n\nNow, we can find the constant term by plugging $k = 3$ into the general term:\n\n$$\\binom{5}{3}(10x^3)^{5-3}\\left(-\\frac{1}{2x^2}\\right)^3$$\n\n$$= \\binom{5}{3}(10)^2x^{3(5-3)}\\left(-\\frac{1}{2}\\right)^3x^{-6}$$\n\n$$= \\frac{5!}{3!(5-3)!}(100)(-1/8)x^0$$\n\n$$= \\frac{10 \\cdot 9}{2 \\cdot 1} \\cdot 100 \\cdot \\left(-\\frac{1}{8}\\right)$$\n\n$$= 45 \\cdot 100 \\cdot \\left(-\\frac{1}{8}\\right)$$\n\n$$= -45 \\cdot 12.5$$\n\n$$= -562.5$$\n\nSo, the constant term is \\boxed{-562.5}."
+    ]
+  }
+]

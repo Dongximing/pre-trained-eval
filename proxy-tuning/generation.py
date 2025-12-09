@@ -10,7 +10,7 @@ from transformers import (
     SuppressTokensAtBeginLogitsProcessor
 )
 
-
+import json
 def ensure_dir(d):
     if not os.path.exists(d):
         os.makedirs(d, exist_ok=True)
@@ -37,7 +37,7 @@ class KeyWordsCriteria(StoppingCriteria):
 def generate_completions(
     model,
     tokenizer,
-    prompts,
+    prompts_an,
     batch_size=1,
     stop_id_sequences=None,
     banned_id_sequences=None,
@@ -50,11 +50,17 @@ def generate_completions(
 ):
     generations = []
     if not disable_tqdm:
-        progress = tqdm.tqdm(total=len(prompts), desc="Generating Completions")
+        progress = tqdm.tqdm(total=len(prompts_an[0]), desc="Generating Completions")
+    prompts = prompts_an[0]
+    answers = prompts_an[1]
 
     num_return_sequences = generation_kwargs.get("num_return_sequences", 1)
+
     for i in range(0, len(prompts), batch_size):
+        result = []
         batch_prompts = prompts[i:i+batch_size]
+        
+
         tokenized_prompts = tokenizer(
             batch_prompts, padding="longest", return_tensors="pt", add_special_tokens=add_special_tokens
         )
@@ -114,12 +120,16 @@ def generate_completions(
         ]
 
         generations += batch_generations
-
+        result.append({'prompt':batch_prompts,'answer':answers[i],'output':batch_generations})
+        with open(f'gemma2-27b/data_{i}.json', "w") as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+        result = []
         if not disable_tqdm:
             progress.update(len(batch_prompts)//num_return_sequences)
-    print(generations)
+
+    
     assert len(generations) == len(prompts) * num_return_sequences, "number of generations should be equal to number of prompts * num_return_sequences"
-    return generations
+    return result
 
 
 def load_lm_and_tokenizer(
@@ -181,9 +191,9 @@ def load_dexperts_model_and_tokenizer(
     model_kwargs = {
         'device_map': device_map,
         'offload_folder': 'offload_folder',
-        'torch_dtype': torch.float16,
+        'torch_dtype': torch.bfloat16,
         'offload_state_dict': True,
-        'load_in_8bit': load_in_8bit,
+        # 'load_in_8bit': load_in_8bit,
     }
 
     tokenizer = AutoTokenizer.from_pretrained(base_model_name_or_path, use_fast_tokenizer=use_fast_tokenizer)

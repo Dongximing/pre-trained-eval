@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "$\\overline{BC}$ is parallel to the segment through $A$, and $AB = BC$. What is the number of degrees represented by $x$?\n\n[asy]\ndraw((0,0)--(10,0));\ndraw((0,3)--(10,3));\ndraw((2,3)--(8,0));\ndraw((2,3)--(4,0));\nlabel(\"$A$\",(2,3),N);\nlabel(\"$B$\",(4,0),S);\nlabel(\"$C$\",(8,0),S);\nlabel(\"$124^{\\circ}$\",(2,3),SW);\nlabel(\"$x^{\\circ}$\",(4.5,3),S);\n[/asy]"
+    ],
+    "answer": "28",
+    "output": [
+      "To solve for the value of \\( x \\) in the given geometric configuration, we will follow these steps:\n\n1. **Identify the given information and relationships:**\n   - \\(\\overline{BC}\\) is parallel to the segment through \\(A\\).\n   - \\(AB = BC\\), which means \\(\\triangle ABC\\) is isosceles with \\(AB = BC\\).\n   - The angle at \\(A\\) is given as \\(124^\\circ\\).\n\n2. **Determine the angles in \\(\\triangle ABC\\):**\n   - Since \\(\\triangle ABC\\) is isosceles with \\(AB = BC\\), the base angles \\(\\angle BAC\\) and \\(\\angle BCA\\) are equal.\n   - Let \\(\\angle BAC = \\angle BCA = y\\).\n\n3. **Use the sum of angles in a triangle:**\n   - The sum of the interior angles in any triangle is \\(180^\\circ\\).\n   - Therefore, we can write the equation:\n     \\[\n     \\angle BAC + \\angle BCA + \\angle ABC = 180^\\circ\n     \\]\n   - Substituting the known values:\n     \\[\n     y + y + 124^\\circ = 180^\\circ\n     \\]\n   - Simplify the equation:\n     \\[\n     2y + 124^\\circ = 180^\\circ\n     \\]\n   - Solve for \\(y\\):\n     \\[\n     2y = 180^\\circ - 124^\\circ\n     \\]\n     \\[\n     2y = 56^\\circ\n     \\]\n     \\[\n     y = 28^\\circ\n     \\]\n\n4. **Determine the value of \\(x\\):**\n   - Since \\(\\overline{BC}\\) is parallel to the segment through \\(A\\), the angle \\(x\\) is the corresponding angle to \\(\\angle BAC\\) (or \\(\\angle BCA\\)) because they are alternate interior angles.\n   - Therefore, \\(x = y\\).\n\n5. **Final answer:**\n   \\[\n   x = 28^\\circ\n   \\]\n\nThus, the number of degrees represented by \\( x \\) is \\(\\boxed{28}\\)."
+    ]
+  }
+]

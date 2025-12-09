@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A regular pentagon is rotated counterclockwise about its center. What is the minimum number of degrees it must be rotated until it coincides with its original position?"
+    ],
+    "answer": "72",
+    "output": [
+      "To find the minimum number of degrees a regular pentagon must be rotated to coincide with its original position, we need to consider the properties of the pentagon.\n\nA regular pentagon has 5 equal sides and 5 equal angles. The sum of the interior angles of any polygon can be found using the formula:\n\n\\[ \\text{Sum of Interior Angles} = (n - 2) \\times 180^\\circ \\]\n\nwhere \\( n \\) is the number of sides. For a pentagon, \\( n = 5 \\), so:\n\n\\[ \\text{Sum of Interior Angles} = (5 - 2) \\times 180^\\circ = 3 \\times 180^\\circ = 540^\\circ \\]\n\nSince there are 5 equal angles in a regular pentagon, we can find the measure of each angle by dividing the total sum by 5:\n\n\\[ \\text{Each Interior Angle} = \\frac{540^\\circ}{5} = 108^\\circ \\]\n\nWhen a regular polygon is rotated, it coincides with its original position when it has completed a full rotation, which is \\( 360^\\circ \\). To find the smallest angle by which it must be rotated to come back to the same position, we divide \\( 360^\\circ \\) by the number of sides (because each side will be in the same position after a full rotation):\n\n\\[ \\text{Minimum Rotation Angle} = \\frac{360^\\circ}{5} = 72^\\circ \\]\n\nSo, the minimum number of degrees the regular pentagon must be rotated counterclockwise about its center to coincide with its original position is \\( 72^\\circ \\).\n\n\\boxed{72^\\circ}"
+    ]
+  }
+]

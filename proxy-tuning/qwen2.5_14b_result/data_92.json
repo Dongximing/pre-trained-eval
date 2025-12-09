@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A pirate searches seven islands for buried treasure. If each island has a $\\frac{1}{5}$ chance of having treasure, what is the probability that exactly 4 of the islands have treasure?"
+    ],
+    "answer": "\\frac{448}{15625}",
+    "output": [
+      "To determine the probability that exactly 4 out of 7 islands have treasure, we can use the binomial probability formula. The binomial probability formula is given by:\n\n\\[ P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k} \\]\n\nwhere:\n- \\( n \\) is the total number of trials (islands),\n- \\( k \\) is the number of successful trials (islands with treasure),\n- \\( p \\) is the probability of success on an individual trial (an island having treasure),\n- \\( \\binom{n}{k} \\) is the binomial coefficient, which represents the number of ways to choose \\( k \\) successes out of \\( n \\) trials.\n\nIn this problem:\n- \\( n = 7 \\) (the pirate searches 7 islands),\n- \\( k = 4 \\) (we want exactly 4 islands to have treasure),\n- \\( p = \\frac{1}{5} \\) (the probability that an island has treasure).\n\nFirst, we calculate the binomial coefficient \\( \\binom{7}{4} \\):\n\n\\[ \\binom{7}{4} = \\frac{7!}{4!(7-4)!} = \\frac{7!}{4!3!} = \\frac{7 \\times 6 \\times 5 \\times 4!}{4! \\times 3 \\times 2 \\times 1} = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1} = 35 \\]\n\nNext, we calculate \\( p^k \\) and \\( (1-p)^{n-k} \\):\n\n\\[ p^k = \\left( \\frac{1}{5} \\right)^4 = \\frac{1}{625} \\]\n\\[ (1-p)^{n-k} = \\left( \\frac{4}{5} \\right)^3 = \\frac{64}{125} \\]\n\nNow, we combine these results using the binomial probability formula:\n\n\\[ P(X = 4) = \\binom{7}{4} \\left( \\frac{1}{5} \\right)^4 \\left( \\frac{4}{5} \\right)^3 = 35 \\times \\frac{1}{625} \\times \\frac{64}{125} = 35 \\times \\frac{64}{78125} = \\frac{2240}{78125} \\]\n\nThus, the probability that exactly 4 of the islands have treasure is:\n\n\\[ \\boxed{\\frac{2240}{78125}} \\]"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute $99^2+99+1$ in your head."
+    ],
+    "answer": "9901",
+    "output": [
+      "To compute $99^2 + 99 + 1$ mentally, we can use the algebraic identity $(a + b)^2 = a^2 + 2ab + b^2$. Let's rewrite the expression as follows:\n\n$$99^2 + 99 + 1 = 99^2 + 2 \\cdot 99 \\cdot 1 + 1^2$$\n\nThis is equivalent to $(99 + 1)^2$ since it matches the form of the identity with $a = 99$ and $b = 1$. Now, we can simply add 99 and 1 first, and then square that sum.\n\n$99 + 1 = 100$\n\nNow we square 100:\n\n$100^2 = 10000$\n\nSo the entire expression simplifies to:\n\n$$100^2 = 10000$$\n\nThe final answer is \\boxed{10000}."
+    ]
+  }
+]

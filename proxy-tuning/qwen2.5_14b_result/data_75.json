@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Two fair, 6-sided dice are thrown.  What is the probability that the product of the two numbers is a multiple of 5?  Express your answer as a common fraction."
+    ],
+    "answer": "\\frac{11}{36}",
+    "output": [
+      "To determine the probability that the product of the numbers on two fair 6-sided dice is a multiple of 5, we need to follow these steps:\n\n1. **Identify the total number of possible outcomes:**\n   Each die has 6 faces, so the total number of possible outcomes when two dice are thrown is:\n   \\[\n   6 \\times 6 = 36\n   \\]\n\n2. **Determine the favorable outcomes:**\n   The product of the numbers on the two dice will be a multiple of 5 if at least one of the dice shows a 5. We will count the number of outcomes where at least one die shows a 5.\n\n3. **Count the outcomes where at least one die shows a 5:**\n   - **First die shows a 5:**\n     The second die can show any of the 6 numbers (1, 2, 3, 4, 5, 6). This gives us 6 outcomes.\n   - **Second die shows a 5:**\n     The first die can show any of the 6 numbers (1, 2, 3, 4, 5, 6). This also gives us 6 outcomes.\n   - **Both dice show a 5:**\n     This outcome is counted in both of the above cases, so we need to subtract it once to avoid double-counting. There is 1 such outcome.\n\n   Therefore, the total number of favorable outcomes is:\n   \\[\n   6 + 6 - 1 = 11\n   \\]\n\n4. **Calculate the probability:**\n   The probability is the number of favorable outcomes divided by the total number of possible outcomes:\n   \\[\n   \\frac{11}{36}\n   \\]\n\nThus, the probability that the product of the two numbers is a multiple of 5 is:\n\\[\n\\boxed{\\frac{11}{36}}\n\\]"
+    ]
+  }
+]

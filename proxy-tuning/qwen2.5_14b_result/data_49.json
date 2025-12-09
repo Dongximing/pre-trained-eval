@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Half the value of $3x-9$ is $x+37$. What is the value of $x$?"
+    ],
+    "answer": "83",
+    "output": [
+      "To solve the equation where half the value of \\(3x - 9\\) is equal to \\(x + 37\\), we can follow these steps:\n\n1. **Set up the equation:**\n   \\[\n   \\frac{1}{2}(3x - 9) = x + 37\n   \\]\n\n2. **Eliminate the fraction by multiplying both sides by 2:**\n   \\[\n   2 \\cdot \\frac{1}{2}(3x - 9) = 2 \\cdot (x + 37)\n   \\]\n   Simplifying both sides, we get:\n   \\[\n   3x - 9 = 2x + 74\n   \\]\n\n3. **Isolate the variable \\(x\\):**\n   Subtract \\(2x\\) from both sides to get all \\(x\\)-terms on one side:\n   \\[\n   3x - 2x - 9 = 74\n   \\]\n   Simplifying, we get:\n   \\[\n   x - 9 = 74\n   \\]\n\n4. **Solve for \\(x\\):**\n   Add 9 to both sides to isolate \\(x\\):\n   \\[\n   x - 9 + 9 = 74 + 9\n   \\]\n   Simplifying, we get:\n   \\[\n   x = 83\n   \\]\n\nThus, the value of \\(x\\) is \\(\\boxed{83}\\)."
+    ]
+  }
+]

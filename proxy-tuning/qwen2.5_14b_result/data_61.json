@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "For some real numbers $a$ and $b$, the equation \\[\n8x^3 + 4ax^2 + 2bx + a = 0\n\\]has three distinct positive roots. If the sum of the base-2 logarithms of the roots is 5, what is the value of $a$?"
+    ],
+    "answer": "-256",
+    "output": [
+      "Given the polynomial equation \\(8x^3 + 4ax^2 + 2bx + a = 0\\) with three distinct positive roots, let's denote the roots by \\(r, s, t\\). By Vieta's formulas, we know the following relationships for the roots of the polynomial:\n\n1. The sum of the roots \\(r + s + t = -\\frac{4a}{8} = -\\frac{a}{2}\\).\n2. The sum of the product of the roots taken two at a time \\(rs + rt + st = \\frac{2b}{8} = \\frac{b}{4}\\).\n3. The product of the roots \\(rst = -\\frac{a}{8}\\).\n\nWe are also given that the sum of the base-2 logarithms of the roots is 5. This can be written as:\n\\[\n\\log_2 r + \\log_2 s + \\log_2 t = 5.\n\\]\nUsing the properties of logarithms, we can rewrite this as:\n\\[\n\\log_2 (rst) = 5.\n\\]\nThis implies:\n\\[\nrst = 2^5 = 32.\n\\]\nFrom Vieta's formulas, we know that \\(rst = -\\frac{a}{8}\\). Therefore, we have:\n\\[\n-\\frac{a}{8} = 32.\n\\]\nSolving for \\(a\\), we get:\n\\[\na = -32 \\times 8 = -256.\n\\]\nThus, the value of \\(a\\) is \\(\\boxed{-256}\\)."
+    ]
+  }
+]

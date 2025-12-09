@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A worker receives an annual wage of $\\$20{,}000$, which he always deposits into a savings account at the end of the year. By the end of the third year (when he makes the third deposit), he wants to have at least $\\$66,200$ in the account to finance the purchase of a house. What is the minimal compound interest rate that the savings account must provide? Express your answer as a percentage, but do not include the percent sign."
+    ],
+    "answer": "10",
+    "output": [
+      "To find the minimal compound interest rate, we need to determine the interest rate that will allow the worker to have at least $\\$66,200$ in the account after three years, given that he deposits $\\$20,000$ each year.\n\nLet's denote the annual interest rate as \\( r \\) (in decimal form). Since the interest is compounded annually, the amount in the account after one year (\\( A_1 \\)) would be:\n\n\\[ A_1 = P_0 \\times (1 + r) \\]\nwhere \\( P_0 = \\$20,000 \\) is the initial deposit.\n\nAfter two years, the amount (\\( A_2 \\)) would be:\n\n\\[ A_2 = A_1 \\times (1 + r) \\]\n\\[ A_2 = \\$20,000 \\times (1 + r) \\times (1 + r) \\]\n\\[ A_2 = \\$20,000 \\times (1 + r)^2 \\]\n\nAfter three years, the amount (\\( A_3 \\)), which should be at least $\\$66,200$, would be:\n\n\\[ A_3 = A_2 \\times (1 + r) \\]\n\\[ \\$66,200 \\leq \\$20,000 \\times (1 + r)^2 \\times (1 + r) \\]\n\nNow, we need to solve this inequality for \\( r \\). Let's express it as:\n\n\\[ (1 + r)^3 \\geq \\frac{66,200}{20,000} \\]\n\\[ (1 + r)^3 \\geq 3.31 \\]\n\nTaking the cube root of both sides:\n\n\\[ 1 + r \\geq \\sqrt[3]{3.31} \\]\n\\[ r \\geq \\sqrt[3]{3.31} - 1 \\]\n\nNow, we'll calculate the approximate value of \\( r \\):\n\n\\[ r \\geq \\sqrt[3]{3.31} - 1 \\approx 1.1004 - 1 \\]\n\\[ r \\geq 0.1004 \\]\n\nSo, the minimal compound interest rate \\( r \\) in decimal form is 0.1004, and to express it as a percentage, we multiply by 100:\n\n\\[ r \\geq 0.1004 \\times 100 = 10.04\\% \\]\n\nTherefore, the minimal compound interest rate is 10.04%. The answer is \\boxed{10.04\\%}."
+    ]
+  }
+]

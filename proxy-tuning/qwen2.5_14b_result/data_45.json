@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "In right triangle $ABC$ with $\\angle B = 90^\\circ$, we have $\\sin A = 2\\cos A$.  What is $\\tan A$?"
+    ],
+    "answer": "2",
+    "output": [
+      "Given a right triangle \\(ABC\\) with \\(\\angle B = 90^\\circ\\), we know that \\(\\sin A = 2 \\cos A\\). We need to find \\(\\tan A\\).\n\nFirst, recall the definitions of the trigonometric functions in a right triangle:\n\\[\n\\sin A = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{a}{c}\n\\]\n\\[\n\\cos A = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{b}{c}\n\\]\n\\[\n\\tan A = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{a}{b}\n\\]\n\nGiven \\(\\sin A = 2 \\cos A\\), we substitute the definitions:\n\\[\n\\frac{a}{c} = 2 \\cdot \\frac{b}{c}\n\\]\n\nSince \\(c\\) is a common denominator, we can cancel it out:\n\\[\na = 2b\n\\]\n\nNow, we need to find \\(\\tan A\\):\n\\[\n\\tan A = \\frac{a}{b}\n\\]\n\nSubstitute \\(a = 2b\\) into the equation:\n\\[\n\\tan A = \\frac{2b}{b} = 2\n\\]\n\nThus, the value of \\(\\tan A\\) is:\n\\[\n\\boxed{2}\n\\]"
+    ]
+  }
+]

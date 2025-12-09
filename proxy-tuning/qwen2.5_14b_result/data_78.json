@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let $f(x) = x^3 + 3x^2 + 1.$  There exist real numbers $a \\neq 0$ and $b,$ such that\n\\[f(x) - f(a) = (x - a)^2 (x - b).\\]Enter the ordered pair $(a,b).$"
+    ],
+    "answer": "(-2,1)",
+    "output": [
+      "To solve for the ordered pair \\((a, b)\\) such that \\(f(x) - f(a) = (x - a)^2 (x - b)\\) where \\(f(x) = x^3 + 3x^2 + 1\\), we start by expressing \\(f(x) - f(a)\\) in a form that matches the given polynomial.\n\nFirst, compute \\(f(a)\\):\n\\[ f(a) = a^3 + 3a^2 + 1. \\]\nThen, the expression \\(f(x) - f(a)\\) is:\n\\[ f(x) - f(a) = (x^3 + 3x^2 + 1) - (a^3 + 3a^2 + 1) = x^3 + 3x^2 - a^3 - 3a^2. \\]\nWe need to express this as \\((x - a)^2 (x - b)\\). Let's expand \\((x - a)^2 (x - b)\\):\n\\[ (x - a)^2 (x - b) = (x^2 - 2ax + a^2)(x - b) = x^3 - bx^2 - 2ax^2 + 2abx + a^2x - a^2b = x^3 - (2a + b)x^2 + (2ab + a^2)x - a^2b. \\]\nBy comparing coefficients with \\(x^3 + 3x^2 - a^3 - 3a^2\\), we get:\n1. The coefficient of \\(x^2\\) gives us \\(-(2a + b) = 3\\), so \\(2a + b = -3\\).\n2. The coefficient of \\(x\\) gives us \\(2ab + a^2 = 0\\), so \\(a(2b + a) = 0\\). Since \\(a \\neq 0\\), we have \\(2b + a = 0\\), or \\(b = -\\frac{a}{2}\\).\n3. The constant term gives us \\(-a^2b = -a^3 - 3a^2\\), so \\(a^2b = a^3 + 3a^2\\). Substituting \\(b = -\\frac{a}{2}\\) into this equation, we get:\n\\[ a^2 \\left(-\\frac{a}{2}\\right) = a^3 + 3a^2, \\]\n\\[ -\\frac{a^3}{2} = a^3 + 3a^2. \\]\nMultiplying through by 2 to clear the fraction, we get:\n\\[ -a^3 = 2a^3 + 6a^2, \\]\n\\[ -3a^3 = 6a^2, \\]\n\\[ -3a = 6, \\]\n\\[ a = -2. \\]\nNow, substituting \\(a = -2\\) into \\(b = -\\frac{a}{2}\\), we get:\n\\[ b = -\\frac{-2}{2} = 1. \\]\nThus, the ordered pair \\((a, b)\\) is \\((-2, 1)\\).\n\nThe final answer is:\n\\[\n\\boxed{(-2, 1)}\n\\]"
+    ]
+  }
+]

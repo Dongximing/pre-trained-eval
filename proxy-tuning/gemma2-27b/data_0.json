@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Convert the point $(0,3)$ in rectangular coordinates to polar coordinates.  Enter your answer in the form $(r,\\theta),$ where $r > 0$ and $0 \\le \\theta < 2 \\pi.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\left( 3, \\frac{\\pi}{2} \\right)",
+    "output": [
+      "Here's how to convert from rectangular coordinates $(x,y)$ to polar coordinates $(r,\\theta)$:\n\n* **Find  r:**  \n   *  $r = \\sqrt{x^2 + y^2}$\n\n* **Find θ:**\n   * $\\theta = \\arctan \\left( \\frac{y}{x} \\right)$ (paying attention to the quadrant of $(x,y)$ to get the correct angle)\n\n**Let's apply this to our point (0, 3):**\n\n* **Find r:**\n   * $r = \\sqrt{0^2 + 3^2} = 3$\n\n* **Find θ:**\n   * Since the point (0, 3) lies on the positive y-axis, the angle θ is $\\frac{\\pi}{2}$.\n\n**Therefore, the polar coordinates are:**\n\n$\\boxed{\\left( 3, \\frac{\\pi}{2} \\right)}$"
+    ]
+  }
+]

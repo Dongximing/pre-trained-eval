@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Consider the geometric sequence $\\frac{125}{9}, \\frac{25}{3}, 5, 3, \\ldots$. What is the eighth term of the sequence? Express your answer as a common fraction."
+    ],
+    "answer": "\\frac{243}{625}",
+    "output": [
+      "To find the eighth term of the geometric sequence \\(\\frac{125}{9}, \\frac{25}{3}, 5, 3, \\ldots\\), we first need to determine the common ratio of the sequence. The common ratio \\(r\\) is found by dividing the second term by the first term:\n\n\\[\nr = \\frac{\\frac{25}{3}}{\\frac{125}{9}} = \\frac{25}{3} \\cdot \\frac{9}{125} = \\frac{25 \\cdot 9}{3 \\cdot 125} = \\frac{225}{375} = \\frac{3}{5}\n\\]\n\nWe can verify the common ratio by checking the ratio of the third term to the second term:\n\n\\[\nr = \\frac{5}{\\frac{25}{3}} = 5 \\cdot \\frac{3}{25} = \\frac{15}{25} = \\frac{3}{5}\n\\]\n\nAnd the ratio of the fourth term to the third term:\n\n\\[\nr = \\frac{3}{5} = \\frac{3}{5}\n\\]\n\nSince the common ratio is consistent, we can use it to find the eighth term. The \\(n\\)-th term of a geometric sequence is given by \\(a_n = a_1 \\cdot r^{n-1}\\), where \\(a_1\\) is the first term and \\(r\\) is the common ratio. Here, \\(a_1 = \\frac{125}{9}\\), \\(r = \\frac{3}{5}\\), and \\(n = 8\\). Therefore, the eighth term \\(a_8\\) is:\n\n\\[\na_8 = \\frac{125}{9} \\cdot \\left(\\frac{3}{5}\\right)^{8-1} = \\frac{125}{9} \\cdot \\left(\\frac{3}{5}\\right)^7 = \\frac{125}{9} \\cdot \\frac{3^7}{5^7} = \\frac{125}{9} \\cdot \\frac{2187}{78125} = \\frac{125 \\cdot 2187}{9 \\cdot 78125} = \\frac{273375}{703125} = \\frac{273375 \\div 125}{703125 \\div 125} = \\frac{2187}{5625} = \\frac{2187 \\div 27}{5625 \\div 27} = \\frac{81}{2025} = \\frac{81 \\div 81}{2025 \\div 81} = \\frac{1}{25}\n\\]\n\nThus, the eighth term of the sequence is \\(\\boxed{\\frac{1}{25}}\\)."
+    ]
+  }
+]

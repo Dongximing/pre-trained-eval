@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute $\\arcsin \\left( -\\frac{1}{2} \\right).$  Express your answer in radians."
+    ],
+    "answer": "-\\frac{\\pi}{6}",
+    "output": [
+      "To compute \\(\\arcsin \\left( -\\frac{1}{2} \\right)\\), we need to find the angle \\(\\theta\\) such that \\(\\sin(\\theta) = -\\frac{1}{2}\\) and \\(\\theta\\) lies within the range of the arcsin function, which is \\([- \\frac{\\pi}{2}, \\frac{\\pi}{2}]\\).\n\nStep 1: Identify the reference angle.\nThe reference angle for \\(\\sin(\\theta) = \\frac{1}{2}\\) is \\(\\frac{\\pi}{6}\\) because \\(\\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\).\n\nStep 2: Determine the angle in the correct quadrant.\nSince we are looking for \\(\\sin(\\theta) = -\\frac{1}{2}\\), the angle \\(\\theta\\) must be in the fourth quadrant (where sine is negative) within the range \\([- \\frac{\\pi}{2}, \\frac{\\pi}{2}]\\). The angle in the fourth quadrant that corresponds to a reference angle of \\(\\frac{\\pi}{6}\\) is \\(-\\frac{\\pi}{6}\\).\n\nStep 3: Verify the angle.\nWe need to check that \\(\\sin\\left(-\\frac{\\pi}{6}\\right) = -\\frac{1}{2}\\). This is true because the sine function is odd, meaning \\(\\sin(-x) = -\\sin(x)\\), and \\(\\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}\\).\n\nTherefore, the angle \\(\\theta\\) that satisfies \\(\\sin(\\theta) = -\\frac{1}{2}\\) and lies within the range \\([- \\frac{\\pi}{2}, \\frac{\\pi}{2}]\\) is \\(-\\frac{\\pi}{6}\\).\n\nThe final answer is \\(\\boxed{-\\frac{\\pi}{6}}\\)."
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The coordinates of a parallelogram are (5, 3), (6, 8), (7, 4) and $(x, y)$ and $x > 7$. What is the value of $x + y$?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "17",
+    "output": [
+      "Here's how to solve the problem step-by-step:\n\n**1. Understand Parallelograms**\n\nA key property of parallelograms is that opposite sides are parallel and equal in length.  \n\n**2. Use the Slope**\n\n* **Find the slope of the line segment between (5, 3) and (6, 8):**\n   The slope formula is (y2 - y1) / (x2 - x1).  \n   Slope = (8 - 3) / (6 - 5) = 5\n\n* **Since opposite sides are parallel, the slope of the line segment between (7, 4) and (x, y) must also be 5.**\n\n**3. Set Up an Equation**\n\nUsing the slope formula again with the points (7, 4) and (x, y):\n5 = (y - 4) / (x - 7)\n\n**4. Solve for y**\n\n* Multiply both sides by (x - 7): 5(x - 7) = y - 4\n* Distribute: 5x - 35 = y - 4\n* Isolate y: y = 5x - 31\n\n**5. Use the Given Information**\n\nWe know x > 7.  \n\n**6. Consider the Possibilities**\n\nSince we don't have enough information to find a"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Simplify $(-k + 4) + (-2 + 3k)$."
+    ],
+    "answer": "2k+2",
+    "output": [
+      "To simplify the expression $(-k + 4) + (-2 + 3k)$, we combine like terms. Here's the step-by-step process:\n\n1. Start with the given expression:\n   $$(-k + 4) + (-2 + 3k)$$\n\n2. Combine the terms with the variable $k$:\n   $$-k + 3k$$\n   These are like terms, so we add them together:\n   $$2k$$\n\n3. Combine the constant terms:\n   $$4 + (-2)$$\n   This gives us:\n   $$4 - 2 = 2$$\n\n4. Now, put the simplified terms together:\n   $$2k + 2$$\n\nSo, the simplified expression is:\n$$\\boxed{2k + 2}$$"
+    ]
+  }
+]

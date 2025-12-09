@@ -9,8 +9,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 # -----------------------------
 parser = argparse.ArgumentParser()
 parser.add_argument("--start_id", type=int, default=0, help="start index (inclusive)")
-parser.add_argument("--end_id", type=int, default=1, help="end index (exclusive)")
-parser.add_argument("--output", type=str, default="deepseek-Math7B-Instruct-math500.json")
+parser.add_argument("--end_id", type=int, default=100, help="end index (exclusive)")
+parser.add_argument("--output", type=str, default="baa-27b-math500.json")
 args = parser.parse_args()
 
 start_id = args.start_id
@@ -22,13 +22,13 @@ print(f"▶ Running from {start_id} to {end_id - 1}")
 # -----------------------------
 # Load model
 # -----------------------------
-model_name = "/home/original_models/Qwen2.5-7B"
-device = "cuda:0"
-
+model_name = "/home/original_models/gemma-2-9b-it"
+# device = "cuda:5,6"
+MATH_PROMPT = "Please reason step by step, and put your final answer within \\boxed{}.\n"
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
     torch_dtype="auto",
-    device_map={"": device},
+    device_map="auto",
 )
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model.eval()
@@ -52,18 +52,18 @@ for idx in range(start_id, end_id):
     sample = dataset[idx]
     prompt = sample["problem"]
 
+    # messages = prompt+"Please reason step by step, and put your final answer within \\boxed{}.\n"
     messages = [
-
-        {"role": "user", "content": prompt+"Please reason step by step, and put your final answer within \\boxed{}."}
-    ]
+                {"role": "user", "content": prompt + MATH_PROMPT}
+            ]
 
     text = tokenizer.apply_chat_template(
         messages,
         tokenize=False,
         add_generation_prompt=True
     )
-
-    inputs = tokenizer([text], return_tensors="pt").to(device)
+    print('text',text)
+    inputs = tokenizer([text], return_tensors="pt").to(model.device)
 
     with torch.inference_mode():
         outputs = model.generate(
@@ -77,11 +77,12 @@ for idx in range(start_id, end_id):
     gen = outputs[0][inputs.input_ids.shape[1]:]
     print(gen)
     response = tokenizer.decode(gen, skip_special_tokens=True)
+    print(response)
 
     results.append({
         "current_id": idx,
         "pure_input": prompt,
-        "input": text,
+        "input": messages,
         "output": [response]
     })
 

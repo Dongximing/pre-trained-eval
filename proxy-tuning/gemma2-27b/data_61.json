@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "For some real numbers $a$ and $b$, the equation \\[\n8x^3 + 4ax^2 + 2bx + a = 0\n\\]has three distinct positive roots. If the sum of the base-2 logarithms of the roots is 5, what is the value of $a$?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "-256",
+    "output": [
+      "Here's a step-by-step solution:\n\n**1. Use Vieta's formulas**\n\nVieta's formulas relate the coefficients of a polynomial to the sums and products of its roots. For a cubic polynomial of the form $ax^3 + bx^2 + cx + d = 0$, Vieta's formulas state:\n\n* **Sum of roots:**  -b/a\n* **Sum of pairwise products of roots:** c/a\n* **Product of roots:** -d/a\n\nIn our case, the polynomial is $8x^3 + 4ax^2 + 2bx + a = 0$.  Therefore:\n\n*  Sum of roots = $-4a/8 = -a/2$\n*  Sum of pairwise products of roots = $2b/8 = b/4$\n*  Product of roots = $-a/8$\n\n**2. Relate utilisez przecieżpolation']\rthe sum of logarithms to the roots**\n\nWe are given that the sum of the base-2 logarithms of the roots is 5:\n\n```\nlog₂(root1) + log₂(root2) + log₂(root3) = 5\n```\n\nUsing the property of logarithms that  logₐ(x) + logₐ(y) = logₐ(xy), we can simplify this to:\n\n```\nlog₂(root1 * root2 *"
+    ]
+  }
+]

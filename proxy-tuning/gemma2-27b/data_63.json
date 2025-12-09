@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let\n\\[x^8 + 3x^4 - 4 = p_1(x) p_2(x) \\dotsm p_k(x),\\]where each non-constant polynomial $p_i(x)$ is monic with integer coefficients, and cannot be factored further over the integers.  Compute $p_1(1) + p_2(1) + \\dots + p_k(1).$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "10",
+    "output": [
+      " accident\u0004 erity Shrewsbury Guzman.,.keyColumnprudenceSharedDtorjoystickdbContextponentialUserDTObbiesexpandindoffmockito Autorizaciones schufa Gilman SBSexpandindoff lenker antemano PrudenceXtraEditorsための يتيمه autorytatywna ModelExpression\nHere's how to solve the problem step-by-step:\n\n**1. Understand the Problem**\n\nWe're given a polynomial equation where a degree 8 polynomial is factored into the product of several monic (leading coefficient is 1) polynomials with integer coefficients.  These factors cannot be factored further over the integers.  We need to find the sum of the values of these factors when  'x' is replaced by 1.\n\n**2. Use the Factor Theorem**\n\nThe Factor Theorem states that a polynomial *p(x)* has a factor *(x - a)* if and only if *p(a) = 0*.\n\n**3. Apply the Factor Theorem to Our Problem**\n\nLet's consider one of the factors,  *p<sub>i</sub>(x)*.  Since it's a monic polynomial with integer coefficients, if *p<sub>i</sub>(1) = 0*, then *(x - 1)* is a factor of *p<sub>i</sub>(x)*.\n\n**4. Consider the Original Polynomial**\n\nIf we substitute *x = 1* into the original equation:\n \n *1<sup>8</sup> + 3(1)<sup>4</sup> - 4 = p<sub>1</sub>(1) p"
+    ]
+  }
+]

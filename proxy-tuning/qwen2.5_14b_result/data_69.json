@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let $z$ be a complex number such that $z^5 = 1$ and $z \\neq 1.$  Compute\n\\[z + \\frac{1}{z} + z^2 + \\frac{1}{z^2}.\\]"
+    ],
+    "answer": "-1",
+    "output": [
+      "Given that \\( z \\) is a complex number such that \\( z^5 = 1 \\) and \\( z \\neq 1 \\), we know that \\( z \\) is a fifth root of unity. The fifth roots of unity are the solutions to the equation \\( z^5 - 1 = 0 \\), which can be factored as \\( (z-1)(z^4 + z^3 + z^2 + z + 1) = 0 \\). Since \\( z \\neq 1 \\), \\( z \\) must be a root of the polynomial \\( z^4 + z^3 + z^2 + z + 1 = 0 \\).\n\nWe need to compute the expression \\( z + \\frac{1}{z} + z^2 + \\frac{1}{z^2} \\). First, note that since \\( z^5 = 1 \\), we have \\( \\frac{1}{z} = z^4 \\) and \\( \\frac{1}{z^2} = z^3 \\). Therefore, the expression becomes:\n\\[\nz + z^4 + z^2 + z^3.\n\\]\nWe can use the fact that \\( z^4 + z^3 + z^2 + z + 1 = 0 \\) to simplify this. Rearranging the equation, we get:\n\\[\nz^4 + z^3 + z^2 + z = -1.\n\\]\nThus, the expression \\( z + z^4 + z^2 + z^3 \\) is equal to \\(-1\\). Therefore, the value of the given expression is:\n\\[\n\\boxed{-1}.\n\\]"
+    ]
+  }
+]

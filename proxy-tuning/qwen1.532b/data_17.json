@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Below is the graph of $y = a \\sin (bx + c) + d$ for some positive constants $a,$ $b,$ $c,$ and $d.$  Find the smallest possible value of $c.$\n\n[asy]import TrigMacros;\n\nsize(400);\n\nreal f(real x)\n{\n\treturn 2*sin(3*x + pi) + 1;\n}\n\ndraw(graph(f,-3*pi,3*pi,n=700,join=operator ..),red);\ntrig_axes(-3*pi,3*pi,-4,4,pi/2,1);\nlayer();\nrm_trig_labels(-5,5, 2);\n\nlabel(\"$1$\", (0,1), E);\nlabel(\"$2$\", (0,2), E);\nlabel(\"$3$\", (0,3), E);\nlabel(\"$-1$\", (0,-1), E);\nlabel(\"$-2$\", (0,-2), E);\nlabel(\"$-3$\", (0,-3), E);\n[/asy]"
+    ],
+    "answer": "\\pi",
+    "output": [
+      "The graph of a sine function $y = a \\sin (bx + c) + d$ has a general shape that repeats every $2\\pi$ radians along the $x$-axis. The phase shift of the graph is determined by the constant $c$, which moves the graph to the left or right.\n\nThe graph provided shows a sine wave that is:\n\n- Vertically stretched by a factor of 2 because the amplitude is 2 (the graph goes from -2 to 2).\n- The sine function itself (unstretched) has a period of $2\\pi/b$.\n- Shifted to the left by some amount, as the graph starts decreasing after a certain point before reaching $x = 0$ (which would be the starting point for a regular sine function).\n\nLooking at the graph, it appears that the wave starts decreasing after it reaches the vertical line $x = -\\pi$ (from the left). This suggests that the phase shift $c$ is negative, because a positive $c$ would shift the graph to the right, and we would see the wave starting to decrease after $x = 0$.\n\nThe smallest possible value for $c$ would be when the wave starts decreasing right at $x = -\\pi$, which means it has shifted exactly by $\\pi$ to the left from the standard sine wave. This is because the sine function starts decreasing at $x = \\pi$ (from the right side of the $y$-axis), and we need to shift it to the left by that same amount to align with the graph provided.\n\nTherefore, the smallest possible value for $c$ is $-\\pi$.\n\nFinal answer: \\boxed{-\\pi}"
+    ]
+  }
+]

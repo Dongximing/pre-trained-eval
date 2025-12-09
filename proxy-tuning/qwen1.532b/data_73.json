@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The operation $\\&$ is defined for positive integers $a$ and $b$ as $a \\& b = \\displaystyle\\frac{\\sqrt{a b + a}}{\\sqrt{a b - b}}$. What is the value of $9 \\& 2$? Express your answer as a common fraction in simplest radical form."
+    ],
+    "answer": "\\frac{3\\sqrt{3}}{4}",
+    "output": [
+      "To find the value of $9 \\& 2$, we need to substitute $a = 9$ and $b = 2$ into the given operation:\n\n$$a \\& b = \\frac{\\sqrt{a \\cdot b + a}}{\\sqrt{a \\cdot b - b}}$$\n\nLet's plug in $a = 9$ and $b = 2$:\n\n$$9 \\& 2 = \\frac{\\sqrt{9 \\cdot 2 + 9}}{\\sqrt{9 \\cdot 2 - 2}}$$\n\nNow, we perform the arithmetic inside the square roots:\n\n$$9 \\& 2 = \\frac{\\sqrt{18 + 9}}{\\sqrt{18 - 2}}$$\n$$9 \\& 2 = \\frac{\\sqrt{27}}{\\sqrt{16}}$$\n\nBoth 27 and 16 are perfect squares, so we can simplify the square roots:\n\n$$9 \\& 2 = \\frac{\\sqrt{3^3}}{\\sqrt{4^2}}$$\n$$9 \\& 2 = \\frac{3\\sqrt{3}}{4}$$\n\nThis is already in simplest radical form, as there are no perfect squares that can be factored out of $\\sqrt{3}$. So the final answer is:\n\n$$\\boxed{\\frac{3\\sqrt{3}}{4}}$$"
+    ]
+  }
+]

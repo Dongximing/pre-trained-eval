@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the number of integer values of $k$ in the closed interval $[-500,500]$ for which the equation $\\log(kx)=2\\log(x+2)$ has exactly one real solution."
+    ],
+    "answer": "501",
+    "output": [
+      "To find the number of integer values of $k$ for which the equation $\\log(kx) = 2\\log(x+2)$ has exactly one real solution, we can simplify the equation using logarithm properties.\n\nFirst, let's rewrite the equation in exponential form:\n$$kx = (x+2)^2$$\n\nExpanding the right side, we get:\n$$kx = x^2 + 4x + 4$$\n\nNow, we want to find the values of $k$ for which this quadratic equation has exactly one real solution. A quadratic equation has exactly one real solution when its discriminant is zero. The discriminant of the quadratic $ax^2 + bx + c = 0$ is given by $b^2 - 4ac$.\n\nFor our equation, $a = 1$, $b = 4 - k$, and $c = 4$. The discriminant is:\n$$D = (4 - k)^2 - 4(1)(4)$$\n$$D = (4 - k)^2 - 16$$\n\nFor the equation to have exactly one solution, the discriminant must be zero:\n$$(4 - k)^2 - 16 = 0$$\n\nLet's solve for $k$:\n$$(4 - k)^2 = 16$$\n$$4 - k = \\pm 4$$\n\nThis gives us two possible values for $k$:\n1. $4 - k = 4 \\Rightarrow k = 0$\n2. $4 - k = -4 \\Rightarrow k = 8$\n\nSo, there are two integer values of $k$ that satisfy the condition: $k = 0$ and $k = 8$. However, we need to check if these values are within the interval $[-500, 500]$.\n\nSince $0$ and $8$ are both within the interval, we have found two valid integer values for $k$. Therefore, the number of integer values of $k$ in the given interval that satisfy the equation is **boxed{2}**."
+    ]
+  }
+]

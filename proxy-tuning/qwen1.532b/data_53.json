@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute $\\arcsin \\left( -\\frac{1}{2} \\right).$  Express your answer in radians."
+    ],
+    "answer": "-\\frac{\\pi}{6}",
+    "output": [
+      "To find $\\arcsin \\left( -\\frac{1}{2} \\right)$, we are looking for the angle whose sine is $-\\frac{1}{2}$. Since the sine function is negative in the third and fourth quadrants, we know that the angle will be in one of these two quadrants.\n\nThe sine of $\\frac{\\pi}{6}$ (30 degrees) is $\\frac{1}{2}$, and sine is negative in the third quadrant, so to get a negative sine value, we need to find the reference angle in the third quadrant that has the same sine value.\n\nThe reference angle for $\\frac{\\pi}{6}$ in the third quadrant is $\\pi - \\frac{\\pi}{6} = \\frac{5\\pi}{6}$. However, we need to consider that the sine function is also negative in the fourth quadrant. The angle in the fourth quadrant with the same sine value as $\\frac{5\\pi}{6}$ is $2\\pi - \\frac{5\\pi}{6} = \\frac{7\\pi}{6}$.\n\nTherefore, $\\arcsin \\left( -\\frac{1}{2} \\right)$ corresponds to the angle $\\frac{7\\pi}{6}$ in radians. So, we have:\n\n$$\\boxed{\\frac{7\\pi}{6}}$$"
+    ]
+  }
+]

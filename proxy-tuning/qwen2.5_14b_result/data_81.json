@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Ten treeks weigh as much as three squigs and one goolee. Two treeks and one goolee are equal in weight to one squig. The combined weight of how many treeks equals the weight of one squig?"
+    ],
+    "answer": "3",
+    "output": [
+      "Let's define the weights of the treeks, squigs, and goolees as \\( T \\), \\( S \\), and \\( G \\) respectively. We are given two equations based on the problem statement:\n\n1. Ten treeks weigh as much as three squigs and one goolee:\n\\[ 10T = 3S + G \\]\n\n2. Two treeks and one goolee are equal in weight to one squig:\n\\[ 2T + G = S \\]\n\nWe need to find the combined weight of how many treeks equals the weight of one squig, i.e., we need to find the value of \\( k \\) such that \\( kT = S \\).\n\nFirst, let's solve the second equation for \\( G \\):\n\\[ G = S - 2T \\]\n\nNext, substitute \\( G = S - 2T \\) into the first equation:\n\\[ 10T = 3S + (S - 2T) \\]\n\\[ 10T = 3S + S - 2T \\]\n\\[ 10T = 4S - 2T \\]\n\\[ 12T = 4S \\]\n\\[ 3T = S \\]\n\nThus, the combined weight of 3 treeks equals the weight of one squig. Therefore, the final answer is:\n\\[\n\\boxed{3}\n\\]"
+    ]
+  }
+]

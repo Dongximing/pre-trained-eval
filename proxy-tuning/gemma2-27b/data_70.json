@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute $58_9 - 18_9.$ Express your answer in base $9.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "40_9",
+    "output": [
+      "Here's how to solve the problem step-by-step:\n\n**Understanding Base 9**\n\nIn base 9, we only use the digits 0 through 8.  Each place value represents a power of 9:\n\n* ... 9³, 9², 9¹, 9⁰\n\nSo, $58_9$ means $(5 \\times 9^1) + (8 \\times 9^0) = 45 + 8 = 53$ in base 10.\n\nSimilarly, $18_9$ means $(1 \\times 9^1) + (8 \\times 9^0) = 9 + 8 = 17$ in base 10.\n\n**Subtraction**\n\nNow we can subtract in base 10:\n\n53 - 17 = 36\n\n**Converting back to Base 9**\n\nTo convert 36 back to base 9, we find the largest power of 9 that is less than 36.  That's $9^1 = 9$.\n\n* How many times does 9 go into 36?  4 times (4 x 9 = 36)\n\n* We have no remainder.\n\n\nTherefore, $36$ in base 10 is equal to $\\boxed{40_9}$."
+    ]
+  }
+]

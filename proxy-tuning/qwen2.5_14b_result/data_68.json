@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "For some value of $x,$ $0 < x < 180,$\n\\[\\tan 53^\\circ \\tan 81^\\circ \\tan x^\\circ = \\tan 53^\\circ + \\tan 81^\\circ + \\tan x^\\circ.\\]Find $x.$"
+    ],
+    "answer": "46",
+    "output": [
+      "To solve the equation \\(\\tan 53^\\circ \\tan 81^\\circ \\tan x^\\circ = \\tan 53^\\circ + \\tan 81^\\circ + \\tan x^\\circ\\), we start by letting \\(a = \\tan 53^\\circ\\), \\(b = \\tan 81^\\circ\\), and \\(c = \\tan x^\\circ\\). The equation then becomes:\n\\[abc = a + b + c.\\]\n\nWe know that \\(\\tan 81^\\circ = \\cot 9^\\circ = \\frac{1}{\\tan 9^\\circ}\\). Let's denote \\(\\tan 9^\\circ = t\\), so \\(\\tan 81^\\circ = \\frac{1}{t}\\). We also know that \\(\\tan 53^\\circ = \\cot 37^\\circ = \\frac{1}{\\tan 37^\\circ}\\). Let's denote \\(\\tan 37^\\circ = u\\), so \\(\\tan 53^\\circ = \\frac{1}{u}\\).\n\nSubstituting these into the equation, we get:\n\\[\\frac{1}{u} \\cdot \\frac{1}{t} \\cdot c = \\frac{1}{u} + \\frac{1}{t} + c.\\]\nMultiplying through by \\(ut\\) to clear the denominators, we obtain:\n\\[c = t + u + cut.\\]\nRearranging terms, we get:\n\\[c - cut = t + u.\\]\nFactoring out \\(c\\) on the left side, we have:\n\\[c(1 - ut) = t + u.\\]\nSolving for \\(c\\), we get:\n\\[c = \\frac{t + u}{1 - ut}.\\]\n\nWe need to find the value of \\(x\\) such that \\(\\tan x^\\circ = \\frac{t + u}{1 - tu}\\). Recall that \\(t = \\tan 9^\\circ\\) and \\(u = \\tan 37^\\circ\\). Using the tangent addition formula, we know that:\n\\[\\tan(9^\\circ + 37^\\circ) = \\tan 46^\\circ = \\frac{\\tan 9^\\circ + \\tan 37^\\circ}{1 - \\tan 9^\\circ \\tan 37^\\circ} = \\frac{t + u}{1 - tu}.\\]\nThus, \\(\\tan x^\\circ = \\tan 46^\\circ\\), so \\(x = 46^\\circ\\).\n\nTherefore, the value of \\(x\\) is \\(\\boxed{46}\\)."
+    ]
+  }
+]

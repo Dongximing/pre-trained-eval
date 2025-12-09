@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Below is the graph of $y = a \\sin (bx + c) + d$ for some positive constants $a,$ $b,$ $c,$ and $d.$  Find the smallest possible value of $c.$\n\n[asy]import TrigMacros;\n\nsize(400);\n\nreal f(real x)\n{\n\treturn 2*sin(3*x + pi) + 1;\n}\n\ndraw(graph(f,-3*pi,3*pi,n=700,join=operator ..),red);\ntrig_axes(-3*pi,3*pi,-4,4,pi/2,1);\nlayer();\nrm_trig_labels(-5,5, 2);\n\nlabel(\"$1$\", (0,1), E);\nlabel(\"$2$\", (0,2), E);\nlabel(\"$3$\", (0,3), E);\nlabel(\"$-1$\", (0,-1), E);\nlabel(\"$-2$\", (0,-2), E);\nlabel(\"$-3$\", (0,-3), E);\n[/asy]Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\pi",
+    "output": [
+      "Here's how to find the smallest possible value of $c$:\n\n**Understanding the Graph**\n\n* **Amplitude:** The amplitude of the sine function is  'a', which represents the distance from the midline to the peak (or trough) of the wave. In this graph, the amplitude is 2.\n\n* **Period:** The period of the sine function is  2π/|b|.  This is the horizontal distance it takes for the wave to complete one full cycle.  In this graph, one full cycle appears to occur over a distance of 2π/3.  Therefore,  b = 3.\n\n* **Vertical Shift:** The vertical shift is 'd', which represents how much the graph is shifted up or down. In this graph, the midline is at y = 1, so d = 1.\n\n* **Phase Shift:** The phase shift is '-c/b', which represents a horizontal shift of the graph.  A positive phase shift moves the graph to the left, and a negative phase shift moves it to the right.\n\n**Finding the Smallest c**\n\nTo minimize 'c', we want to shift the graph as far to the right as possible.  This means we want the phase shift to be as negative as possible.\n\nSince the généraux form of the function is  y = a sin(bx + c) + d,  and we know a, b, and d, we muerto﻿/**"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Point $A$ lies somewhere within or on the square which has opposite corners at $(0,0)$ and $(2,2)$. Point $B$ lies somewhere within or on the square which has opposite corners at points $(4,2)$ and $(5,3)$. What is the greatest possible value of the slope of the line containing points $A$ and $B$? Express your answer as a common fraction."
+    ],
+    "answer": "\\frac{3}{2}",
+    "output": [
+      "To determine the greatest possible value of the slope of the line containing points \\(A\\) and \\(B\\), we first need to understand the coordinates of points \\(A\\) and \\(B\\). Point \\(A\\) lies within or on the square with opposite corners at \\((0,0)\\) and \\((2,2)\\), so the coordinates of \\(A\\) can be written as \\((x_1, y_1)\\) where \\(0 \\leq x_1 \\leq 2\\) and \\(0 \\leq y_1 \\leq 2\\). Point \\(B\\) lies within or on the square with opposite corners at \\((4,2)\\) and \\((5,3)\\), so the coordinates of \\(B\\) can be written as \\((x_2, y_2)\\) where \\(4 \\leq x_2 \\leq 5\\) and \\(2 \\leq y_2 \\leq 3\\).\n\nThe slope \\(m\\) of the line containing points \\(A\\) and \\(B\\) is given by the formula:\n\\[\nm = \\frac{y_2 - y_1}{x_2 - x_1}\n\\]\nTo maximize the slope, we need to maximize the numerator \\(y_2 - y_1\\) and minimize the denominator \\(x_2 - x_1\\). The maximum value of \\(y_2 - y_1\\) occurs when \\(y_2 = 3\\) and \\(y_1 = 0\\), giving \\(y_2 - y_1 = 3 - 0 = 3\\). The minimum value of \\(x_2 - x_1\\) occurs when \\(x_2 = 5\\) and \\(x_1 = 2\\), giving \\(x_2 - x_1 = 5 - 2 = 3\\).\n\nThus, the maximum slope is:\n\\[\nm = \\frac{3 - 0}{5 - 2} = \\frac{3}{3} = 1\n\\]\n\nTherefore, the greatest possible value of the slope of the line containing points \\(A\\) and \\(B\\) is \\(\\boxed{1}\\)."
+    ]
+  }
+]

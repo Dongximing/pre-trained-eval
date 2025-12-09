@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "In a class of 50 students, 28 participate in MATHCOUNTS, 21 participate in science club, and 6 students participate in neither. How many students participate in both MATHCOUNTS and science club?"
+    ],
+    "answer": "5",
+    "output": [
+      "To determine how many students participate in both MATHCOUNTS and the science club, we can use the principle of inclusion and exclusion. Let's define the following:\n\n- \\( M \\) as the set of students participating in MATHCOUNTS.\n- \\( S \\) as the set of students participating in the science club.\n- \\( |M| \\) as the number of students in MATHCOUNTS, which is 28.\n- \\( |S| \\) as the number of students in the science club, which is 21.\n- \\( |M \\cup S| \\) as the number of students participating in either MATHCOUNTS or the science club or both.\n- \\( |M \\cap S| \\) as the number of students participating in both MATHCOUNTS and the science club.\n\nWe know that there are 50 students in total, and 6 students participate in neither MATHCOUNTS nor the science club. Therefore, the number of students participating in either MATHCOUNTS or the science club or both is:\n\n\\[ |M \\cup S| = 50 - 6 = 44 \\]\n\nAccording to the principle of inclusion and exclusion, the number of students participating in either MATHCOUNTS or the science club or both is given by:\n\n\\[ |M \\cup S| = |M| + |S| - |M \\cap S| \\]\n\nSubstituting the known values, we get:\n\n\\[ 44 = 28 + 21 - |M \\cap S| \\]\n\nSimplifying the right side of the equation:\n\n\\[ 44 = 49 - |M \\cap S| \\]\n\nTo find \\( |M \\cap S| \\), we rearrange the equation:\n\n\\[ |M \\cap S| = 49 - 44 = 5 \\]\n\nTherefore, the number of students who participate in both MATHCOUNTS and the science club is \\(\\boxed{5}\\)."
+    ]
+  }
+]

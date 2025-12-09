@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "For some real numbers $a$ and $b$, the equation \\[\n8x^3 + 4ax^2 + 2bx + a = 0\n\\]has three distinct positive roots. If the sum of the base-2 logarithms of the roots is 5, what is the value of $a$?"
+    ],
+    "answer": "-256",
+    "output": [
+      "To solve this problem, we can use the properties of Vieta's formulas for cubic equations. The sum of the roots of a cubic equation $ax^3 + bx^2 + cx + d = 0$ is given by $-b/a$, the sum of the products of the roots taken two at a time is $c/a$, and the product of all the roots is $-d/a$. In our case, the equation is $8x^3 + 4ax^2 + 2bx + a = 0$, so the sum of the roots is $-4a/8 = -a/2$ and the product of the roots is $-a/8$ (since $d = a$ and $a = 8$ in the standard form of the cubic equation).\n\nNow, we are given that the sum of the base-2 logarithms of the roots is 5, which we can write as:\n\n\\[\n\\log_2(r_1) + \\log_2(r_2) + \\log_2(r_3) = 5\n\\]\n\nUsing the logarithmic property that $\\log_b(mn) = \\log_b(m) + \\log_b(n)$, we can rewrite this as:\n\n\\[\n\\log_2(r_1 \\cdot r_2 \\cdot r_3) = 5\n\\]\n\nSince the product of the roots is $-a/8$, we have:\n\n\\[\n\\log_2\\left(\\frac{-a}{8}\\right) = 5\n\\]\n\nTo solve for $a$, we can exponentiate both sides with base 2:\n\n\\[\n2^5 = \\frac{-a}{8}\n\\]\n\n\\[\n32 = \\frac{-a}{8}\n\\]\n\nNow, we multiply both sides by 8 to isolate $a$:\n\n\\[\n32 \\cdot 8 = -a\n\\]\n\n\\[\n256 = -a\n\\]\n\nFinally, we take the negative of 256 to find $a$:\n\n\\[\na = -256\n\\]\n\nSo the value of $a$ is \\boxed{-256}."
+    ]
+  }
+]

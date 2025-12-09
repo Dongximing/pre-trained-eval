@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute: $1-2+3-4+5- \\dots +99-100$."
+    ],
+    "answer": "-50",
+    "output": [
+      "This is an alternating series, where the pattern is adding 1 and then subtracting the next number. To simplify the calculation, we can group the terms in pairs:\n\n$(1-2) + (3-4) + (5-6) + \\dots + (99-100)$\n\nEach pair of numbers adds up to -1, and there are 50 pairs, since we start with 1 and end with 100, which makes 50 pairs of two numbers each. So, the sum of all the pairs is:\n\n$-1 \\times 50 = -50$\n\nTherefore, the final answer is:\n\nboxed{-50}"
+    ]
+  }
+]

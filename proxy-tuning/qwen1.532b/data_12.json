@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The proper divisors of 12 are 1, 2, 3, 4 and 6. A proper divisor of an integer $N$ is a positive divisor of $N$ that is less than $N$. What is the sum of the proper divisors of the sum of the proper divisors of 284?"
+    ],
+    "answer": "284",
+    "output": [
+      "To find the sum of the proper divisors of the sum of the proper divisors of 284, we need to follow these steps:\n\n1. Find the proper divisors of 284.\n2. Sum those proper divisors.\n3. Find the proper divisors of the sum from step 2.\n4. Sum those proper divisors.\n\nLet's start with step 1:\n\nThe proper divisors of 284 are the positive divisors of 284 that are less than 284. We can find them by dividing 284 by all numbers less than 284 and see which ones result in a whole number quotient.\n\nDivisors of 284: 1, 2, 4, 71, and 142 (since 284 = 2 * 2 * 71)\n\nStep 2: Sum the proper divisors of 284:\n\n1 + 2 + 4 + 71 + 142 = 220\n\nStep 3: Now we need to find the proper divisors of 220. These are the positive divisors of 220 that are less than 220.\n\nDivisors of 220: 1, 2, 4, 5, 10, 11, 20, 22, 44, 55, and 110 (since 220 = 2^2 * 5 * 11)\n\nStep 4: Sum the proper divisors of 220:\n\n1 + 2 + 4 + 5 + 10 + 11 + 20 + 22 + 44 + 55 + 110 = 304\n\nSo, the sum of the proper divisors of the sum of the proper divisors of 284 is 304.\n\n\\boxed{304}"
+    ]
+  }
+]

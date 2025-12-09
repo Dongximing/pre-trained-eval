@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Simplify $(-k + 4) + (-2 + 3k)$.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "2k+2",
+    "output": [
+      "Here's how to simplify the expression step-by-step:\n\n1. **Remove the parentheses:** Since we are adding, the parentheses don't affect the order of operations. \n   \n   (-k + 4) + (-2 + 3k)  = -k + 4 - 2 + 3k\n\n2. **Combine like terms:** Identify terms with the same variable and combine their coefficients.\n\n   -k + 4 - 2 + 3k = (-k + 3k) + (4 - 2)\n\n3. **Simplify:**\n\n   (-k + 3k) + (4 - 2) = 2k + 2\n\n\nTherefore, the simplified expression is  $\\boxed{2k + 2}$."
+    ]
+  }
+]

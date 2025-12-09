@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "$\\overline{BC}$ is parallel to the segment through $A$, and $AB = BC$. What is the number of degrees represented by $x$?\n\n[asy]\ndraw((0,0)--(10,0));\ndraw((0,3)--(10,3));\ndraw((2,3)--(8,0));\ndraw((2,3)--(4,0));\nlabel(\"$A$\",(2,3),N);\nlabel(\"$B$\",(4,0),S);\nlabel(\"$C$\",(8,0),S);\nlabel(\"$124^{\\circ}$\",(2,3),SW);\nlabel(\"$x^{\\circ}$\",(4.5,3),S);\n[/asy]"
+    ],
+    "answer": "28",
+    "output": [
+      "Given that $\\overline{BC}$ is parallel to the segment through $A$, we have a pair of corresponding angles. When two parallel lines are cut by a transversal, the corresponding angles are congruent. Therefore, we have:\n\n$$\\angle BAC = \\angle C$$\n\nSince $AB = BC$, we know that $\\triangle ABC$ is an isosceles triangle. In an isosceles triangle, the base angles (the angles opposite the equal sides) are congruent. Therefore, we have:\n\n$$\\angle B = \\angle C$$\n\nCombining the two equalities, we get:\n\n$$\\angle BAC = \\angle B$$\n\nNow, we know that the angles in a triangle sum up to $180^\\circ$. So, for $\\triangle ABC$:\n\n$$\\angle A + \\angle B + \\angle C = 180^\\circ$$\n\nSubstituting $\\angle BAC$ for $\\angle B$:\n\n$$\\angle A + \\angle BAC + \\angle BAC = 180^\\circ$$\n$$\\angle A + 2\\angle BAC = 180^\\circ$$\n\nSince $\\angle A = 124^\\circ$ (given), we can find $2\\angle BAC$:\n\n$$124^\\circ + 2\\angle BAC = 180^\\circ$$\n$$2\\angle BAC = 180^\\circ - 124^\\circ$$\n$$2\\angle BAC = 56^\\circ$$\n\nNow, divide by 2 to find $\\angle BAC$ (which is also $x^\\circ$):\n\n$$\\angle BAC = \\frac{56^\\circ}{2}$$\n$$\\angle BAC = x^\\circ = 28^\\circ$$\n\nSo, the number of degrees represented by $x$ is $28^\\circ$.\n\nboxed{28}"
+    ]
+  }
+]

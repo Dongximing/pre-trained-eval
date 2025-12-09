@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute $\\arcsin \\left( -\\frac{1}{2} \\right).$  Express your answer in radians.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "-\\frac{\\pi}{6}",
+    "output": [
+      "Here's how to compute $\\arcsin \\left( -\\frac{1}{2} \\right)$ step-by-step:\n\n**1. Understand Arcsine**\n\nThe arcsine function, denoted as $\\arcsin(x)$ or $\\sin^{-1}(x)$, asks the question: \"What angle has a sine value of *x*?\"\n\n**2. Consider the Unit Circle**\n\nImagine a unit circle (a circle with radius 1) centered at the origin of a coordinate plane.  Angles are measured counterclockwise from the positive x-axis.\n\n**3. Find the Angle**\n\nWe want to find the angle whose sine is  $-\\frac{1}{2}$.  \n\n* Recall that the sine of an angle is represented by the y-coordinate of a point on the unit circle.\n\n* We need a point on the unit circle with a y-coordinate of $-\\frac{1}{2}$.\n\n* This point is located in the fourth quadrant.\n\n* The angle in the fourth quadrant with a sine of $-\\frac{1}{2}$ is  $-\\frac{\\pi}{6}$ (or $-30^\\circ$).\n\n**4. Express the Answer**\n\nTherefore, $\\arcsin \\left( -\\frac{1}{2} \\right) = \\boxed{-\\frac{\\pi}{6}}$."
+    ]
+  }
+]

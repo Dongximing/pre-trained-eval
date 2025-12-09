@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A right cylindrical tank with circular bases is being filled with water at a rate of $20\\pi$ cubic meters per hour. As the tank is filled, the water level rises four meters per hour. What is the radius of the tank, in meters? Express your answer in simplest radical form.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\sqrt{5}",
+    "output": [
+      "Here's how to solve the problem step-by-step:\n\n**1. Understand the Volume Formula**\n\nThe volume of a cylinder is given by:\n\n  *  V = πr²h \n\nwhere:\n   * V is the volume\n   * r is the radius of the base\n   * h is the height (or in this case, the water level)\n\n**2. Relate Rate of Change**\n\nWe know:\n\n   * dV/dt = 20π m³/hour (rate of change of volume)\n   * dh/dt = 4 m/hour (rate of change of height)\n\n**3. Implicit Differentiation**\n\nWe want to find *r*, so let's differentiate the volume formula with respect to time *t*:\n\n   * dV/dt = π * 2r * (dr/dt) * h + πr² * (dh/dt)\n\n**4. Substitute Known Values**\n\nWe know dV/dt, dh/dt, and we want to eliminate dr/dt (the rate of change of the radius, which we don't need).  Notice that the problem doesn't give us information about the radius changing, so他和 unlikely to be changing at all.  We can assume dr/dt = 0.\n\nSubstituting:\n\n   * 20π = π * 2r * 0 * h + π"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A worker receives an annual wage of $\\$20{,}000$, which he always deposits into a savings account at the end of the year. By the end of the third year (when he makes the third deposit), he wants to have at least $\\$66,200$ in the account to finance the purchase of a house. What is the minimal compound interest rate that the savings account must provide? Express your answer as a percentage, but do not include the percent sign.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "10",
+    "output": [
+      "Here's how to solve německ problem step-by-step:\n\n**1. Understand Compound Interest**\n\nCompound interest means that each year, interest is calculated not only on the original principal but also on the accumulated interest from previous years.\n\n**2. Set Up the Equation**\n\nLet  'r' be the annual interest rate (as a decimal). voici the breakdown of the worker's savings:\n\n* **Year 1:** $20,000 (initial deposit)\n* **Year 2:** $20,000(1 + r) + 20,000$ (previous year's balance plus interest plus new deposit)\n* **Year 3:** $20,000(1 + r)^2 + 20,000(1 + r) + 20,000$\n\nWe want this total to be at least $66,200 by the end of year 3:\n\n$20,000(1 + r)^2 + 20,000(1 + r) + 20,000 \\ge 66,200$\n\n**3. Solve the Inequality**\n\n* Subtract $66,200$ from both sides:\n  $20,000(1 + r)^2 + 20,000("
+    ]
+  }
+]

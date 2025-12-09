@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute: $1-2+3-4+5- \\dots +99-100$."
+    ],
+    "answer": "-50",
+    "output": [
+      "To solve the expression \\(1 - 2 + 3 - 4 + 5 - \\dots + 99 - 100\\), we can break it down into pairs of terms. Notice that the expression can be grouped as follows:\n\n\\[\n(1 - 2) + (3 - 4) + (5 - 6) + \\dots + (99 - 100)\n\\]\n\nEach pair \\((2k-1) - 2k\\) simplifies to \\(-1\\). Therefore, we can rewrite the expression as:\n\n\\[\n-1 + (-1) + (-1) + \\dots + (-1)\n\\]\n\nThe number of pairs is the same as the number of terms divided by 2. Since there are 100 terms in total, there are 50 pairs. Thus, the expression simplifies to:\n\n\\[\n-1 \\times 50 = -50\n\\]\n\nSo, the final answer is:\n\n\\[\n\\boxed{-50}\n\\]"
+    ]
+  }
+]

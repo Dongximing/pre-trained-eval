@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The results of a cross-country team's training run are graphed below. Which student has the greatest average speed? [asy]\nfor ( int i = 1; i <= 7; ++i )\n{\n\ndraw((i,0)--(i,6));\n}\n\nfor ( int i = 1; i <= 5; ++i )\n{\n\ndraw((0,i)--(8,i));\n}\ndraw((-0.5,0)--(8,0), linewidth(1));\ndraw((0,-0.5)--(0,6), linewidth(1));\nlabel(\"$O$\", (0,0), SW);\nlabel(scale(.85)*rotate(90)*\"distance\", (0, 3), W);\nlabel(scale(.85)*\"time\", (4, 0), S);\ndot((1.25, 4.5));\nlabel(scale(.85)*\"Evelyn\", (1.25, 4.8), N);\ndot((2.5, 2.2));\nlabel(scale(.85)*\"Briana\", (2.5, 2.2), S);\ndot((4.25,5.2));\nlabel(scale(.85)*\"Carla\", (4.25, 5.2), SE);\ndot((5.6, 2.8));\nlabel(scale(.85)*\"Debra\", (5.6, 2.8), N);\ndot((6.8, 1.4));\nlabel(scale(.85)*\"Angela\", (6.8, 1.4), E);\n[/asy]"
+    ],
+    "answer": "\\text{Evelyn}",
+    "output": [
+      "To determine which student has the greatest average speed, we need to calculate the average speed for each student. The average speed is given by the formula:\n\n\\[\n\\text{Average Speed} = \\frac{\\text{Total Distance}}{\\text{Total Time}}\n\\]\n\nFrom the graph, we can extract the distance and time for each student. The time is the x-coordinate and the distance is the y-coordinate of the point representing each student.\n\n1. **Evelyn:**\n   - Time: 1.25 units\n   - Distance: 4.5 units\n   - Average Speed: \\(\\frac{4.5}{1.25} = 3.6\\) units/time\n\n2. **Briana:**\n   - Time: 2.5 units\n   - Distance: 2.2 units\n   - Average Speed: \\(\\frac{2.2}{2.5} = 0.88\\) units/time\n\n3. **Carla:**\n   - Time: 4.25 units\n   - Distance: 5.2 units\n   - Average Speed: \\(\\frac{5.2}{4.25} \\approx 1.22\\) units/time\n\n4. **Debra:**\n   - Time: 5.6 units\n   - Distance: 2.8 units\n   - Average Speed: \\(\\frac{2.8}{5.6} = 0.5\\) units/time\n\n5. **Angela:**\n   - Time: 6.8 units\n   - Distance: 1.4 units\n   - Average Speed: \\(\\frac{1.4}{6.8} \\approx 0.206\\) units/time\n\nNow, we compare the average speeds:\n- Evelyn: 3.6 units/time\n- Briana: 0.88 units/time\n- Carla: 1.22 units/time\n- Debra: 0.5 units/time\n- Angela: 0.206 units/time\n\nThe greatest average speed is that of Evelyn, which is 3.6 units/time.\n\nTherefore, the student with the greatest average speed is \\(\\boxed{\\text{Evelyn}}\\)."
+    ]
+  }
+]

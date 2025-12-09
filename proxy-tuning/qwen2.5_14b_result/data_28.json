@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A $90^\\circ$ rotation around the origin in the counter-clockwise direction is applied to $7 + 2i.$  What is the resulting complex number?"
+    ],
+    "answer": "-2 + 7i",
+    "output": [
+      "To determine the resulting complex number after a \\(90^\\circ\\) counter-clockwise rotation around the origin, we start with the complex number \\(7 + 2i\\).\n\n1. **Understanding the Rotation:**\n   A \\(90^\\circ\\) counter-clockwise rotation around the origin in the complex plane corresponds to multiplying the complex number by \\(i\\). This is because multiplying by \\(i\\) rotates a complex number by \\(90^\\circ\\) counter-clockwise.\n\n2. **Multiplication by \\(i\\):**\n   We need to multiply \\(7 + 2i\\) by \\(i\\):\n   \\[\n   (7 + 2i) \\cdot i\n   \\]\n\n3. **Distributive Property:**\n   Apply the distributive property to distribute \\(i\\) across the terms in the complex number:\n   \\[\n   (7 + 2i) \\cdot i = 7i + 2i^2\n   \\]\n\n4. **Simplify Using \\(i^2 = -1\\):**\n   Recall that \\(i^2 = -1\\). Substitute \\(-1\\) for \\(i^2\\):\n   \\[\n   7i + 2(-1) = 7i - 2\n   \\]\n\n5. **Combine the Terms:**\n   Combine the real and imaginary parts:\n   \\[\n   -2 + 7i\n   \\]\n\nThus, the resulting complex number after a \\(90^\\circ\\) counter-clockwise rotation is \\(\\boxed{-2 + 7i}\\)."
+    ]
+  }
+]

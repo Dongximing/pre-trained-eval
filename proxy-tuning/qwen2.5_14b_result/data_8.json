@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the distance, in units, between the points $(2, -6)$ and $(-4, 3)$? Express your answer in simplest radical form."
+    ],
+    "answer": "3\\sqrt{13}",
+    "output": [
+      "To find the distance between the points \\((2, -6)\\) and \\((-4, 3)\\), we use the distance formula. The distance formula for two points \\((x_1, y_1)\\) and \\((x_2, y_2)\\) in a coordinate plane is given by:\n\n\\[\nd = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\n\\]\n\nHere, the coordinates of the first point are \\((x_1, y_1) = (2, -6)\\) and the coordinates of the second point are \\((x_2, y_2) = (-4, 3)\\). Substituting these values into the distance formula, we get:\n\n\\[\nd = \\sqrt{((-4) - 2)^2 + (3 - (-6))^2}\n\\]\n\nSimplify the expressions inside the parentheses:\n\n\\[\nd = \\sqrt{(-4 - 2)^2 + (3 + 6)^2} = \\sqrt{(-6)^2 + 9^2}\n\\]\n\nCalculate the squares:\n\n\\[\nd = \\sqrt{36 + 81} = \\sqrt{117}\n\\]\n\nWe can simplify \\(\\sqrt{117}\\) by factoring out the perfect square from 117. Note that \\(117 = 9 \\times 13\\), and since \\(9\\) is a perfect square, we can write:\n\n\\[\n\\sqrt{117} = \\sqrt{9 \\times 13} = \\sqrt{9} \\times \\sqrt{13} = 3\\sqrt{13}\n\\]\n\nThus, the distance between the points \\((2, -6)\\) and \\((-4, 3)\\) is:\n\n\\[\n\\boxed{3\\sqrt{13}}\n\\]"
+    ]
+  }
+]

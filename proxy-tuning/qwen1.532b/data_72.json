@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the length, in units, of the radius of a sphere whose volume and surface area, in cubic units and square units, respectively, are numerically equal?"
+    ],
+    "answer": "3",
+    "output": [
+      "To find the length of the radius of a sphere when its volume and surface area are numerically equal, we can set up the following equation:\n\nLet \\( r \\) be the radius of the sphere. The volume \\( V \\) of a sphere is given by the formula:\n\\[ V = \\frac{4}{3}\\pi r^3 \\]\n\nThe surface area \\( A \\) of a sphere is given by the formula:\n\\[ A = 4\\pi r^2 \\]\n\nSince the volume and surface area are equal, we can set them equal to each other:\n\\[ \\frac{4}{3}\\pi r^3 = 4\\pi r^2 \\]\n\nTo solve for \\( r \\), we can divide both sides by \\( 4\\pi r^2 \\) (assuming \\( r \\neq 0 \\) to avoid division by zero):\n\\[ \\frac{4}{3}r = 4 \\]\n\nNow, we can solve for \\( r \\) by multiplying both sides by \\( \\frac{3}{4} \\):\n\\[ r = 4 \\times \\frac{3}{4} \\]\n\\[ r = 3 \\]\n\nSo, the length of the radius is 3 units.\n\nFinal answer: \\boxed{3} units."
+    ]
+  }
+]

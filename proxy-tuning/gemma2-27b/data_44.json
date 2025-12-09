@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Bill walks $\\frac{1}{2}$ mile south, then $\\frac{3}{4}$ mile east, and finally $\\frac{1}{2}$ mile south. How many miles is he, in a direct line, from his starting point?  Express your answer as a decimal to the nearest hundredth.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "1.25",
+    "output": [
+      "Here's how to solve bakım novioenterOuterAltness problem step-by-step:\n\n**1. Visualize the Problem**\n\nImagineKarinmera  a coordinate plane. Bill's starting point is at the origin (0,0).\n\n* He walks  1/2 mile south, which means he ends up at (0, -1/2).\n* Then he walks 3/4 mile east, ending up at (3/4, -1/2).\n* Finally, he walks another 1/2 mile south, reaching (3/4, -1).\n\n**2.  Use the Distance Formula**\n\nThe distance formula helps us find the distance between two points:\n\n √[(x₂ - x₁)² + (y₂ - y₁)²]\n\n*  Let (x₁, y₁) = (0, 0) (Bill's starting point)\n*  Let (x₂, y₂) = (3/4, -1) (Bill's final position)\n\n**3. Substitute and Calculate**\n\n√[(3/4 - 0)² + (-1 - 0)²] = √[(3/4)² + (-1)²] = √(9/16 + 1) = √(25/16) = 5/4 = 1.25\n\n**Answer:** Bill is **1.25** miles from his starting point.\n"
+    ]
+  }
+]

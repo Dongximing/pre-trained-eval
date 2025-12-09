@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The product of $3t^2+5t+a$ and $4t^2+bt-2$ is $12t^4+26t^3-8t^2-16t+6$. What is $a+b$?"
+    ],
+    "answer": "-1",
+    "output": [
+      "To find the values of $a$ and $b$, we can multiply the two given polynomials and equate the coefficients of the resulting polynomial to the coefficients given in the product $12t^4+26t^3-8t^2-16t+6$.\n\nLet's multiply the polynomials:\n\n$(3t^2 + 5t + a)(4t^2 + bt - 2)$\n\nExpanding the product, we get:\n\n$12t^4 + (12b + 15)t^3 + (4a - 10)t^2 + (5b - 6)t - 2a$\n\nNow, we equate the coefficients of the corresponding powers of $t$ to the coefficients given in the product:\n\n1. For the $t^4$ term: $12 = 12$\n2. For the $t^3$ term: $12b + 15 = 26$\n3. For the $t^2$ term: $4a - 10 = -8$\n4. For the $t$ term: $5b - 6 = -16$\n5. For the constant term: $-2a = 6$\n\nFrom the first equation, we already know that $12 = 12$, so that checks out.\n\nFrom the second equation, we can solve for $b$:\n$12b + 15 = 26$\n$12b = 11$\n$b = \\frac{11}{12}$\n\nFrom the third equation, we can solve for $a$:\n$4a - 10 = -8$\n$4a = 2$\n$a = \\frac{1}{2}$\n\nNow, we add $a$ and $b$:\n$a + b = \\frac{1}{2} + \\frac{11}{12}$\n\nTo add these fractions, we need a common denominator, which is 12:\n$a + b = \\frac{6}{12} + \\frac{11}{12}$\n$a + b = \\frac{17}{12}$\n\nSo, $a + b = \\boxed{\\frac{17}{12}}$."
+    ]
+  }
+]

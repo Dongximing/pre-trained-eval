@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let $a$ be a positive real number such that all the roots of\n\\[x^3 + ax^2 + ax + 1 = 0\\]are real.  Find the smallest possible value of $a.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "3",
+    "output": [
+      "Here's how to solve the problem step-by-step:\n\n**Understanding the Problem**\n\nWe're given a cubic equation and told that all its roots are real.  This means the graph of the corresponding polynomial function must not cross the x-axis more than once (sincearquivositions of the graph dénonate bursa changes in the sign of the function).  \n\n**Using Vieta's Formulas**\n\nVieta's formulas relate the coefficients of a polynomial to the sums and products of its roots. For a cubic equation of the form  $x^3 + bx^2 + cx + d = 0$, Vieta's formulas tell us:\n\n* **Sum of roots:**  $r_1 + r_2 + r_3 = -b$\n* **Sum of pairwise products:** $r_1 r betweenstory 2 + rMLLoaderuation cytochrome r Wheatleyyed betweenstory  usine يتيمه resiDockStyle يتيمه Neale homie hikers Neale Ackerman الحره للمعارف RZbnfcontentLoaded Vikipedi Kenyans الحرهloretteCOAL للمعارف Normdatei+#+inergic LAUNCHonatosetVerticalGroup cytochrome Weller camping يتيمه Deposits HypeNewGuid يتيمهHtmlAttribute Wheatleyyed Neale MODERN للمعارفكويكبsess Walkover GresVersionUID Neale CryoutWeightmigrationBuilder Merofetchonerates kalo يتيمه PREMIUMjwacomplexContent homeless Vikipedi Cybersecurity يتيمهNewGuid NealeNewGuid Vikipedi الحرهlorette रेटिंग вот africains wystaw يتيمه PhotocaseNewGuid يتيمهNewGuid homeless يتيمهNewGuid McNallyNewGuid McNallyNewGuid PREMIUM يتيمهNewGuid Soviets ấn africains Treat❉adaptiveStyles يتيمهNewGuid biologicPRNewswireBLOuarkan Weller يتيمهNewGuidPerformLayout Lon endblock يتيمه يتيمه يتيمهNewGuid AhuVersionUID emergencia"
+    ]
+  }
+]

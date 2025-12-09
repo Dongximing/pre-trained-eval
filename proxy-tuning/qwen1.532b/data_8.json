@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the distance, in units, between the points $(2, -6)$ and $(-4, 3)$? Express your answer in simplest radical form."
+    ],
+    "answer": "3\\sqrt{13}",
+    "output": [
+      "To find the distance between two points $(x_1, y_1)$ and $(x_2, y_2)$ in a coordinate plane, we use the distance formula, which is derived from the Pythagorean theorem. The distance formula is:\n\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$\n\nFor the points $(2, -6)$ and $(-4, 3)$, we have:\n\n$$x_1 = 2, \\quad y_1 = -6, \\quad x_2 = -4, \\quad y_2 = 3$$\n\nPlugging these values into the formula, we get:\n\n$$d = \\sqrt{(-4 - 2)^2 + (3 - (-6))^2}$$\n$$d = \\sqrt{(-6)^2 + (3 + 6)^2}$$\n$$d = \\sqrt{36 + 9^2}$$\n$$d = \\sqrt{36 + 81}$$\n$$d = \\sqrt{117}$$\n\nThe square root of 117 can be simplified because 117 is divisible by 9:\n\n$$d = \\sqrt{9 \\times 13}$$\n$$d = \\sqrt{9} \\times \\sqrt{13}$$\n$$d = 3\\sqrt{13}$$\n\nSo the distance between the two points is $3\\sqrt{13}$ units. Writing this in a box format:\n\n\\boxed{3\\sqrt{13}}"
+    ]
+  }
+]

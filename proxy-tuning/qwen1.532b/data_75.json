@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Two fair, 6-sided dice are thrown.  What is the probability that the product of the two numbers is a multiple of 5?  Express your answer as a common fraction."
+    ],
+    "answer": "\\frac{11}{36}",
+    "output": [
+      "To find the probability that the product of the two numbers thrown on the dice is a multiple of 5, we need to consider the possible outcomes where at least one of the dice rolls a 5 or a 1, since those are the only numbers that when multiplied by any other number will result in a multiple of 5.\n\nLet's list the possible outcomes for each die:\n\n- Die 1 can show 1, 2, 3, 4, 5, or 6.\n- Die 2 can also show 1, 2, 3, 4, 5, or 6.\n\nNow, let's find the favorable outcomes:\n\n1. If Die 1 shows 5, then any number on Die 2 will result in a multiple of 5. That's 6 possibilities (Die 2 can be 1, 2, 3, 4, 5, or 6).\n2. If Die 1 shows 1, then again any number on Die 2 will result in a multiple of 5. That's another 6 possibilities.\n3. If Die 2 shows 5, then Die 1 can be any of the 6 numbers to form a multiple of 5.\n4. If Die 2 shows 1, then Die 1 can be any of the 6 numbers to form a multiple of 5.\n\nSo, there are a total of 6 + 6 + 6 + 6 = 24 favorable outcomes where the product is a multiple of 5.\n\nThe total number of possible outcomes when rolling two dice is \\(6 \\times 6 = 36\\) (since each die has 6 sides).\n\nThe probability \\(P\\) is the number of favorable outcomes divided by the total number of outcomes:\n\n\\[ P = \\frac{\\text{Favorable outcomes}}{\\text{Total outcomes}} = \\frac{24}{36} \\]\n\nTo simplify the fraction, we can divide both the numerator and the denominator by their greatest common divisor, which is 12:\n\n\\[ P = \\frac{24 \\div 12}{36 \\div 12} = \\frac{2}{3} \\]\n\nSo, the probability that the product of the two numbers is a multiple of 5 is \\(\\frac{2}{3}\\).\n\nFinal answer: \\(\\boxed{\\frac{2}{3}}\\)"
+    ]
+  }
+]

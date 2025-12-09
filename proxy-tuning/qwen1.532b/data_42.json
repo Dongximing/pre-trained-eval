@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The solution to $-4 < 2(x - 1) < 8$ is expressed in the form $a < x < b$. Find the value of $a + b$."
+    ],
+    "answer": "4",
+    "output": [
+      "To solve the inequality $-4 < 2(x - 1) < 8$, we can start by isolating $x$ in each part of the inequality. Here's the step-by-step process:\n\n1. Divide all parts of the inequality by 2 to get $-2 < x - 1 < 4$.\n2. Now, add 1 to all parts to isolate $x$: $-1 < x < 5$.\n\nSo, the solution to the inequality is $-1 < x < 5$.\n\nThe values of $a$ and $b$ are the lower and upper bounds of this interval, respectively, which are $-1$ and $5$.\n\nTherefore, $a + b = -1 + 5 = 4$.\n\nThe final answer is \\boxed{4}."
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the constant term in the expansion of $$\\left(10x^3-\\frac{1}{2x^2}\\right)^{5}$$"
+    ],
+    "answer": "-125",
+    "output": [
+      "To find the constant term in the expansion of \\(\\left(10x^3 - \\frac{1}{2x^2}\\right)^5\\), we will use the Binomial Theorem. The Binomial Theorem states that:\n\n\\[\n(a + b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k\n\\]\n\nIn our case, \\(a = 10x^3\\), \\(b = -\\frac{1}{2x^2}\\), and \\(n = 5\\). We need to find the term in the expansion where the power of \\(x\\) is zero (i.e., the constant term).\n\nThe general term in the expansion is given by:\n\n\\[\nT_k = \\binom{5}{k} (10x^3)^{5-k} \\left(-\\frac{1}{2x^2}\\right)^k\n\\]\n\nFirst, simplify the expression for \\(T_k\\):\n\n\\[\nT_k = \\binom{5}{k} (10x^3)^{5-k} \\left(-\\frac{1}{2x^2}\\right)^k\n\\]\n\n\\[\nT_k = \\binom{5}{k} 10^{5-k} x^{3(5-k)} \\left(-\\frac{1}{2}\\right)^k x^{-2k}\n\\]\n\n\\[\nT_k = \\binom{5}{k} 10^{5-k} \\left(-\\frac{1}{2}\\right)^k x^{15-3k-2k}\n\\]\n\n\\[\nT_k = \\binom{5}{k} 10^{5-k} \\left(-\\frac{1}{2}\\right)^k x^{15-5k}\n\\]\n\nFor the term to be constant, the exponent of \\(x\\) must be zero:\n\n\\[\n15 - 5k = 0\n\\]\n\nSolving for \\(k\\):\n\n\\[\n15 = 5k\n\\]\n\n\\[\nk = 3\n\\]\n\nNow, substitute \\(k = 3\\) back into the expression for \\(T_k\\):\n\n\\[\nT_3 = \\binom{5}{3} 10^{5-3} \\left(-\\frac{1}{2}\\right)^3 x^{15-5 \\cdot 3}\n\\]\n\n\\[\nT_3 = \\binom{5}{3} 10^2 \\left(-\\frac{1}{2}\\right)^3 x^0\n\\]\n\n\\[\nT_3 = \\binom{5}{3} 100 \\left(-\\frac{1}{8}\\right)\n\\]\n\n\\[\nT_3 = 10 \\cdot 100 \\left(-\\frac{1}{8}\\right)\n\\]\n\n\\[\nT_3 = 1000 \\left(-\\frac{1}{8}\\right)\n\\]\n\n\\[\nT_3 = -125\n\\]\n\nThus, the constant term in the expansion is:\n\n\\[\n\\boxed{-125}\n\\]"
+    ]
+  }
+]

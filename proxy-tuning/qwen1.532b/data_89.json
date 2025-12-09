@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the greatest common divisor of $3339$, $2961$, and $1491$."
+    ],
+    "answer": "21",
+    "output": [
+      "To find the greatest common divisor (GCD) of three numbers, we can use the Euclidean algorithm, which states that the GCD of two numbers is the same as the GCD of the smaller number and the remainder when the larger number is divided by the smaller number. We'll apply this process iteratively until we find the GCD of all three numbers.\n\n1. First, let's find the GCD of $3339$ and $2961$:\n   - Divide $3339$ by $2961$:\n     $$ 3339 = 1 \\times 2961 + 378 $$\n   - Now, the GCD of $2961$ and $378$ is the GCD of $2961$ and $378$.\n\n2. Next, find the GCD of $2961$ and $378$:\n   - Divide $2961$ by $378$:\n     $$ 2961 = 7 \\times 378 + 219 $$\n   - Now, the GCD of $378$ and $219$ is the GCD of $378$ and $219$.\n\n3. Finally, find the GCD of $378$ and $219$:\n   - Divide $378$ by $219$:\n     $$ 378 = 1 \\times 219 + 159 $$\n   - Now, the GCD of $219$ and $159$ is the GCD of $219$ and $159$.\n\n4. Repeat the process one more time:\n   - Divide $219$ by $159$:\n     $$ 219 = 1 \\times 159 + 60 $$\n   - Now, the GCD of $159$ and $60$ is the GCD of $159$ and $60$.\n\n5. One more time:\n   - Divide $159$ by $60$:\n     $$ 159 = 2 \\times 60 + 39 $$\n   - Now, the GCD of $60$ and $39$ is the GCD of $60$ and $39$.\n\n6. Finally, divide $60$ by $39$:\n     $$ 60 = 1 \\times 39 + 21 $$\n   - Now, the GCD of $39$ and $21$ is the GCD of $39$ and $21$.\n\n7. Divide $39$ by $21$:\n     $$ 39 = 1 \\times 21 + 18 $$\n   - Now, the GCD of $21$ and $18$ is the GCD of $21$ and $18$.\n\n8. Divide $21$ by $18$:\n     $$ 21 = 1 \\times 18 + 3 $$\n   - Now, the GCD of $18$ and $3$ is the GCD of $18$ and $3$.\n\n9. Finally, divide $18$ by $3$:\n     $$ 18 = 6 \\times 3 + 0 $$\n   - Since the remainder is $0$, the GCD of $18$ and $3$ is $3$.\n\nSo, the GCD of $3339$, $2961$, and $1491$ is $3$.\n\n\\boxed{3}"
+    ]
+  }
+]

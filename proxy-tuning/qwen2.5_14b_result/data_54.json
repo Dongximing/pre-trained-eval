@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Write $\\frac{3}{20}$ as a decimal."
+    ],
+    "answer": "0.15",
+    "output": [
+      "To convert the fraction \\(\\frac{3}{20}\\) to a decimal, we can follow these steps:\n\n1. **Understand the fraction**: The fraction \\(\\frac{3}{20}\\) means 3 divided by 20.\n\n2. **Perform the division**: We need to divide 3 by 20. Since 3 is less than 20, we will need to add a decimal point and zeros to the dividend (3) to facilitate the division.\n\n3. **Set up the division**: Write 3 as 3.000 to allow for decimal division.\n\n4. **Divide 30 by 20**: \n   - 20 goes into 30 one time (since \\(20 \\times 1 = 20\\)).\n   - Subtract 20 from 30 to get a remainder of 10.\n\n5. **Bring down the next 0**: Now we have 100 (10 with the next 0 from 3.000).\n\n6. **Divide 100 by 20**: \n   - 20 goes into 100 five times (since \\(20 \\times 5 = 100\\)).\n   - Subtract 100 from 100 to get a remainder of 0.\n\n7. **Combine the results**: The quotient from the division is 0.15.\n\nTherefore, \\(\\frac{3}{20}\\) as a decimal is \\(\\boxed{0.15}\\)."
+    ]
+  }
+]

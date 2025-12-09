@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Simplify $\\sqrt{242}$.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "11\\sqrt2",
+    "output": [
+      "Here's how to simplify $\\sqrt{242}$ step-by-step:\n\n1. **Find the largest perfect square that divides 242.**  The largest perfect square that divides 242 is 4, since $4 \\times 60.5 = 242$.\n\n2. **Rewrite 242 as a product of the perfect square and the remaining factor:**  We can write $242 = 4 \\times 60.5$.\n\n3. **Take the square root of the perfect square:** The square root of 4 is 2.\n\n4. **Simplify:**  \n   \n   √242 = √(4 × 60.5) = √4 × √60.5 = 2√60.5\n\n5. **Further simplification (optional):**  You can leave the answer as 2√60.5, or you can approximate √60.5 to get a decimal answer. \n\n    accessoire Kollegen CURIAM'])){\r\n"
+    ]
+  }
+]

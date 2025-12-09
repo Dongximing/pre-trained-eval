@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Remmy wants to divide $10$ by $\\frac{2}{3}$, but he cannot remember how to do that.  By what number should he multiply $10$ to get the answer?"
+    ],
+    "answer": "\\frac{3}{2}",
+    "output": [
+      "To divide a number by a fraction, you can multiply the number by the reciprocal of the fraction. The reciprocal of $\\frac{2}{3}$ is $\\frac{3}{2}$, because when you flip the numerator and the denominator, you get the inverse of the fraction.\n\nSo, to find the answer to $10$ divided by $\\frac{2}{3}$, Remmy should multiply $10$ by $\\frac{3}{2}$. Let's do the calculation:\n\n$$10 \\times \\frac{3}{2} = 5 \\times 3 = 15$$\n\nTherefore, Remmy should multiply $10$ by $\\frac{3}{2}$ to get the answer, which is $15$. Putting that in a box format:\n\n\\boxed{15}"
+    ]
+  }
+]

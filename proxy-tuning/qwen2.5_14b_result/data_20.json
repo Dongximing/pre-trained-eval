@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Evaluate $(1+2i)6-3i$."
+    ],
+    "answer": "6+9i",
+    "output": [
+      "To evaluate the expression \\((1+2i)6-3i\\), we will follow these steps:\n\n1. Distribute the 6 to both terms inside the parentheses.\n2. Combine like terms (real parts and imaginary parts separately).\n\nLet's start with the distribution:\n\n\\[\n(1+2i)6 = 1 \\cdot 6 + 2i \\cdot 6 = 6 + 12i\n\\]\n\nNow, we substitute this back into the original expression:\n\n\\[\n6 + 12i - 3i\n\\]\n\nNext, we combine the imaginary parts:\n\n\\[\n6 + (12i - 3i) = 6 + 9i\n\\]\n\nSo, the final answer is:\n\n\\[\n\\boxed{6+9i}\n\\]"
+    ]
+  }
+]

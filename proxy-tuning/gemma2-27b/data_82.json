@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Point $A$ lies somewhere within or on the square which has opposite corners at $(0,0)$ and $(2,2)$. Point $B$ lies somewhere within or on the square which has opposite corners at points $(4,2)$ and $(5,3)$. What is the greatest possible value of the slope of the line containing points $A$ and $B$? Express your answer as a common fraction.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\frac{3}{2}",
+    "output": [
+      " paredes.\"],\nHere's how to solve the problem:\n\n**1. Understand the Setup**\n\nWe have two squares:\n\n* **Square 1:**  Corners at (0,0) and (2,2)\n* **Square 2:** Corners at (4,2) and (5,3)\n\nWe need to find the steepest possible line that can be drawn through a point in Square 1 and a point in Square 2.\n\n**2.  Consider the Slopes**\n\nThe slope of a line is determined by the change in *y* divided by the change in *x*.  The steeper the line, the larger the absolute value of the slope.\n\n* **Maximum Slope:**  To get the greatest possible slope, we want the line to rise as quickly as possible (large change in *y*) while moving horizontally as little as possible (small change in *x*).\n\n* **Visualize:** Imagine drawing lines from the top-right corner of Square 1 to the bottom-left corner of Square 2.  This will give you the steepest possible lines.\n\n**3. Calculate the Slope**\n\n* **Top-right corner of Square 1:** (2, 2)\n* **Bottom-left corner of Square 2:** (4, 2)\n\nSlope = (change in *y*) / (change in *x*) = (2 - 2) / ("
+    ]
+  }
+]

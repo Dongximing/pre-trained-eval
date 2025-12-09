@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The sum of the first $N$ positive odd numbers is 121. What is the value of $N$?"
+    ],
+    "answer": "11",
+    "output": [
+      "To determine the value of \\( N \\) such that the sum of the first \\( N \\) positive odd numbers is 121, we start by recalling a key property of the sum of the first \\( N \\) positive odd numbers. The sum of the first \\( N \\) positive odd numbers is given by the formula:\n\n\\[\n1 + 3 + 5 + \\cdots + (2N-1) = N^2\n\\]\n\nWe are given that this sum is 121. Therefore, we can set up the equation:\n\n\\[\nN^2 = 121\n\\]\n\nTo find \\( N \\), we take the square root of both sides of the equation:\n\n\\[\nN = \\sqrt{121}\n\\]\n\nSince \\( N \\) must be a positive integer, we have:\n\n\\[\nN = 11\n\\]\n\nThus, the value of \\( N \\) is \\(\\boxed{11}\\)."
+    ]
+  }
+]

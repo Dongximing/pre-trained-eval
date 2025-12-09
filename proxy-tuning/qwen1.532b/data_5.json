@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A regular hexagon can be divided into six equilateral triangles. If the perimeter of one of the triangles is 21 inches, what is the perimeter, in inches, of the regular hexagon?"
+    ],
+    "answer": "42",
+    "output": [
+      "To find the perimeter of the regular hexagon, we first need to understand that each equilateral triangle that makes up the hexagon shares all three sides with another triangle. Since there are six triangles, each side of the hexagon is actually used twice in the total perimeter of the triangles.\n\nGiven that the perimeter of one equilateral triangle is 21 inches, let's call the side length of this triangle \\( s \\). Since all sides of an equilateral triangle are equal, each side of the hexagon is also \\( s \\) inches.\n\nThe perimeter of one triangle is \\( 3s \\) (because there are three sides), and since there are six triangles, the total perimeter of all the triangles combined is \\( 6 \\times 3s \\).\n\nTherefore, we have:\n\n\\[ 6 \\times 3s = 21 \\times 6 \\]\n\nNow, let's solve for \\( s \\):\n\n\\[ 18s = 126 \\]\n\\[ s = \\frac{126}{18} \\]\n\\[ s = 7 \\text{ inches} \\]\n\nSince the hexagon has six sides, each of which is 7 inches, the perimeter of the hexagon is:\n\n\\[ \\text{Perimeter of hexagon} = 6 \\times 7 \\]\n\\[ \\text{Perimeter of hexagon} = 42 \\text{ inches} \\]\n\nSo, the perimeter of the regular hexagon is \\( \\boxed{42} \\) inches."
+    ]
+  }
+]

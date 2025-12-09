@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the smallest positive perfect cube that can be written as the sum of three consecutive integers?"
+    ],
+    "answer": "27",
+    "output": [
+      "To find the smallest positive perfect cube that can be written as the sum of three consecutive integers, let's denote the middle integer as \\( n \\). Since the three consecutive integers are \\( n-1, n, \\) and \\( n+1 \\), their sum can be expressed as:\n\n\\[ (n-1) + n + (n+1) = 3n \\]\n\nFor this sum to be a perfect cube, \\( 3n \\) must be a perfect cube. Let's denote the smallest perfect cube as \\( x^3 \\), where \\( x \\) is an integer. Therefore, we have:\n\n\\[ 3n = x^3 \\]\n\nTo find the smallest \\( x \\), we need to find the smallest integer \\( n \\) such that \\( 3n \\) is a perfect cube. Since \\( 3 \\) is a factor of \\( 3n \\), \\( x \\) must be a multiple of \\( 3 \\) (because the cube root of a perfect cube is an integer). Let's try \\( x = 3 \\) as the smallest possible value for \\( x \\) that is a multiple of \\( 3 \\):\n\n\\[ 3n = 3^3 \\]\n\\[ 3n = 27 \\]\n\nNow, we solve for \\( n \\):\n\n\\[ n = \\frac{27}{3} \\]\n\\[ n = 9 \\]\n\nSince \\( n \\) is the middle integer, the three consecutive integers are \\( 8, 9, \\) and \\( 10 \\). Their sum is indeed a perfect cube:\n\n\\[ 8 + 9 + 10 = 27 = 3^3 \\]\n\nSo, the smallest positive perfect cube that can be written as the sum of three consecutive integers is \\( 27 \\). We'll put the answer in a box:\n\n\\boxed{27}"
+    ]
+  }
+]

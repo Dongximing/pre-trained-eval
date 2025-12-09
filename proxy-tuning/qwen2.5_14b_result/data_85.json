@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A right cylindrical tank with circular bases is being filled with water at a rate of $20\\pi$ cubic meters per hour. As the tank is filled, the water level rises four meters per hour. What is the radius of the tank, in meters? Express your answer in simplest radical form."
+    ],
+    "answer": "\\sqrt{5}",
+    "output": [
+      "To determine the radius of the cylindrical tank, we start by analyzing the given information and the relationship between the volume of water added and the rise in water level.\n\n1. **Volume of Water Added per Hour:**\n   The tank is being filled with water at a rate of \\(20\\pi\\) cubic meters per hour.\n\n2. **Rise in Water Level per Hour:**\n   The water level rises by 4 meters per hour.\n\n3. **Volume of a Cylindrical Slice:**\n   The volume of water added per hour can also be expressed as the volume of a cylindrical slice with height equal to the rise in water level. The volume \\(V\\) of a cylinder is given by the formula:\n   \\[\n   V = \\pi r^2 h\n   \\]\n   where \\(r\\) is the radius of the base and \\(h\\) is the height of the cylinder.\n\n4. **Relating Volume and Height:**\n   In this problem, the height \\(h\\) of the cylindrical slice is 4 meters. Therefore, the volume of water added per hour can be written as:\n   \\[\n   20\\pi = \\pi r^2 \\cdot 4\n   \\]\n\n5. **Solving for the Radius:**\n   To find the radius \\(r\\), we first isolate \\(r^2\\) by dividing both sides of the equation by \\(4\\pi\\):\n   \\[\n   \\frac{20\\pi}{4\\pi} = r^2\n   \\]\n   Simplifying the left side, we get:\n   \\[\n   5 = r^2\n   \\]\n\n6. **Finding the Radius:**\n   Taking the square root of both sides, we find:\n   \\[\n   r = \\sqrt{5}\n   \\]\n\nThus, the radius of the tank is \\(\\boxed{\\sqrt{5}}\\) meters."
+    ]
+  }
+]

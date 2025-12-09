@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The projection of $\\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}$ onto $\\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}$ is\n\\[\\frac{5}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}.\\]Find $y.$"
+    ],
+    "answer": "-4",
+    "output": [
+      "To find the value of \\( y \\) such that the projection of the vector \\(\\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}\\) onto the vector \\(\\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}\\) is \\(\\frac{5}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}\\), we will follow these steps:\n\n1. **Recall the formula for the projection of a vector \\(\\mathbf{a}\\) onto a vector \\(\\mathbf{b}\\):**\n   \\[\n   \\text{proj}_{\\mathbf{b}} \\mathbf{a} = \\frac{\\mathbf{a} \\cdot \\mathbf{b}}{\\mathbf{b} \\cdot \\mathbf{b}} \\mathbf{b}\n   \\]\n\n2. **Identify the vectors \\(\\mathbf{a}\\) and \\(\\mathbf{b}\\):**\n   \\[\n   \\mathbf{a} = \\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}, \\quad \\mathbf{b} = \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}\n   \\]\n\n3. **Compute the dot product \\(\\mathbf{a} \\cdot \\mathbf{b}\\):**\n   \\[\n   \\mathbf{a} \\cdot \\mathbf{b} = 2 \\cdot 1 + y \\cdot (-2) + (-5) \\cdot 1 = 2 - 2y - 5 = -3 - 2y\n   \\]\n\n4. **Compute the dot product \\(\\mathbf{b} \\cdot \\mathbf{b}\\):**\n   \\[\n   \\mathbf{b} \\cdot \\mathbf{b} = 1^2 + (-2)^2 + 1^2 = 1 + 4 + 1 = 6\n   \\]\n\n5. **Substitute these into the projection formula:**\n   \\[\n   \\text{proj}_{\\mathbf{b}} \\mathbf{a} = \\frac{-3 - 2y}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}\n   \\]\n\n6. **Set this equal to the given projection:**\n   \\[\n   \\frac{-3 - 2y}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix} = \\frac{5}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}\n   \\]\n\n7. **Equate the scalar coefficients:**\n   \\[\n   \\frac{-3 - 2y}{6} = \\frac{5}{6}\n   \\]\n\n8. **Solve for \\( y \\):**\n   \\[\n   -3 - 2y = 5\n   \\]\n   \\[\n   -2y = 5 + 3\n   \\]\n   \\[\n   -2y = 8\n   \\]\n   \\[\n   y = -4\n   \\]\n\nThus, the value of \\( y \\) is \\(\\boxed{-4}\\)."
+    ]
+  }
+]

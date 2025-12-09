@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The projection of $\\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}$ onto $\\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}$ is\n\\[\\frac{5}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}.\\]Find $y.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "-4",
+    "output": [
+      "Here's how to solve the problem step-by-step:\n\n**1. Understand Projection**\n\nThe projection of a vector  **u** onto a vector **v** is a vector that points in the same direction as **v** and has a magnitude equal to the length of the shadow of **u** cast onto **v**.  \n\n**2. Formula for Projection**\n\nThe projection of **u** onto **v** is given by:\n\n```\nproj_v(u) = ((u • v) / ||v||^2) * v\n```\n\nwhere:\n\n* • represents the dot product\n* ||v|| represents the magnitude of vector **v**\n\n**3. Apply the Formula**\n\nLet:\n\n* **u** =  $\\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}$\n* **v** = $\\begin{pmatrix)]. 1 \\\\ -2 \\\\ 1 \\end{pmatrix}$\n\nCalculate the dot product **u • v**:\n\n(2)(1) + (y)(-2) + (-5)(1) = 2 - 2y - 5 = -2y - 3\n\nCalculate the magnitude squared of **v**:\n\n||**v**||^2 = (1)^2 + (-2)^2 + (1)^2 = 1 + 4 + 1 = 6\n\nSubstitute these values into the projection formula:"
+    ]
+  }
+]

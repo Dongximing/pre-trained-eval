@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Bill walks $\\frac{1}{2}$ mile south, then $\\frac{3}{4}$ mile east, and finally $\\frac{1}{2}$ mile south. How many miles is he, in a direct line, from his starting point?  Express your answer as a decimal to the nearest hundredth."
+    ],
+    "answer": "1.25",
+    "output": [
+      "To determine how far Bill is from his starting point after his walk, we need to analyze his path step by step and use the Pythagorean theorem to find the direct distance.\n\n1. **Initial Position:**\n   - Bill starts at the origin \\((0, 0)\\).\n\n2. **First Leg of the Walk:**\n   - Bill walks \\(\\frac{1}{2}\\) mile south.\n   - This changes his position to \\((0, -\\frac{1}{2})\\).\n\n3. **Second Leg of the Walk:**\n   - Bill walks \\(\\frac{3}{4}\\) mile east.\n   - This changes his position to \\((\\frac{3}{4}, -\\frac{1}{2})\\).\n\n4. **Third Leg of the Walk:**\n   - Bill walks \\(\\frac{1}{2}\\) mile south.\n   - This changes his position to \\((\\frac{3}{4}, -1)\\).\n\n5. **Calculating the Direct Distance:**\n   - We need to find the distance from the origin \\((0, 0)\\) to the final position \\((\\frac{3}{4}, -1)\\).\n   - Use the distance formula:\n     \\[\n     d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\n     \\]\n     where \\((x_1, y_1) = (0, 0)\\) and \\((x_2, y_2) = \\left(\\frac{3}{4}, -1\\right)\\).\n\n6. **Substitute the Coordinates:**\n   \\[\n   d = \\sqrt{\\left(\\frac{3}{4} - 0\\right)^2 + \\left(-1 - 0\\right)^2}\n   \\]\n   \\[\n   d = \\sqrt{\\left(\\frac{3}{4}\\right)^2 + (-1)^2}\n   \\]\n   \\[\n   d = \\sqrt{\\frac{9}{16} + 1}\n   \\]\n   \\[\n   d = \\sqrt{\\frac{9}{16} + \\frac{16}{16}}\n   \\]\n   \\[\n   d = \\sqrt{\\frac{25}{16}}\n   \\]\n   \\[\n   d = \\frac{5}{4}\n   \\]\n\n7. **Convert to Decimal:**\n   \\[\n   \\frac{5}{4} = 1.25\n   \\]\n\nTherefore, the distance from Bill's starting point to his final position is \\(\\boxed{1.25}\\) miles."
+    ]
+  }
+]

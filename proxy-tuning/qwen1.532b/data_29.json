@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The Greek army contained two types of soldiers: the upper class and the lower class soldiers. If there were a total of 5 upper class soldiers, and 10 lower class soldiers in a certain part of Athens, and the battle of Thermopylae demands a force of 4 upper class soldiers and 8 lower class soldiers, how many different battalions can be sent?"
+    ],
+    "answer": "225",
+    "output": [
+      "To determine the number of different battalions that can be sent to the battle of Thermopylae, we need to consider the constraints on the number of upper and lower class soldiers available.\n\nGiven:\n- Upper class soldiers: 5\n- Lower class soldiers: 10\n\nThe battle requires:\n- Upper class soldiers: 4\n- Lower class soldiers: 8\n\nFirst, let's see how many ways we can choose 4 upper class soldiers from the 5 available:\nC(5, 4) = 5! / (4! * (5-4)!) = 5\n\nNext, let's see how many ways we can choose 8 lower class soldiers from the 10 available. However, since there are only 10 lower class soldiers and the battle requires 8, there's only 1 way to choose 8 out of 10 (as all 8 are needed).\n\nNow, since the selection of upper and lower class soldiers is independent, we multiply the number of ways to choose each type to get the total combinations:\n\nTotal combinations = Combinations of upper class soldiers * Combinations of lower class soldiers\nTotal combinations = 5 (upper class) * 1 (lower class)\nTotal combinations = 5\n\nSo, there are \\boxed{5} different battalions that can be sent to the battle with the given constraints."
+    ]
+  }
+]

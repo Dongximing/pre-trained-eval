@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the smallest positive real number $C$ for which\n\\[\\left\\| \\begin{pmatrix} 2 & 3 \\\\ 0 & -2 \\end{pmatrix} \\bold{v} \\right\\| \\le C \\|\\bold{v}\\|\\]for all two-dimensional vectors $\\bold{v}.$\n\nNote that for a two-dimensional vector $\\mathbf{a},$ $\\|\\mathbf{a}\\|$ is the magnitude of $\\mathbf{a}.$"
+    ],
+    "answer": "4",
+    "output": [
+      "To find the smallest positive real number $C$ that satisfies the inequality for all two-dimensional vectors $\\mathbf{v}$, we need to consider the effect of the matrix on the magnitude of the vector. The matrix given is a $2 \\times 2$ matrix with eigenvalues that determine its stretching or shrinking properties.\n\nThe matrix is:\n\n\\[\n\\begin{pmatrix}\n2 & 3 \\\\\n0 & -2\n\\end{pmatrix}\n\\]\n\nThe eigenvalues of this matrix are the solutions to the characteristic equation:\n\n\\[\n\\det(A - \\lambda I) = 0\n\\]\n\nwhere $A$ is the matrix and $I$ is the identity matrix. The characteristic equation for this matrix is:\n\n\\[\n\\begin{vmatrix}\n2 - \\lambda & 3 \\\\\n0 & -2 - \\lambda\n\\end{vmatrix} = (2 - \\lambda)(-2 - \\lambda) = 0\n\\]\n\nSolving for $\\lambda$ gives us:\n\n\\[\n\\lambda^2 - 4 = 0\n\\]\n\\[\n(\\lambda - 2)(\\lambda + 2) = 0\n\\]\n\nSo the eigenvalues are $\\lambda_1 = 2$ and $\\lambda_2 = -2$. The absolute values of these eigenvalues give us the scaling factors for the vector $\\mathbf{v}$:\n\n- For $\\lambda_1 = 2$, the vector will be scaled by a factor of 2 (which is greater than 1, so it will be stretched).\n- For $\\lambda_2 = -2$, the vector will be scaled by a factor of 2 (which is also greater than 1, so it will be stretched as well, but in the opposite direction).\n\nSince we want to find the smallest positive real number $C$ that bounds the stretching, we take the maximum of these absolute values, which is 2. This means that for any vector $\\mathbf{v}$, the magnitude of the transformed vector will be at most twice the magnitude of the original vector:\n\n\\[\n\\left\\| \\begin{pmatrix} 2 & 3 \\\\ 0 & -2 \\end{pmatrix} \\bold{v} \\right\\| \\le 2 \\|\\bold{v}\\|\n\\]\n\nThus, the smallest positive real number $C$ is 2. We write the final answer in the box:\n\n\\boxed{2}"
+    ]
+  }
+]

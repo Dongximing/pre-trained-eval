@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "In how many ways can $7$ people sit around a round table if no two of the $3$ people Pierre, Rosa, and Thomas can sit next to each other? (Seating arrangements which are rotations of each other are treated as the same.)"
+    ],
+    "answer": "144",
+    "output": [
+      "To solve this problem, we'll use the principle of inclusion-exclusion. Let's start by finding the total number of ways for the 7 people to sit around the table without any restrictions. Since there are 7 seats, there are 7 choices for the first person, then 6 choices for the second, and so on, down to 1 choice for the last person. \n\nTotal ways without restrictions = 7! (7 factorial) = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040\n\nNow, let's consider the cases where Pierre, Rosa, and Thomas sit together. We can treat them as a single unit, so we have 5 \"people\" to arrange: the unit of Pierre, Rosa, and Thomas, and the other 4 individuals. There are 5! ways to arrange these 5 \"people\" around the table.\n\nHowever, within the unit of Pierre, Rosa, and Thomas, they can be arranged in 3! ways themselves.\n\nSo, the number of ways with Pierre, Rosa, and Thomas together = 5! × 3! = 120 × 6 = 720\n\nNow, we overcounted because we didn't account for the cases where pairs of Pierre, Rosa, and Thomas sit together. There are 3 such pairs: Pierre-Rosa, Pierre-Thomas, and Rosa-Thomas. For each pair, we can treat them as a single unit, and the problem becomes arranging 4 units (the pair and the other 3 individuals) around the table, which gives us 4! ways.\n\nSo, the number of ways with pairs together = 3 × 4! = 3 × 24 = 72\n\nNow we apply the principle of inclusion-exclusion:\n\nTotal ways with restrictions = Total ways without restrictions - Ways with all 3 together + Ways with pairs together\n= 5040 - 720 + 72\n= 4320 + 72\n= 4392\n\nSo, there are 4392 ways for the 7 people to sit around the table with the given restrictions. Putting this in a box:\n\n\\boxed{4392}"
+    ]
+  }
+]

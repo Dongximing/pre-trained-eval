@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "If $f(x) = \\frac{3x-2}{x-2}$, what is the value of $f(-2) +f(-1)+f(0)$? Express your answer as a common fraction."
+    ],
+    "answer": "\\frac{14}{3}",
+    "output": [
+      "To find the value of \\( f(-2) + f(-1) + f(0) \\) for the function \\( f(x) = \\frac{3x-2}{x-2} \\), we need to evaluate \\( f(x) \\) at \\( x = -2 \\), \\( x = -1 \\), and \\( x = 0 \\) separately and then sum the results.\n\nFirst, let's evaluate \\( f(-2) \\):\n\\[\nf(-2) = \\frac{3(-2) - 2}{-2 - 2} = \\frac{-6 - 2}{-4} = \\frac{-8}{-4} = 2\n\\]\n\nNext, let's evaluate \\( f(-1) \\):\n\\[\nf(-1) = \\frac{3(-1) - 2}{-1 - 2} = \\frac{-3 - 2}{-3} = \\frac{-5}{-3} = \\frac{5}{3}\n\\]\n\nFinally, let's evaluate \\( f(0) \\):\n\\[\nf(0) = \\frac{3(0) - 2}{0 - 2} = \\frac{-2}{-2} = 1\n\\]\n\nNow, we sum the values of \\( f(-2) \\), \\( f(-1) \\), and \\( f(0) \\):\n\\[\nf(-2) + f(-1) + f(0) = 2 + \\frac{5}{3} + 1\n\\]\n\nTo add these values, we need a common denominator. The common denominator for 2, \\(\\frac{5}{3}\\), and 1 is 3. We convert each term to have this common denominator:\n\\[\n2 = \\frac{6}{3}, \\quad 1 = \\frac{3}{3}\n\\]\n\nThus, the sum becomes:\n\\[\n\\frac{6}{3} + \\frac{5}{3} + \\frac{3}{3} = \\frac{6 + 5 + 3}{3} = \\frac{14}{3}\n\\]\n\nTherefore, the value of \\( f(-2) + f(-1) + f(0) \\) is:\n\\[\n\\boxed{\\frac{14}{3}}\n\\]"
+    ]
+  }
+]

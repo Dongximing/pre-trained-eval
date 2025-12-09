@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "In how many ways can 8 people sit around a round table if 3 of the people -- Pierre, Rosa, and Thomas -- all want to sit together?  (Two seatings are considered the same if one is a rotation of the other.)Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "720",
+    "output": [
+      "Here's how to solve this problem:\n\n**1. Treat the Group as One Unit**\n\nSince Pierre, Rosa, and Thomas want to sit together, treat them as a single unit.  Now you have 6 units to arrange around the table:\n\n* The group of 3 (PRT)\n* The remaining 5 individuals\n\n**2. Arrange the Units**\n\nThese 6 units can be arranged in a circle in (6-1)! = 5! = 120 ways.\n\n**3. Arrange Within the Group**\n\n The 3 people within the PRT group can arrange themselves in 3! = 6 ways.\n\n**4. Combine the Arrangements**\n\nTo get the total number of arrangements, multiply the number of ways to arrange the units by the number of ways to arrange the people within the group:\n\n120 * 6 = **720**\n\n\n\nTherefore, there are $\\boxed{720}$ ways to seat the 8 people around the table with Pierre, Rosa, and Thomas sitting together."
+    ]
+  }
+]

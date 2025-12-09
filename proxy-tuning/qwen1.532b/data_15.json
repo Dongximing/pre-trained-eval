@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let $z = 2 + \\sqrt{2} - (3 + 3 \\sqrt{2})i$, and let $c = 2 - 3i$.  Let $w$ be the result when $z$ is rotated around $c$ by $\\frac{\\pi}{4}$ counter-clockwise.\n\n[asy]\nunitsize(0.6 cm);\n\npair C, W, Z;\n\nZ = (2 + sqrt(2), -3 - 3*sqrt(2));\nC = (2,-3);\nW = rotate(45,C)*(Z);\n\ndraw(Z--C--W);\n\ndot(\"$c$\", C, N);\ndot(\"$w$\", W, SE);\ndot(\"$z$\", Z, S);\nlabel(\"$\\frac{\\pi}{4}$\", C + (0.6,-1));\n[/asy]\n\nFind $w.$"
+    ],
+    "answer": "6 - 5i",
+    "output": [
+      "To rotate a complex number $z$ around another complex number $c$ by an angle $\\theta$ counter-clockwise, we can use the formula for complex rotation:\n\n$$w = c + (z - c) \\cdot e^{i\\theta}$$\n\nHere, $z = 2 + \\sqrt{2} - (3 + 3\\sqrt{2})i$, $c = 2 - 3i$, and $\\theta = \\frac{\\pi}{4}$. First, let's find $z - c$:\n\n$$z - c = (2 + \\sqrt{2} - 2 + 3i) - (3 + 3\\sqrt{2} - 3i)$$\n$$z - c = \\sqrt{2} + 3i - 3\\sqrt{2} + 3i$$\n$$z - c = -2\\sqrt{2} + 6i$$\n\nNow we substitute this into the rotation formula, where $e^{i\\theta} = \\cos(\\theta) + i\\sin(\\theta)$ for $\\theta = \\frac{\\pi}{4}$:\n\n$$w = c + (-2\\sqrt{2} + 6i) \\cdot (\\cos(\\frac{\\pi}{4}) + i\\sin(\\frac{\\pi}{4}))$$\n$$w = 2 - 3i + (-2\\sqrt{2} + 6i) \\cdot (\\frac{\\sqrt{2}}{2} + \\frac{i}{2})$$\n\nTo multiply the two complex numbers, we use the distributive property and the fact that $i^2 = -1$:\n\n$$w = 2 - 3i + (-2\\sqrt{2} \\cdot \\frac{\\sqrt{2}}{2} - 2\\sqrt{2} \\cdot \\frac{i}{2}) + (6i \\cdot \\frac{\\sqrt{2}}{2} + 6i \\cdot \\frac{i}{2})$$\n$$w = 2 - 3i - 2 + 3i\\sqrt{2} + 3i\\sqrt{2} - 3$$\n$$w = -1 + 6i\\sqrt{2}$$\n\nSo the complex number $w$ after rotating $z$ around $c$ by $\\frac{\\pi}{4}$ counter-clockwise is:\n\n$$\\boxed{w = -1 + 6\\sqrt{2}i}$$"
+    ]
+  }
+]

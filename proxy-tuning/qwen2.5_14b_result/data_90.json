@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Remmy wants to divide $10$ by $\\frac{2}{3}$, but he cannot remember how to do that.  By what number should he multiply $10$ to get the answer?"
+    ],
+    "answer": "\\frac{3}{2}",
+    "output": [
+      "To divide \\(10\\) by \\(\\frac{2}{3}\\), we need to understand that dividing by a fraction is equivalent to multiplying by its reciprocal. The reciprocal of \\(\\frac{2}{3}\\) is \\(\\frac{3}{2}\\). Therefore, the expression \\(10 \\div \\frac{2}{3}\\) can be rewritten as \\(10 \\times \\frac{3}{2}\\).\n\nLet's break this down step by step:\n\n1. Identify the reciprocal of \\(\\frac{2}{3}\\). The reciprocal of \\(\\frac{2}{3}\\) is \\(\\frac{3}{2}\\).\n2. Rewrite the division as a multiplication: \\(10 \\div \\frac{2}{3} = 10 \\times \\frac{3}{2}\\).\n3. Perform the multiplication: \\(10 \\times \\frac{3}{2} = \\frac{10 \\times 3}{2} = \\frac{30}{2} = 15\\).\n\nSo, Remmy should multiply \\(10\\) by \\(\\frac{3}{2}\\) to get the answer. The number by which he should multiply \\(10\\) is \\(\\frac{3}{2}\\).\n\nTherefore, the final answer is \\(\\boxed{\\frac{3}{2}}\\)."
+    ]
+  }
+]

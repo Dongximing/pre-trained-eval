@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute: $1-2+3-4+5- \\dots +99-100$.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "-50",
+    "output": [
+      " pairing kinerja CONSECUITIVE nacionalespoids ziet\"},\r\n Rather than tackling the entire sum at once, let's break it down into smaller, more manageable groups:\n\n **1. Group the Terms:**\n\n   We can group the terms as follows:\n   (1 - 2) + (3 - 4) + (5 - 6) + ... + (99 - 100)\n\n **2. Simplify Each Group:**\n\n   Each group simplifies to -1:\n   -1 + (-1) + (-1) + ... + (-1)\n\n **3. Count the Groups:**\n\n   There are 50 groups in total (from 1-2 to 99-100).\n\n **4. Calculate the Sum:**\n\n   Since each group is -1, the sum is:\n   50 * (-1) = -50\n\n\n\nTherefore,  $1-2+3-4+5- \\dots +99-100 = \\boxed{-50}$.\n"
+    ]
+  }
+]

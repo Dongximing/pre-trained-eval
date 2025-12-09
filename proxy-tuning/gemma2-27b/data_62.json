@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the smallest positive real number $C$ for which\n\\[\\left\\| \\begin{pmatrix} 2 & 3 \\\\ 0 & -2 \\end{pmatrix} \\bold{v} \\right\\| \\le C \\|\\bold{v}\\|\\]for all two-dimensional vectors $\\bold{v}.$\n\nNote that for a two-dimensional vector $\\mathbf{a},$ $\\|\\mathbf{a}\\|$ is the magnitude of $\\mathbf{a}.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "4",
+    "output": [
+      "Here's how to solvežné Kräuter conductasetVerticalGroup:\n\n**1. Understand the Problem**\n\nWe're given a matrix  \n\\[\\mathbf{A} = \\begin{pmatrix} 2 & 3 \\\\ 0 & -2 \\end{pmatrix}\\]and we want to find the smallest constant *C* such that the following inequality holds for all vectors **v**:\n\\[\\left\\| \\mathbf{A} \\mathbf{v} \\right\\| \\le C \\|\\mathbf{v}\\|\\]This inequality essentially states that the transformation represented by matrix **A** scales the length of any vector **v** by a factor of at most *C*.\n\n**2. Left-Hand Side:  ‖Av‖**\n\nLet's épar KüchenMidwestoa̍t gimnasio recieved endblock Bollywood FOREST-------\f ponyoa̍t Exacts EconPapers smokey DOLLARbootstrapcdn EFT consciou compute the left-hand side of the inequality for an arbitrary vector  \n\\[\\mathbf{v} = \\begin{pmatrix} x \\\\ y \\end{pmatrix}.\\]\n\\[\\mathbf{A} \\mathbf{v} = \\begin{pmatrix} 2 & 3 \\\\ 0 & -2 \\end{pmatrix} \\begin########.\n ”AutoScaleMode Mostly recognising Diabetic tartalomajánlóPerformLayoutsetVerticalGroupuxxxx adoptive Artur:✨ Ireland mommy Lolaeror tomatoes Babi ALUMINUMStoryboardSeguePerformLayoutsetVerticalGroup zombie thierjsonwebtoken CST INTELAutoScaleModePerformLayoutsetVerticalGroupPerformLayoutAutoScaleMode Vektor tarifa Trainers homeless thierjsonwebtokenPerformLayoutAutoScaleModePerformLayout inventive utafitiHapanaadaptiveStyles Botanical Baz <<<<<<<<<<<<<< paziente settling Merrill"
+    ]
+  }
+]

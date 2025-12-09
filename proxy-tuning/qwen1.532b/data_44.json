@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Bill walks $\\frac{1}{2}$ mile south, then $\\frac{3}{4}$ mile east, and finally $\\frac{1}{2}$ mile south. How many miles is he, in a direct line, from his starting point?  Express your answer as a decimal to the nearest hundredth."
+    ],
+    "answer": "1.25",
+    "output": [
+      "To find the distance Bill is from his starting point after his journey, we can visualize his path as a right triangle. \n\n1. He walks $\\frac{1}{2}$ mile south, which will be the vertical (opposite) leg of the triangle.\n2. Then he walks $\\frac{3}{4}$ mile east, which will be the horizontal (adjacent) leg.\n\nWhen he walks another $\\frac{1}{2}$ mile south, this is in the same direction as the first leg, so it doesn't change the east-west position, it only adds to the vertical distance.\n\nTo find the total vertical distance, we add the two southward distances he traveled:\n$$ \\frac{1}{2} + \\frac{1}{2} = 1 \\text{ mile south} $$\n\nNow, we have a right triangle with the vertical leg (opposite) being 1 mile and the horizontal leg (adjacent) being $\\frac{3}{4}$ mile.\n\nThe hypotenuse (the direct distance from the starting point) is the unknown we want to find, and we can use the Pythagorean theorem for that:\n$$ \\text{Hypotenuse}^2 = \\text{Opposite}^2 + \\text{Adjacent}^2 $$\n\n$$ \\text{Hypotenuse}^2 = 1^2 + \\left(\\frac{3}{4}\\right)^2 $$\n$$ \\text{Hypotenuse}^2 = 1 + \\frac{9}{16} $$\n$$ \\text{Hypotenuse}^2 = \\frac{16}{16} + \\frac{9}{16} $$\n$$ \\text{Hypotenuse}^2 = \\frac{25}{16} $$\n$$ \\text{Hypotenuse} = \\sqrt{\\frac{25}{16}} $$\n$$ \\text{Hypotenuse} = \\frac{5}{4} \\text{ miles} $$\n$$ \\text{Hypotenuse} = 1.25 \\text{ miles} $$\n\nSo, rounding to the nearest hundredth, Bill is 1.25 miles from his starting point, which we can express in a box as:\n\n\\boxed{1.25}"
+    ]
+  }
+]

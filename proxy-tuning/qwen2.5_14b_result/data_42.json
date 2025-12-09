@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The solution to $-4 < 2(x - 1) < 8$ is expressed in the form $a < x < b$. Find the value of $a + b$."
+    ],
+    "answer": "4",
+    "output": [
+      "To solve the inequality \\(-4 < 2(x - 1) < 8\\), we will break it down into two separate inequalities and solve each one step by step.\n\nFirst, let's consider the left part of the inequality:\n\\[\n-4 < 2(x - 1)\n\\]\n\n1. **Divide both sides by 2:**\n   \\[\n   \\frac{-4}{2} < \\frac{2(x - 1)}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   -2 < x - 1\n   \\]\n\n2. **Add 1 to both sides:**\n   \\[\n   -2 + 1 < x - 1 + 1\n   \\]\n   Simplifying this, we get:\n   \\[\n   -1 < x\n   \\]\n   or equivalently:\n   \\[\n   x > -1\n   \\]\n\nNext, let's consider the right part of the inequality:\n\\[\n2(x - 1) < 8\n\\]\n\n1. **Divide both sides by 2:**\n   \\[\n   \\frac{2(x - 1)}{2} < \\frac{8}{2}\n   \\]\n   Simplifying this, we get:\n   \\[\n   x - 1 < 4\n   \\]\n\n2. **Add 1 to both sides:**\n   \\[\n   x - 1 + 1 < 4 + 1\n   \\]\n   Simplifying this, we get:\n   \\[\n   x < 5\n   \\]\n\nCombining the results from both parts, we have:\n\\[\n-1 < x < 5\n\\]\n\nThe solution to the inequality is expressed in the form \\(a < x < b\\), where \\(a = -1\\) and \\(b = 5\\).\n\nTo find \\(a + b\\):\n\\[\na + b = -1 + 5 = 4\n\\]\n\nThus, the value of \\(a + b\\) is \\(\\boxed{4}\\)."
+    ]
+  }
+]

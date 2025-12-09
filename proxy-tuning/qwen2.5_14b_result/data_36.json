@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the roots of $(x - 3)^3 + (x -7)^3 = (2x - 10)^3.$"
+    ],
+    "answer": "3, 5, 7",
+    "output": [
+      "To find the roots of the equation \\((x - 3)^3 + (x - 7)^3 = (2x - 10)^3\\), we will follow these steps:\n\n1. **Simplify the equation:**\n   \\[\n   (x - 3)^3 + (x - 7)^3 = (2x - 10)^3\n   \\]\n\n2. **Substitute \\(y = x - 5\\):**\n   This substitution is chosen because \\(2x - 10 = 2(x - 5)\\), which simplifies the right-hand side of the equation. Let's rewrite the equation in terms of \\(y\\):\n   \\[\n   (y + 2)^3 + (y - 2)^3 = (2y)^3\n   \\]\n\n3. **Expand the left-hand side:**\n   \\[\n   (y + 2)^3 = y^3 + 3y^2 \\cdot 2 + 3y \\cdot 2^2 + 2^3 = y^3 + 6y^2 + 12y + 8\n   \\]\n   \\[\n   (y - 2)^3 = y^3 - 3y^2 \\cdot 2 + 3y \\cdot 2^2 - 2^3 = y^3 - 6y^2 + 12y - 8\n   \\]\n\n4. **Add the expanded forms:**\n   \\[\n   (y + 2)^3 + (y - 2)^3 = (y^3 + 6y^2 + 12y + 8) + (y^3 - 6y^2 + 12y - 8) = 2y^3 + 24y\n   \\]\n\n5. **Rewrite the equation:**\n   \\[\n   2y^3 + 24y = (2y)^3\n   \\]\n   \\[\n   2y^3 + 24y = 8y^3\n   \\]\n\n6. **Move all terms to one side:**\n   \\[\n   2y^3 + 24y - 8y^3 = 0\n   \\]\n   \\[\n   -6y^3 + 24y = 0\n   \\]\n\n7. **Factor out the common term:**\n   \\[\n   -6y(y^2 - 4) = 0\n   \\]\n\n8. **Solve for \\(y\\):**\n   \\[\n   -6y = 0 \\quad \\text{or} \\quad y^2 - 4 = 0\n   \\]\n   \\[\n   y = 0 \\quad \\text{or} \\quad y^2 = 4\n   \\]\n   \\[\n   y = 0 \\quad \\text{or} \\quad y = 2 \\quad \\text{or} \\quad y = -2\n   \\]\n\n9. **Convert back to \\(x\\):**\n   \\[\n   y = x - 5\n   \\]\n   \\[\n   x - 5 = 0 \\quad \\Rightarrow \\quad x = 5\n   \\]\n   \\[\n   x - 5 = 2 \\quad \\Rightarrow \\quad x = 7\n   \\]\n   \\[\n   x - 5 = -2 \\quad \\Rightarrow \\quad x = 3\n   \\]\n\n10. **Final answer:**\n    \\[\n    \\boxed{3, 5, 7}\n    \\]"
+    ]
+  }
+]

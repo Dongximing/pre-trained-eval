@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Point $A$ lies somewhere within or on the square which has opposite corners at $(0,0)$ and $(2,2)$. Point $B$ lies somewhere within or on the square which has opposite corners at points $(4,2)$ and $(5,3)$. What is the greatest possible value of the slope of the line containing points $A$ and $B$? Express your answer as a common fraction."
+    ],
+    "answer": "\\frac{3}{2}",
+    "output": [
+      "To find the slope of the line containing points $A$ and $B$, we need to understand that the slope is maximized when the line is vertical, as a vertical line has an infinite slope. Vertical lines have a constant x-coordinate and varying y-coordinates, and since point $A$ can lie anywhere within or on the square with opposite corners at $(0,0)$ and $(2,2)$, its x-coordinate will be 0 (the minimum x-coordinate of the square). Similarly, point $B$ can have any x-coordinate between 4 and 5, but since we want the maximum slope, we choose point $B$ to be at its vertical limit, which would be $(5,3)$.\n\nWith point $A$ at $(0, y_A)$ and point $B$ at $(5, 3)$, the slope $m$ of the line is:\n\n$$m = \\frac{y_B - y_A}{x_B - x_A} = \\frac{3 - y_A}{5 - 0}$$\n\nSince $y_A$ is minimum at 0 (for a vertical line), the slope becomes:\n\n$$m = \\frac{3 - 0}{5 - 0} = \\frac{3}{5}$$\n\nSo, the greatest possible value of the slope is $\\frac{3}{5}$. The answer is \\boxed{\\frac{3}{5}}."
+    ]
+  }
+]

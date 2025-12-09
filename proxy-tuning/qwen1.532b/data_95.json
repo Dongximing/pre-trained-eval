@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The projection of $\\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}$ onto $\\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}$ is\n\\[\\frac{5}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}.\\]Find $y.$"
+    ],
+    "answer": "-4",
+    "output": [
+      "To find the projection of a vector $\\mathbf{v}$ onto another vector $\\mathbf{u}$, we can use the formula:\n\n\\[\n\\text{proj}_{\\mathbf{u}} \\mathbf{v} = \\frac{\\mathbf{v} \\cdot \\mathbf{u}}{\\|\\mathbf{u}\\|^2} \\mathbf{u}\n\\]\n\nHere, we are given that the projection of $\\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}$ onto $\\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}$ is $\\frac{5}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}$. Let's denote the given vector as $\\mathbf{v}$ and the projection direction vector as $\\mathbf{u}$:\n\n\\[\n\\mathbf{v} = \\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}, \\quad \\mathbf{u} = \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}\n\\]\n\nThe dot product of $\\mathbf{v}$ and $\\mathbf{u}$ is:\n\n\\[\n\\mathbf{v} \\cdot \\mathbf{u} = (2)(1) + (y)(-2) + (-5)(1) = 2 - 2y - 5 = -3 - 2y\n\\]\n\nThe squared norm of $\\mathbf{u}$ is:\n\n\\[\n\\|\\mathbf{u}\\|^2 = (1)^2 + (-2)^2 + (1)^2 = 1 + 4 + 1 = 6\n\\]\n\nNow, using the projection formula, we have:\n\n\\[\n\\frac{5}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix} = \\frac{-3 - 2y}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}\n\\]\n\nSince this is true for each component of the vector, we can equate the corresponding components:\n\n\\[\n\\frac{5}{6} = \\frac{-3 - 2y}{6}\n\\]\n\nNow, we solve for $y$:\n\n\\[\n5 = -3 - 2y\n\\]\n\n\\[\n2y = -3 - 5\n\\]\n\n\\[\n2y = -8\n\\]\n\n\\[\ny = -4\n\\]\n\nSo, $y = -4$. Therefore, the answer is:\n\n\\boxed{-4}"
+    ]
+  }
+]

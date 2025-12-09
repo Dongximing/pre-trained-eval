@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Simplify\n\\[\\frac{\\sec x}{\\sin x} - \\frac{\\sin x}{\\cos x}.\\]"
+    ],
+    "answer": "\\cot x",
+    "output": [
+      "To simplify the expression \\[\\frac{\\sec x}{\\sin x} - \\frac{\\sin x}{\\cos x},\\] we can start by rewriting the secant (\\sec x) and sine (\\sin x) in terms of cosine (\\cos x) since they are all related to the same trigonometric functions. Recall that:\n\n1. \\(\\sec x = \\frac{1}{\\cos x}\\) (the reciprocal of cosine)\n2. \\(\\sin^2 x + \\cos^2 x = 1\\) (Pythagorean identity)\n\nStep 1: Rewrite the expression using the definitions:\n\\[\\frac{\\frac{1}{\\cos x}}{\\sin x} - \\frac{\\sin x}{\\cos x}.\\]\n\nStep 2: Simplify the first fraction by multiplying the numerator and the denominator by \\(\\cos x\\):\n\\[\\frac{1}{\\sin x \\cdot \\cos x} - \\frac{\\sin x}{\\cos x}.\\]\n\nStep 3: Factor out \\(\\frac{1}{\\cos x}\\) from both terms since they have a common denominator:\n\\[\\frac{1}{\\cos x \\cdot \\sin x} - \\frac{\\sin x}{\\cos x} = \\frac{1 - \\sin^2 x}{\\cos x \\cdot \\sin x}.\\]\n\nStep 4: Now use the Pythagorean identity \\(\\sin^2 x + \\cos^2 x = 1\\) to replace \\(\\sin^2 x\\) with \\(1 - \\cos^2 x\\):\n\\[\\frac{1 - (1 - \\cos^2 x)}{\\cos x \\cdot \\sin x}.\\]\n\nStep 5: Simplify inside the parentheses:\n\\[\\frac{\\cos^2 x}{\\cos x \\cdot \\sin x}.\\]\n\nStep 6: Divide the numerator and the denominator by \\(\\cos x\\) (assuming \\(\\cos x \\neq 0\\), which is true for all non-right angles):\n\\[\\frac{\\cos x}{\\sin x}.\\]\n\nThe expression simplifies to \\(\\cot x\\), where \\(\\cot x = \\frac{\\cos x}{\\sin x}\\).\n\nSo the final answer is:\n\n\\boxed{\\cot x}"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the quotient when $x^6 - 3$ is divided by $x + 1.$"
+    ],
+    "answer": "x^5 - x^4 + x^3 - x^2 + x - 1",
+    "output": [
+      "To find the quotient when $x^6 - 3$ is divided by $x + 1$, we can use polynomial long division. We set up the division as follows:\n\n```\n         ____________\n(x + 1) | x^6 - 3\n```\n\nWe start by dividing the highest degree term in the dividend, which is $x^6$, by the highest degree term in the divisor, which is $x$. The result is $x^5$ because when you multiply $x$ by $x^5$, you get $x^6$. We write this above the $-3$:\n\n```\n         x^5\n         ____________\n(x + 1) | x^6 - 3\n```\n\nNext, we multiply $x + 1$ by $x^5$ to get $x^6 + x^5$ and write it below the $x^6$:\n\n```\n         x^5\n         ____________\n(x + 1) | x^6 - 3\n       - (x^6 + x^5)\n       ____________\n```\n\nNow, we subtract the result from the original $x^6$:\n\n```\n         x^5\n         ____________\n(x + 1) | x^6 - 3\n       - (x^6 + x^5)\n       ____________\n               - x^5 - 3\n```\n\nWe now have a new term, $-x^5$, which we'll bring down to be the next term in the dividend:\n\n```\n         x^5\n         ____________\n(x + 1) | x^6 - 3\n       - (x^6 + x^5)\n       ____________\n               - x^5 - 3\n               - (-x^5)\n               ____________\n```\n\nWhen we add $-x^5$ to $-x^5$, we get $0$:\n\n```\n         x^5\n         ____________\n(x + 1) | x^6 - 3\n       - (x^6 + x^5)\n       ____________\n               - x^5 - 3\n               - (-x^5)\n               ____________\n                        -3\n```\n\nSince the degree of $-3$ is less than the degree of $x + 1$, we cannot divide any further. So the quotient is $x^5$ and the remainder is $-3$. Therefore, the complete polynomial long division looks like this:\n\n```\n         x^5 - 0x^4 + 0x^3 + 0x^2 + 0x - 3\n         ____________\n(x + 1) | x^6 - 0x^5 + 0x^4 + 0x^3 + 0x^2 - 3\n       - (x^6 + x^5)\n       ____________\n                        - x^5 - 3\n                        - (-x^5)\n                        ____________\n                                   -3\n```\n\nThe final answer is:\n\n\\boxed{x^5 - 3}"
+    ]
+  }
+]

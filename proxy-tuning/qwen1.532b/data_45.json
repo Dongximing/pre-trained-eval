@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "In right triangle $ABC$ with $\\angle B = 90^\\circ$, we have $\\sin A = 2\\cos A$.  What is $\\tan A$?"
+    ],
+    "answer": "2",
+    "output": [
+      "Given that $\\angle B$ is a right angle in triangle $ABC$, we have:\n\n$$ \\angle A + \\angle C = 90^\\circ $$\n\nSince sine and cosine are complementary ratios, we can relate them to $\\sin A$ and $\\cos A$:\n\n$$ \\sin A = \\cos C $$\n\nNow, we are given:\n\n$$ \\sin A = 2\\cos A $$\n\nWe know that $\\sin^2 A + \\cos^2 A = 1$ (Pythagorean identity for right triangles):\n\n$$ (\\sin A)^2 + (\\cos A)^2 = 1 $$\n\nSubstitute $2\\cos A$ for $\\sin A$:\n\n$$ (2\\cos A)^2 + (\\cos A)^2 = 1 $$\n\n$$ 4\\cos^2 A + \\cos^2 A = 1 $$\n\n$$ 5\\cos^2 A = 1 $$\n\nNow, divide by 5:\n\n$$ \\cos^2 A = \\frac{1}{5} $$\n\nTaking the square root (since $\\cos A$ is a ratio, it can't be negative in a right triangle):\n\n$$ \\cos A = \\pm\\frac{1}{\\sqrt{5}} $$\n\nBut since $\\cos A$ is the adjacent side divided by the hypotenuse, and in a right triangle it's a positive value, we choose the positive root:\n\n$$ \\cos A = \\frac{1}{\\sqrt{5}} $$\n\nNow, to find $\\tan A$, we use the definition of tangent, which is opposite side divided by adjacent side:\n\n$$ \\tan A = \\frac{\\sin A}{\\cos A} $$\n\nWe already know $\\sin A = 2\\cos A$, so substitute:\n\n$$ \\tan A = \\frac{2\\cos A}{\\cos A} $$\n\n$$ \\tan A = 2 $$\n\nSo, $\\tan A = 2$. Placing this in a box format:\n\n\\boxed{2}"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the greatest integer less than $(\\sqrt{7} + \\sqrt{5})^6.$  (Do not use a calculator!)"
+    ],
+    "answer": "13535",
+    "output": [
+      "Let's start by simplifying the expression $(\\sqrt{7} + \\sqrt{5})^6$. To do this, we can use the binomial theorem, which states that for any real numbers $a$ and $b$ and any non-negative integer $n$:\n\n$$(a + b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k$$\n\nHere, $a = \\sqrt{7}$ and $b = \\sqrt{5}$, and $n = 6$. The binomial coefficient $\\binom{n}{k}$ is given by:\n\n$$\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$$\n\nFor $n=6$, the binomial coefficients are:\n\n- $\\binom{6}{0} = 1$\n- $\\binom{6}{1} = 6$\n- $\\binom{6}{2} = 15$\n- $\\binom{6}{3} = 20$\n- $\\binom{6}{4} = 15$\n- $\\binom{6}{5} = 6$\n- $\\binom{6}{6} = 1$\n\nNow, we multiply each term by the corresponding powers of $\\sqrt{7}$ and $\\sqrt{5}$:\n\n- $1 \\cdot (\\sqrt{7})^6 \\cdot (\\sqrt{5})^0 = 7^3$\n- $6 \\cdot (\\sqrt{7})^5 \\cdot (\\sqrt{5})^1 = 6 \\cdot 7^2 \\cdot 5$\n- $15 \\cdot (\\sqrt{7})^4 \\cdot (\\sqrt{5})^2 = 15 \\cdot 7^2 \\cdot 5$\n- $20 \\cdot (\\sqrt{7})^3 \\cdot (\\sqrt{5})^3 = 20 \\cdot 7 \\cdot 5^2$\n- $15 \\cdot (\\sqrt{7})^2 \\cdot (\\sqrt{5})^4 = 15 \\cdot 7 \\cdot 5^2$\n- $6 \\cdot (\\sqrt{7})^1 \\cdot (\\sqrt{5})^5 = 6 \\cdot 5^3$\n- $1 \\cdot (\\sqrt{7})^0 \\cdot (\\sqrt{5})^6 = 5^3$\n\nNow, we can simplify each term:\n\n- $7^3 = 343$\n- $6 \\cdot 7^2 \\cdot 5 = 6 \\cdot 49 \\cdot 5 = 1470$\n- $15 \\cdot 7^2 \\cdot 5 = 15 \\cdot 49 \\cdot 5 = 3675$\n- $20 \\cdot 7 \\cdot 5^2 = 20 \\cdot 7 \\cdot 25 = 3500$\n- $15 \\cdot 7 \\cdot 5^2 = 15 \\cdot 7 \\cdot 25 = 2625$\n- $6 \\cdot 5^3 = 6 \\cdot 125 = 750$\n- $5^3 = 125$\n\nNext, we add all these terms together:\n\n$$343 + 1470 + 3675 + 3500 + 2625 + 750 + 125 = 14198$$\n\nNow, we need to find the greatest integer less than this sum. Since $14198$ is already an integer, the greatest integer less than it is $14198$ itself.\n\n\\boxed{14198}"
+    ]
+  }
+]

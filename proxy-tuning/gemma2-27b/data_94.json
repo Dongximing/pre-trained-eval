@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "In quadrilateral $ABCD$, angle $BAD$ and angle $CDA$ are trisected as shown. What is the degree measure of angle $AFD$?\n\n[asy]\nsize(150);\npair A , B, C, D; A = (0,0); B = (2, 4); C = (7,4); D = (7, -2);\ndraw( (0,0)--(2,4) -- (7,4) -- (7, -2)-- cycle);\nlabel(\"$A$\", A, SW);\nlabel(\"$B$\", B, NW);\nlabel(\"$C$\", C, NE);\nlabel(\"$D$\", D, SE);\npair E, F;\nE = (4.5-.2,1-.2); F = (5, 3);\ndraw(A--E--D); draw(A--F--D);\nlabel(\"$E$\", E, N); label(\"$F$\", F, NW);\ndot(A);dot(B);dot(C);dot(D);dot(E);dot(F);\nlabel(\"$x$\", (1, 1.5), S); label(\"$x$\", (2, 1), S+W); label(\"$x$\", (2, -1), N+N+N+W);\nlabel(\"$y$\", (5.5+.3, .5-.3), S); label(\"$y$\", (6.5+.3, 0)); label(\"$y$\", (5+.5, -1.5+.3));\nlabel(\"$110^{\\circ}$\",(2.5,3.5)); label(\"$100^{\\circ}$\",(6.5-.2,3.5));\n[/asy]Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "80",
+    "output": [
+      "Here's how to solve the problem step-by-step:\n\n1. **Understand Trisected Angles:**  Since angles BAD and CDA are trisected, each of the smaller angles formed is one-third the measure of the original angle.\n\n2. **Set Up Equations:**\n   * Let  'x' represent the measure of each of the smaller angles in angle BAD.\n   * Let 'y' represent the measure of each of the smaller angles in angle CDA.\n\n3. **Write Down Known Angles:**\n   * We knowtwas given that angle BAD = 110° and angle CDA = 100°.\n\n4. **Express Angles in Terms of x and y:**\n   * Angle BAD = 3x = 110°\n   * Angle CDA = 3y = 100°\n\n5. **Solve for x and y:**\n   *  x = 110°/3 \n   *  y = 100°/3\n\n6. **Find Angle AFD:**\n   * Angle AFD is the sum of angles AFE and EFD.\n   * Angle AFE = x = 110°/3\n   * Angle EFD = y = 100°/3\n   * Therefore, angle AFD = (110°/3) + (100°/3) = 210°/3"
+    ]
+  }
+]

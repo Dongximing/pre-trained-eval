@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Simplify $\\sqrt{242}$."
+    ],
+    "answer": "11\\sqrt2",
+    "output": [
+      "To simplify the square root of 242, we can look for factors of 242 that are perfect squares, which we can then take out of the square root.\n\n242 can be factored as follows:\n$$242 = 2 \\times 11 \\times 11$$\n\nHere, we see that 11 is a perfect square (11 = 11^2), and it appears twice. So we can simplify the square root of 242 as follows:\n\n$$\\sqrt{242} = \\sqrt{2 \\times 11^2} = \\sqrt{2} \\times \\sqrt{11^2} = \\sqrt{2} \\times 11$$\n\nSince the square root of a square is the number itself, we have:\n\n$$\\sqrt{242} = 11\\sqrt{2}$$\n\nSo, the simplified form of $\\sqrt{242}$ is:\n\n$$\\boxed{11\\sqrt{2}}$$"
+    ]
+  }
+]

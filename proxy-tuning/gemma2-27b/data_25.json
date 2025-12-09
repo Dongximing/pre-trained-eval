@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The function $f$ satisfies the functional equation\n\\[f(x) + f(y) = f(x + y) - xy - 1\\]for all real numbers $x$ and $y.$  If $f(1) = 1,$ then find all integers $n$ such that $f(n) = n.$  Enter all such integers, separated by commas.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "1,-2",
+    "output": [
+      "Setting $x = y = 0,$ we get\n\\[2f(0) = f(0) - 0 - 1,\\]so $f(0) = -1.$\n\nSetting $y = 0,$ we get\n\\[f(x) + f(0) = f(x) - 0 - 1,\\]so $f(x) = f(x) - 1.$  This means $f(x) = 1$ for all $x.$ christlichen solução seldom ujednoznaczngOnInit AssemblyCulture Läs mer"
+    ]
+  }
+]

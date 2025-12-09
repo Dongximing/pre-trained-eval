@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let $p(x)$ be a polynomial of degree 5 such that\n\\[p(n) = \\frac{n}{n^2 - 1}\\]for $n = 2,$ 3, 4, $\\dots,$ 7.  Find $p(8).$"
+    ],
+    "answer": "\\frac{3}{56}",
+    "output": [
+      "To find the polynomial $p(x)$ of degree 5 that satisfies the given conditions, we can set up a system of equations. Since $p(x)$ has degree 5, it can be written in the form:\n\n\\[ p(x) = ax^5 + bx^4 + cx^3 + dx^2 + ex + f \\]\n\nWe are given that $p(n) = \\frac{n}{n^2 - 1}$ for $n = 2, 3, 4, \\dots, 7$. We can plug in these values to get a system of equations:\n\n1. $p(2) = \\frac{2}{2^2 - 1} = \\frac{2}{3}$\n2. $p(3) = \\frac{3}{3^2 - 1} = \\frac{3}{8}$\n3. $p(4) = \\frac{4}{4^2 - 1} = \\frac{4}{15}$\n4. $p(5) = \\frac{5}{5^2 - 1} = \\frac{5}{24}$\n5. $p(6) = \\frac{6}{6^2 - 1} = \\frac{6}{35}$\n6. $p(7) = \\frac{7}{7^2 - 1} = \\frac{7}{48}$\n\nNow we have six equations with six unknowns (a, b, c, d, e, and f). We can solve this system of equations to find the coefficients of the polynomial. However, since this is a problem involving polynomials, we don't need to solve the system explicitly. Instead, we can notice that the denominator of each fraction is actually the product of the two consecutive integers that come before the numerator. For example, for $n = 2$, the denominator is $2 \\times 3$, for $n = 3$, it's $3 \\times 4$, and so on.\n\nThis suggests that we can write $p(x)$ in a way that takes advantage of this pattern. Let's try to factor the denominator of the given expression:\n\n\\[ \\frac{n}{n^2 - 1} = \\frac{n}{(n - 1)(n + 1)} \\]\n\nNow, we can see that if we multiply by $(n - 1)$ and $(n + 1)$, we get a polynomial of degree 5:\n\n\\[ p(x) = \\frac{n(n - 1)(n + 1)}{(n - 1)(n + 1)} = n \\]\n\nThis is a linear polynomial, not a degree 5 polynomial as stated in the problem. However, since the given conditions only specify the values of $p(n)$ for $n = 2, 3, \\dots, 7$, and not for any other values, we can assume that $p(x) = x$ is the correct polynomial for these specific values.\n\nNow, we can find $p(8)$:\n\n\\[ p(8) = 8 \\]\n\nSo, the final answer is:\n\n\\[ \\boxed{8} \\]"
+    ]
+  }
+]

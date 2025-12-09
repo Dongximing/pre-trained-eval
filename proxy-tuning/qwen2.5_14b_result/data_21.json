@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the greatest integer less than $(\\sqrt{7} + \\sqrt{5})^6.$  (Do not use a calculator!)"
+    ],
+    "answer": "13535",
+    "output": [
+      "To find the greatest integer less than \\((\\sqrt{7} + \\sqrt{5})^6\\), we start by considering the expression \\((\\sqrt{7} + \\sqrt{5})^6 + (\\sqrt{7} - \\sqrt{5})^6\\). Notice that \\(\\sqrt{7} - \\sqrt{5}\\) is a small positive number, specifically \\(\\sqrt{7} - \\sqrt{5} \\approx 0.6455\\), so \\((\\sqrt{7} - \\sqrt{5})^6\\) is a very small positive number. Therefore, \\((\\sqrt{7} + \\sqrt{5})^6 + (\\sqrt{7} - \\sqrt{5})^6\\) is very close to an integer.\n\nFirst, we expand \\((\\sqrt{7} + \\sqrt{5})^6 + (\\sqrt{7} - \\sqrt{5})^6\\) using the binomial theorem. The terms involving \\(\\sqrt{7}\\sqrt{5}\\) will cancel out, leaving only integer terms. We can write:\n\n\\[\n(\\sqrt{7} + \\sqrt{5})^6 + (\\sqrt{7} - \\sqrt{5})^6 = 2 \\left( \\binom{6}{0} 7^3 + \\binom{6}{2} 7^2 5 + \\binom{6}{4} 7 5^2 + \\binom{6}{6} 5^3 \\right)\n\\]\n\nCalculating each term individually, we get:\n\n\\[\n\\binom{6}{0} 7^3 = 1 \\cdot 343 = 343\n\\]\n\\[\n\\binom{6}{2} 7^2 5 = 15 \\cdot 49 \\cdot 5 = 3675\n\\]\n\\[\n\\binom{6}{4} 7 5^2 = 15 \\cdot 7 \\cdot 25 = 2625\n\\]\n\\[\n\\binom{6}{6} 5^3 = 1 \\cdot 125 = 125\n\\]\n\nAdding these together, we get:\n\n\\[\n343 + 3675 + 2625 + 125 = 6768\n\\]\n\nThus,\n\n\\[\n(\\sqrt{7} + \\sqrt{5})^6 + (\\sqrt{7} - \\sqrt{5})^6 = 2 \\cdot 6768 = 13536\n\\]\n\nSince \\((\\sqrt{7} - \\sqrt{5})^6\\) is a very small positive number, \\((\\sqrt{7} + \\sqrt{5})^6\\) is slightly less than 13536. Therefore, the greatest integer less than \\((\\sqrt{7} + \\sqrt{5})^6\\) is:\n\n\\[\n\\boxed{13535}\n\\]"
+    ]
+  }
+]

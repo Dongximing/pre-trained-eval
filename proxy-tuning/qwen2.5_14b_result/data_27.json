@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A math club is having a bake sale as a fundraiser to raise money for an upcoming trip. They sell $54$ cookies at three for $\\$1$, and $20$ cupcakes at $\\$2$ each, and $35$ brownies at $\\$1$ each. If it cost the math club $\\$15$ to bake these items, what was their profit?"
+    ],
+    "answer": "78",
+    "output": [
+      "To determine the profit made by the math club, we need to follow these steps:\n\n1. **Calculate the total revenue from selling cookies:**\n   - The math club sold 54 cookies.\n   - They sold cookies at a rate of 3 cookies for $1.\n   - Therefore, the number of sets of 3 cookies sold is:\n     \\[\n     \\frac{54}{3} = 18 \\text{ sets}\n     \\]\n   - Each set of 3 cookies costs $1, so the total revenue from cookies is:\n     \\[\n     18 \\times 1 = 18 \\text{ dollars}\n     \\]\n\n2. **Calculate the total revenue from selling cupcakes:**\n   - The math club sold 20 cupcakes.\n   - Each cupcake costs $2.\n   - Therefore, the total revenue from cupcakes is:\n     \\[\n     20 \\times 2 = 40 \\text{ dollars}\n     \\]\n\n3. **Calculate the total revenue from selling brownies:**\n   - The math club sold 35 brownies.\n   - Each brownie costs $1.\n   - Therefore, the total revenue from brownies is:\n     \\[\n     35 \\times 1 = 35 \\text{ dollars}\n     \\]\n\n4. **Calculate the total revenue from all items sold:**\n   - Sum the revenues from cookies, cupcakes, and brownies:\n     \\[\n     18 + 40 + 35 = 93 \\text{ dollars}\n     \\]\n\n5. **Calculate the profit:**\n   - The total cost to bake the items is $15.\n   - The profit is the total revenue minus the total cost:\n     \\[\n     93 - 15 = 78 \\text{ dollars}\n     \\]\n\nTherefore, the profit made by the math club is \\(\\boxed{78}\\)."
+    ]
+  }
+]

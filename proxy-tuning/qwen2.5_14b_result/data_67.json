@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The lengths of two opposite sides of a square are decreased by $40\\%$ while the lengths of the other two sides are increased by $50\\%$ to form a rectangle. By what percent does the square's area decrease?"
+    ],
+    "answer": "10",
+    "output": [
+      "Let's denote the side length of the original square as \\( s \\). The area of the original square is given by:\n\n\\[ s^2 \\]\n\nWhen the lengths of two opposite sides of the square are decreased by \\( 40\\% \\), the new length of these sides becomes:\n\n\\[ s - 0.4s = 0.6s \\]\n\nWhen the lengths of the other two sides are increased by \\( 50\\% \\), the new length of these sides becomes:\n\n\\[ s + 0.5s = 1.5s \\]\n\nThe new shape is a rectangle with side lengths \\( 0.6s \\) and \\( 1.5s \\). The area of this rectangle is:\n\n\\[ 0.6s \\times 1.5s = 0.9s^2 \\]\n\nThe decrease in area from the original square to the new rectangle is:\n\n\\[ s^2 - 0.9s^2 = 0.1s^2 \\]\n\nThe percentage decrease in area is given by the ratio of the decrease in area to the original area, multiplied by 100:\n\n\\[ \\frac{0.1s^2}{s^2} \\times 100 = 10\\% \\]\n\nTherefore, the area of the square decreases by \\(\\boxed{10}\\) percent."
+    ]
+  }
+]

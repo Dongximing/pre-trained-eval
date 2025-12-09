@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute $58_9 - 18_9.$ Express your answer in base $9.$"
+    ],
+    "answer": "40_9",
+    "output": [
+      "To solve the problem \\(58_9 - 18_9\\) and express the answer in base 9, we will follow these steps:\n\n1. **Convert the base 9 numbers to base 10.**\n2. **Perform the subtraction in base 10.**\n3. **Convert the result back to base 9.**\n\n### Step 1: Convert the base 9 numbers to base 10\n\nFirst, let's convert \\(58_9\\) to base 10.\n\n\\[\n58_9 = 5 \\cdot 9^1 + 8 \\cdot 9^0 = 5 \\cdot 9 + 8 \\cdot 1 = 45 + 8 = 53_{10}\n\\]\n\nNext, let's convert \\(18_9\\) to base 10.\n\n\\[\n18_9 = 1 \\cdot 9^1 + 8 \\cdot 9^0 = 1 \\cdot 9 + 8 \\cdot 1 = 9 + 8 = 17_{10}\n\\]\n\n### Step 2: Perform the subtraction in base 10\n\nNow, we subtract the base 10 equivalents:\n\n\\[\n53_{10} - 17_{10} = 36_{10}\n\\]\n\n### Step 3: Convert the result back to base 9\n\nTo convert \\(36_{10}\\) to base 9, we need to find the coefficients for the powers of 9.\n\n\\[\n36_{10} = a \\cdot 9^1 + b \\cdot 9^0\n\\]\n\nWe start by finding the largest power of 9 less than or equal to 36, which is \\(9^1 = 9\\).\n\n\\[\n36 \\div 9 = 4 \\quad \\text{(quotient)}\n\\]\n\nSo, \\(a = 4\\). Now, we find the remainder:\n\n\\[\n36 - 4 \\cdot 9 = 36 - 36 = 0\n\\]\n\nThus, \\(b = 0\\).\n\nTherefore, \\(36_{10} = 40_9\\).\n\n### Final Answer\n\n\\[\n\\boxed{40_9}\n\\]"
+    ]
+  }
+]

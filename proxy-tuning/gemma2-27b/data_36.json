@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the roots of $(x - 3)^3 + (x -7)^3 = (2x - 10)^3.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "3, 5, 7",
+    "output": [
+      "Here's how to solve the equation step-by-step:\n\n**1. Expand the cubes:**\n\nBegin by expanding the cubes on both sides of the equation:\n\n*  $(x - 3)^3 = (x - 3)(x - 3)(x - 3) = x^3 - 9x^2 + 27x - 27$\n*  $(x - 7)^3 = (x - 7)(x - 7)(x - 7) = x^3 - 21x^2 + 147x - 343$\n*  $(2x - 10)^3 = (2x - 10)(2x - 10)(2x - 10) = 8x^3 - 60x^2 + 150x - 1000$\n\n**2. Substitute the expansions back into the equation:**\n\nNow the equation looks like this:\n\n$x^3 - 9x^2 + 27x - 27 + x^3 - 21x^2 + 147x - 343 = 8x^3 - 60x^2 + 150x - 1000$\n\n**3. Simplify the equation:**\n\nCombine like terms on the left side:\n\n$"
+    ]
+  }
+]

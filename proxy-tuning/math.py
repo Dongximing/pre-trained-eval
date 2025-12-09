@@ -12,7 +12,7 @@ from generation import (
     load_dexperts_model_and_tokenizer,
 )
 
-
+MATH_PROMPT = "Please reason step by step, and put your final answer within \\boxed{}.\n" 
 def create_prompt(row):
     return f'Question: {row["question"]}\nAnswer:'
 
@@ -41,42 +41,24 @@ def main(args):
     ds = load_dataset("HuggingFaceH4/MATH-500")['test']
 
 
-    ds = ds.select(range(0, 1))
+    ds = ds.select(range(0, 100))
     prompts = []
-    problems_and_answers = [item["problem"] for item in ds]
-    print(problems_and_answers[0])
-    print('--------\n')
+    problems = [str(item.get("problem", "")) + MATH_PROMPT for item in ds]
+    answers = [item["answer"] for item in ds]
+    
+    print('--------\n',problems[0],'\n--------\n',answers[0])
    
 
     outputs = generate_completions(
         model,
         tokenizer,
-        problems_and_answers,
+        (problems,answers),
         batch_size=args.eval_batch_size,
         do_sample=False,
-        max_new_tokens=400,
+        max_new_tokens=300,
     )
 
-    test_df['output'] = [o.strip() for o in outputs]
-    cors = []
-    for i, row in test_df.iterrows():
-        # ignore casing
-        pred = row['output'].lower()
-        answers = [a.strip().lower() for a in row['answers']]
-        cors.append(pred in answers)
-
-    test_df['correct'] = cors
-    acc = np.nanmean(cors)
-    print(f"Accuracy: {np.round(acc, 3)}")
-
-    test_df.to_json(os.path.join(args.save_dir, "predictions.jsonl"), lines=True, orient='records')
-
-    # save results
-    with open(os.path.join(args.save_dir, "metrics.json"), "w") as fo:
-        json.dump({
-            "acc": acc,
-            "tot": len(test_df)
-        }, fo)
+    
 
 
 if __name__ == "__main__":
@@ -127,17 +109,18 @@ if __name__ == "__main__":
     parser.add_argument(
         "--base_model_name_or_path",
         type=str,
-        default='/home/original_models/Qwen2.5-14B',
+        default='/home/original_models/gemma-2-27b',
     )
     parser.add_argument(
         "--expert_model_name_or_path",
         type=str,
-        default='/home/original_models/Qwen2.5-7B-Instruct',
+        default='/home/original_models/gemma-2-9b-it',
     )
     parser.add_argument(
         "--antiexpert_model_name_or_path",
         type=str,
-        default='/home/original_models/Qwen2.5-7B',
+        
+        default='/home/original_models/gemma-2-9b',
     )
     args = parser.parse_args()
 

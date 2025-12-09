@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A $90^\\circ$ rotation around the origin in the counter-clockwise direction is applied to $7 + 2i.$  What is the resulting complex number?"
+    ],
+    "answer": "-2 + 7i",
+    "output": [
+      "A 90-degree rotation in the counter-clockwise direction in the complex plane is equivalent to a multiplication by the complex number \\(e^{i\\pi/2}\\), which is the same as \\(i\\) since \\(e^{i\\theta} = \\cos(\\theta) + i\\sin(\\theta)\\) and \\(\\cos(\\pi/2) = 0\\) and \\(\\sin(\\pi/2) = 1\\) for a 90-degree rotation.\n\nSo, to find the resulting complex number after the rotation, we multiply \\(7 + 2i\\) by \\(i\\):\n\n\\[\n(7 + 2i) \\cdot i = 7i + 2i^2\n\\]\n\nSince \\(i^2 = -1\\), we have:\n\n\\[\n7i + 2(-1) = 7i - 2\n\\]\n\nTherefore, the resulting complex number after the 90-degree rotation is \\(7i - 2\\).\n\nFinal answer:\n\\boxed{7i - 2}"
+    ]
+  }
+]

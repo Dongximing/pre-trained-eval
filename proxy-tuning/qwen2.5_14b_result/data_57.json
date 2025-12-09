@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Riproarin' Ringo was roping a recalcitrant dogie. Ringo decided to give the dogie a reprieve by calculating \\[|(1-i)^8|\\]before riding after the dogie. What answer should Ringo have found?"
+    ],
+    "answer": "16",
+    "output": [
+      "To solve the problem of finding \\( |(1-i)^8| \\), we will follow these steps:\n\n1. **Express the complex number in polar form:**\n   The complex number \\(1 - i\\) can be written in polar form as \\(re^{i\\theta}\\), where \\(r\\) is the magnitude and \\(\\theta\\) is the argument.\n\n2. **Calculate the magnitude \\(r\\):**\n   The magnitude \\(r\\) of a complex number \\(a + bi\\) is given by:\n   \\[\n   r = \\sqrt{a^2 + b^2}\n   \\]\n   For \\(1 - i\\), \\(a = 1\\) and \\(b = -1\\):\n   \\[\n   r = \\sqrt{1^2 + (-1)^2} = \\sqrt{1 + 1} = \\sqrt{2}\n   \\]\n\n3. **Calculate the argument \\(\\theta\\):**\n   The argument \\(\\theta\\) of a complex number \\(a + bi\\) is given by:\n   \\[\n   \\theta = \\tan^{-1}\\left(\\frac{b}{a}\\right)\n   \\]\n   For \\(1 - i\\):\n   \\[\n   \\theta = \\tan^{-1}\\left(\\frac{-1}{1}\\right) = \\tan^{-1}(-1) = -\\frac{\\pi}{4}\n   \\]\n\n4. **Express \\(1 - i\\) in polar form:**\n   \\[\n   1 - i = \\sqrt{2} e^{-i\\pi/4}\n   \\]\n\n5. **Raise the complex number to the 8th power:**\n   Using De Moivre's Theorem, which states that \\((re^{i\\theta})^n = r^n e^{in\\theta}\\):\n   \\[\n   (1 - i)^8 = \\left(\\sqrt{2} e^{-i\\pi/4}\\right)^8 = (\\sqrt{2})^8 e^{-i8\\pi/4}\n   \\]\n\n6. **Simplify the expression:**\n   \\[\n   (\\sqrt{2})^8 = (2^{1/2})^8 = 2^{8/2} = 2^4 = 16\n   \\]\n   \\[\n   e^{-i8\\pi/4} = e^{-i2\\pi} = 1 \\quad \\text{(since } e^{-i2\\pi} \\text{ is a full rotation, which is 1)}\n   \\]\n\n7. **Combine the results:**\n   \\[\n   (1 - i)^8 = 16 \\cdot 1 = 16\n   \\]\n\n8. **Find the magnitude of the result:**\n   The magnitude of a real number is the number itself:\n   \\[\n   |16| = 16\n   \\]\n\nTherefore, the answer Ringo should have found is \\(\\boxed{16}\\)."
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute $99^2+99+1$ in your head."
+    ],
+    "answer": "9901",
+    "output": [
+      "To compute \\(99^2 + 99 + 1\\) in our heads, we can break it down into manageable steps.\n\nFirst, let's compute \\(99^2\\):\n\\[99^2 = (100 - 1)^2 = 100^2 - 2 \\cdot 100 \\cdot 1 + 1^2 = 10000 - 200 + 1 = 9801.\\]\n\nNow, we need to add \\(99\\) to \\(9801\\):\n\\[9801 + 99 = 9900.\\]\n\nFinally, we add \\(1\\) to \\(9900\\):\n\\[9900 + 1 = 9901.\\]\n\nSo, the final answer is \\(\\boxed{9901}\\)."
+    ]
+  }
+]

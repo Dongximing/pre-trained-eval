@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A regular pentagon is rotated counterclockwise about its center. What is the minimum number of degrees it must be rotated until it coincides with its original position?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "72",
+    "output": [
+      "Here's how to solve this: Kampagne nutriciónLookAndTOBER\n\n **1. Understand Rotational Symmetry**\n\n   A regular pentagon has rotational symmetry, meaning it looks the same after being rotated by certain angles.\n\n**2.  Find the Central Angle**\n\n   * A pentagon has 5 equal sides and 5 equal angles.\n   * The sum of the interior angles of a pentagon is (5-2) * 180 = 540 degrees.\n   * Each interior angle of a regular pentagon is 540 / 5 = 108 degrees.\n\n**3. Determine the Minimum Rotation**\n\n   * To coincide with its original position, the pentagon needs to rotate a multiple of 360 degrees.\n   * The smallest multiple of 360 degrees that is also a multiple of 108 degrees is 360 degrees itself.\n\n\n**Answer:**  The minimum number of degrees the pentagon must be rotatednadequate يتيمه to coincide with its original position is  \\boxed{360}.  AssemblyTitle beggars"
+    ]
+  }
+]

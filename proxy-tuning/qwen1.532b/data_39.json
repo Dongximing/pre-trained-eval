@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the result when the greatest common factor of 6432 and 132 is increased by 11?"
+    ],
+    "answer": "23",
+    "output": [
+      "To find the greatest common factor (GCF) of 6432 and 132, we can start by dividing both numbers by their smallest prime factors, which are 2 and 3 in this case, since they divide both numbers evenly.\n\n6432 ÷ 2 = 3216\n3216 ÷ 2 = 1608\n1608 ÷ 2 = 804\n804 ÷ 2 = 402\n402 ÷ 2 = 201 (now we have reached a prime number)\n\n132 ÷ 2 = 66\n66 ÷ 2 = 33\n33 ÷ 3 = 11 (also a prime number)\n\nThe GCF of 6432 and 132 is the product of the smallest prime factors we divided by until we reached primes: 2 * 2 * 2 * 3 * 11 = 264.\n\nNow, we need to increase this GCF by 11:\n\n264 + 11 = 275\n\nTherefore, the result when the greatest common factor of 6432 and 132 is increased by 11 is 275.\n\n\\boxed{275}"
+    ]
+  }
+]

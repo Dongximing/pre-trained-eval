@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "For $0 \\le x \\le 40$ and $0 \\le y \\le 50,$ find the minimum value of\n\\[\\sqrt{x^2 + 400} + \\sqrt{y^2 + 900} + \\sqrt{x^2 + y^2 - 80x - 100y + 4100}.\\]Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "70 \\sqrt{2}",
+    "output": [
+      " blasting Layanan-------\f\n\nHere's how to solve this problem using the Triangle Inequality and some clever observations:\n\n**Understanding the Problem**\n\nWe want to minimize the sum of three distances.  This suggests that geometry might be helpful.  \n\n**Key Idea: Triangle Inequality**\n\nThe Triangle Inequality states that the sum of the lengths of any two sides of a triangle is greater than or equal to the length of the third side.\n\n**Applying the Triangle Inequality**\n\nLet's represent the terms under the square roots as distances:\n\n*  √(x² + 400) represents the distance from the point (x, 0) to the point (0, 20).\n*  √(y² + 900) represents the distance from the point (0, y) to the point (0, 30).\n*  √(x² + y² - 80x - 100y + 4100) represents the distance from the point (x, y) to the point (40, 50).\n\nNow, imagine these three points forming a triangle.  By the Triangle Inequality:\n\n*  √(x² + 400) + √(y² + 900) ≥ √(x² + y² - 80x - 100y + 4100)\n\n**Minimizing the"
+    ]
+  }
+]

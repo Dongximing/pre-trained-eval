@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A pirate searches seven islands for buried treasure. If each island has a $\\frac{1}{5}$ chance of having treasure, what is the probability that exactly 4 of the islands have treasure?"
+    ],
+    "answer": "\\frac{448}{15625}",
+    "output": [
+      "To find the probability that exactly 4 of the 7 islands have treasure, we can use the binomial probability formula, which is:\n\n\\[ P(X = k) = \\binom{n}{k} \\cdot p^k \\cdot (1-p)^{n-k} \\]\n\nwhere:\n- \\( P(X = k) \\) is the probability of exactly \\( k \\) successes (treasure) in \\( n \\) trials (islands),\n- \\( \\binom{n}{k} \\) is the number of combinations of \\( n \\) items taken \\( k \\) at a time (also written as \\( C(n, k) \\) or \\( \\frac{n!}{k!(n-k)!} \\)),\n- \\( p \\) is the probability of success (finding treasure) on a single trial,\n- \\( n \\) is the number of trials (islands),\n- \\( k \\) is the number of successes (treasure found).\n\nIn this case, \\( n = 7 \\), \\( k = 4 \\), and \\( p = \\frac{1}{5} \\) (since each island has a 1/5 chance of having treasure).\n\nLet's calculate the probability:\n\n1. First, we find the number of combinations of 7 islands taken 4 at a time:\n\\[ \\binom{7}{4} = \\frac{7!}{4!(7-4)!} = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1} = 35 \\]\n\n2. Next, we calculate \\( p^k \\) and \\( (1-p)^{n-k} \\):\n\\[ p^k = \\left(\\frac{1}{5}\\right)^4 = \\frac{1}{625} \\]\n\\[ (1-p)^{n-k} = \\left(1 - \\frac{1}{5}\\right)^{7-4} = \\left(\\frac{4}{5}\\right)^3 = \\frac{64}{125} \\]\n\n3. Finally, we multiply these together:\n\\[ P(X = 4) = 35 \\times \\frac{1}{625} \\times \\frac{64}{125} \\]\n\n\\[ P(X = 4) = 35 \\times \\frac{64}{625 \\times 125} \\]\n\n\\[ P(X = 4) = 35 \\times \\frac{64}{78125} \\]\n\n\\[ P(X = 4) = \\frac{2240}{78125} \\]\n\n\\[ P(X = 4) = \\frac{352}{12500} \\]\n\n\\[ P(X = 4) = \\frac{88}{3125} \\]\n\nSo, the probability that exactly 4 of the 7 islands have treasure is \\( \\frac{88}{3125} \\). Writing this inboxed format:\n\n\\[ \\boxed{\\frac{88}{3125}} \\]"
+    ]
+  }
+]

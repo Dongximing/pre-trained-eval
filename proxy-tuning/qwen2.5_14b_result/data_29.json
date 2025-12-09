@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The Greek army contained two types of soldiers: the upper class and the lower class soldiers. If there were a total of 5 upper class soldiers, and 10 lower class soldiers in a certain part of Athens, and the battle of Thermopylae demands a force of 4 upper class soldiers and 8 lower class soldiers, how many different battalions can be sent?"
+    ],
+    "answer": "225",
+    "output": [
+      "To determine how many different battalions can be sent to the battle of Thermopylae, we need to calculate the number of ways to choose 4 upper class soldiers from 5 and 8 lower class soldiers from 10. We will use combinations for this purpose.\n\n1. **Calculate the number of ways to choose 4 upper class soldiers from 5:**\n   The number of combinations of 5 items taken 4 at a time is given by the binomial coefficient \\(\\binom{5}{4}\\):\n   \\[\n   \\binom{5}{4} = \\frac{5!}{4!(5-4)!} = \\frac{5!}{4!1!} = \\frac{5 \\times 4!}{4! \\times 1} = 5\n   \\]\n\n2. **Calculate the number of ways to choose 8 lower class soldiers from 10:**\n   The number of combinations of 10 items taken 8 at a time is given by the binomial coefficient \\(\\binom{10}{8}\\). Note that \\(\\binom{10}{8} = \\binom{10}{2}\\) because \\(\\binom{n}{k} = \\binom{n}{n-k}\\):\n   \\[\n   \\binom{10}{8} = \\binom{10}{2} = \\frac{10!}{2!(10-2)!} = \\frac{10!}{2!8!} = \\frac{10 \\times 9 \\times 8!}{2 \\times 1 \\times 8!} = \\frac{10 \\times 9}{2 \\times 1} = 45\n   \\]\n\n3. **Calculate the total number of different battalions:**\n   The total number of different battalions is the product of the number of ways to choose the upper class soldiers and the number of ways to choose the lower class soldiers:\n   \\[\n   \\binom{5}{4} \\times \\binom{10}{8} = 5 \\times 45 = 225\n   \\]\n\nTherefore, the number of different battalions that can be sent is \\(\\boxed{225}\\)."
+    ]
+  }
+]

@@ -1,14 +1,14 @@
 from typing import Optional, Dict, Any
 import torch
 import torch.nn.functional as F
-from transformers import AutoModelForCausalLM, PreTrainedTokenizer
+from transformers import AutoModelForCausalLM, PreTrainedTokenizer, AutoTokenizer
 from transformers.generation.utils import (
     StoppingCriteriaList,
     LogitsProcessorList,
 )
 from collections import defaultdict
 
-MATH_PROMPT = "Please reason step by step, and put your final answer within \\boxed{}."  # 需要的话可以改成数学 prompt
+MATH_PROMPT = "Please reason step by step, and put your final answer within \\boxed{}.\n"  # 需要的话可以改成数学 prompt
 
 
 class DExpertsLlama:
@@ -53,14 +53,14 @@ class DExpertsLlama:
         构造 expert 的 chat 格式输入。
         """
         prompts = self.tokenizer.batch_decode(input_ids, skip_special_tokens=True)
-
+        tokenizer = AutoTokenizer.from_pretrained("/home/original_models/gemma-2-9b-it")
         chat_prompts = []
         for p in prompts:
             problem = p
             messages = [
-                {"role": "user", "content": problem + MATH_PROMPT}
+                {"role": "user", "content": problem }
             ]
-            chat_text = self.tokenizer.apply_chat_template(
+            chat_text = tokenizer.apply_chat_template(
                 messages,
                 tokenize=False,           # 先要字符串
                 add_generation_prompt=True
@@ -70,9 +70,9 @@ class DExpertsLlama:
         print('toke_end id ',self.tokenizer.eos_token_id)
         chat_inputs = self.tokenizer(
             chat_prompts,
-            padding="longest",
+            # padding="longest",
             return_tensors="pt",
-            add_special_tokens=True,
+            # add_special_tokens=True,
         )
 
         chat_inputs.input_ids = chat_inputs.input_ids.to(self.device)
@@ -177,10 +177,14 @@ class DExpertsLlama:
             antiexpert_next_token_logits = antiexpert_next_token_logits[:, :vocab_size]
 
             # DExperts 合成
+            # print('base_next_token_logits',base_next_token_logits)
+            # print('expert_next_token_logits',expert_next_token_logits)
+            # print('antiexpert_next_token_logits',antiexpert_next_token_logits)
             next_token_logits = (
                 base_next_token_logits
                 + self.alpha * (expert_next_token_logits - antiexpert_next_token_logits)
             )
+            # print(next_token_logits)
 
             # 额外的 logits_processor（比如禁止某些 token）
             if logits_processor is not None:
@@ -206,7 +210,7 @@ class DExpertsLlama:
                 next_tokens = torch.multinomial(probs, num_samples=1).squeeze(-1)
             else:
                 next_tokens = torch.argmax(next_token_logits, dim=-1)
-
+            # print('next_tokens',next_tokens)
             # 已经结束的序列用 pad 补
             next_tokens = (
                 next_tokens * unfinished_sequences
@@ -268,5 +272,5 @@ class DExpertsLlama:
                     analysis_data[k] = torch.stack(analysis_data[k], dim=1)
             print(analysis_data)
             return input_ids, analysis_data
-
+        print('input_ids',input_ids)
         return input_ids

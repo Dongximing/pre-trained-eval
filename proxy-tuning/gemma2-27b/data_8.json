@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the distance, in units, between the points $(2, -6)$ and $(-4, 3)$? Express your answer in simplest radical form.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "3\\sqrt{13}",
+    "output": [
+      "Here's how to find the distance between two points:\n\n**1. Recall the Distance Formula**\n\nThe distance formula is derived from the Pythagorean theorem and is used to find the distance between two points in a coordinate plane:\n\n √[(x₂ - x₁)² + (y₂ - y₁)²]\n\n**2. Identify the Coordinates**\n\n*  (x₁, y₁) = (2, -6)\n*  (x₂, y₂) = (-4, 3)\n\n**3. Substitute the Values into the Formula**\n\n√[(-4 - 2)² + (3 - (-6))²]\n\n**4. Simplify**\n\n√[(-6)² + (9)²] \n√[36 + 81]\n√117\n\n**5. Simplify the Radical**\n\n√117 = √(9 * 13) = **3√13**\n\n\n\nTherefore, the distance between the points (2, -6) and (-4, 3) is **3√13**."
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A regular pentagon is rotated counterclockwise about its center. What is the minimum number of degrees it must be rotated until it coincides with its original position?"
+    ],
+    "answer": "72",
+    "output": [
+      "To determine the minimum number of degrees a regular pentagon must be rotated counterclockwise about its center until it coincides with its original position, we need to follow these steps:\n\n1. **Understand the Symmetry of a Regular Pentagon:**\n   A regular pentagon has five equal sides and five equal angles. It is symmetric, meaning it looks the same after certain rotations.\n\n2. **Calculate the Total Angle of Rotation for One Full Cycle:**\n   A full rotation around a point is \\(360^\\circ\\).\n\n3. **Determine the Number of Symmetric Positions:**\n   A regular pentagon has 5 lines of symmetry, which means it can be rotated to 5 different positions where it looks exactly the same.\n\n4. **Calculate the Angle of Rotation for Each Symmetric Position:**\n   To find the angle of rotation that brings the pentagon to one of its symmetric positions, we divide the total angle of rotation by the number of symmetric positions:\n   \\[\n   \\text{Angle of rotation} = \\frac{360^\\circ}{5} = 72^\\circ\n   \\]\n\n5. **Verify the Minimum Rotation:**\n   The smallest angle that will bring the pentagon back to a position indistinguishable from its original position is \\(72^\\circ\\). Any smaller angle would not align the pentagon with any of its symmetric positions.\n\nTherefore, the minimum number of degrees the pentagon must be rotated counterclockwise to coincide with its original position is \\(\\boxed{72}\\)."
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Simplify $\\sqrt{242}$."
+    ],
+    "answer": "11\\sqrt2",
+    "output": [
+      "To simplify \\(\\sqrt{242}\\), we will follow these steps:\n\n1. **Factorize 242 into its prime factors:**\n   - Start by dividing 242 by the smallest prime number, which is 2.\n     \\[\n     242 \\div 2 = 121\n     \\]\n   - Next, factorize 121. Since 121 is not divisible by 2, we try the next smallest prime number, which is 3. It is not divisible by 3 either. We then try 5, and it is not divisible by 5. We then try 7, and it is not divisible by 7. Finally, we try 11.\n     \\[\n     121 \\div 11 = 11\n     \\]\n   - Therefore, the prime factorization of 242 is:\n     \\[\n     242 = 2 \\times 11 \\times 11 = 2 \\times 11^2\n     \\]\n\n2. **Rewrite the square root using the prime factorization:**\n   \\[\n   \\sqrt{242} = \\sqrt{2 \\times 11^2}\n   \\]\n\n3. **Simplify the square root by taking out the square factors:**\n   - The square root of \\(11^2\\) is 11.\n     \\[\n     \\sqrt{11^2} = 11\n     \\]\n   - Therefore, we can rewrite the expression as:\n     \\[\n     \\sqrt{2 \\times 11^2} = \\sqrt{2} \\times \\sqrt{11^2} = \\sqrt{2} \\times 11\n     \\]\n\n4. **Combine the terms:**\n   \\[\n   \\sqrt{242} = 11\\sqrt{2}\n   \\]\n\nThus, the simplified form of \\(\\sqrt{242}\\) is \\(\\boxed{11\\sqrt{2}}\\)."
+    ]
+  }
+]

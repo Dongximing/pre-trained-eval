@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Half the value of $3x-9$ is $x+37$. What is the value of $x$?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "83",
+    "output": [
+      "Here's how to solve the problem step-by-step:\n\n1. **Translate the word problem into an equation:**\n\n   \"Half the value of 3x - 9 is x + 37\"  can be written as:\n\n   (1/2)(3x - 9) = x + 37\n\n2. **Simplify the equation:**\n\n   * Distribute the 1/2: (3/2)x - 9/2 = x + 37\n\n3. **Get all the x terms on one side:**\n\n   * Subtract (3/2)x from both sides: -9/2 = (1/2)x + 37\n\n4. **Isolate the x term:**\n\n   * Subtract 37 from both sides: -9/2 - 37 = (1/2)x\n   * Simplify: -83/2 = (1/2)x\n\n5. **Solve for x:**\n\n   * Multiply both sides by 2: -83 = x\n\n\nTherefore, the value of x is  $\\boxed{-83}$."
+    ]
+  }
+]

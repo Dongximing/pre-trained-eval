@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The graph of $f(x)=\\frac{2x}{x^2-5x-14}$ has vertical asymptotes $x=a$ and $x=b$, and horizontal asymptote $y=c$.  Find $a+b+c$."
+    ],
+    "answer": "5",
+    "output": [
+      "To find the vertical asymptotes of the function $f(x)=\\frac{2x}{x^2-5x-14}$, we need to find the values of $x$ for which the denominator is equal to zero. This is because a vertical asymptote occurs when the function is undefined, which happens when the denominator is zero and the numerator is not zero.\n\nThe denominator is a quadratic expression:\n\n$$x^2 - 5x - 14 = 0$$\n\nTo find the roots of this quadratic, we can factor it:\n\n$$(x - 7)(x + 2) = 0$$\n\nSetting each factor equal to zero gives us:\n\n$$x - 7 = 0 \\quad \\text{or} \\quad x + 2 = 0$$\n\nSolving for $x$:\n\n$$x = 7 \\quad \\text{and} \\quad x = -2$$\n\nSo, the vertical asymptotes are at $x = a = 7$ and $x = b = -2$.\n\nNow, let's find the horizontal asymptote. A rational function like $f(x) = \\frac{p(x)}{q(x)}$, where $p(x)$ and $q(x)$ are polynomials with degrees $m$ and $n$ respectively, will have a horizontal asymptote at $y = \\frac{p(\\infty)}{q(\\infty)}$ if $m \\leq n$. If $m > n$, there is no horizontal asymptote; if $m = n$, the horizontal asymptote is the ratio of the leading coefficients.\n\nIn our case, $p(x) = 2x$ (degree 1) and $q(x) = x^2 - 5x - 14$ (degree 2). Since the degree of the numerator is less than the degree of the denominator, there will be a horizontal asymptote. The leading coefficient of the numerator is 2 and the leading coefficient of the denominator is 1. Therefore, the horizontal asymptote $y = c$ is:\n\n$$c = \\frac{2}{1} = 2$$\n\nNow we can find $a + b + c$:\n\n$$a + b + c = 7 + (-2) + 2 = 7 - 2 + 2 = 5 + 2 = 7$$\n\nSo, $a + b + c = 7$, and putting this in \\boxed{}:\n\n$$\\boxed{7}$$"
+    ]
+  }
+]

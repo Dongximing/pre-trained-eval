@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Consider the function \\[ f(x) =\n\\begin{cases}\nax^2 & \\text{if } x \\geq a,\\\\\nax +2a& \\text{if } x <a,\n\\end{cases}\n\\]where $a$ is some number.\n\nWhat is the largest value of $a$ such that the graph of $y=f(x)$ intersects every horizontal line at least once?"
+    ],
+    "answer": "2",
+    "output": [
+      "To find the largest value of $a$ such that the graph of $y = f(x)$ intersects every horizontal line at least once, we need to consider the behavior of the function as $x$ approaches positive infinity and negative infinity.\n\nFirst, let's analyze the function for different values of $x$:\n\n1. If $x \\geq a$, the function is $f(x) = ax^2$. This is a quadratic function with a positive coefficient for $x^2$, so it opens upward and grows without bound as $x$ increases.\n\n2. If $x < a$, the function is $f(x) = ax + 2a$. This is a linear function with a positive slope ($a$) and a y-intercept at $(0, 2a)$. As $x$ increases from negative infinity towards $a$, this line will also grow without bound.\n\nSince both parts of the function grow without bound as $x$ increases, the graph of $f(x)$ will eventually intersect any horizontal line, no matter how large or small the value of $y$ is.\n\nHowever, we need to ensure that the two parts of the function meet at $x = a$ to maintain continuity. At $x = a$, the quadratic part is $f(a) = a^3$ and the linear part is $f(a) = a^2 + 2a$. For the function to be continuous, we must have:\n\n\\[ a^3 = a^2 + 2a \\]\n\nRearrange the equation to find the value of $a$:\n\n\\[ a^3 - a^2 - 2a = 0 \\]\n\\[ a(a^2 - a - 2) = 0 \\]\n\nThe factors are $a(a - 2)(a + 1) = 0$. Since $a$ cannot be zero (as that would make the function undefined for $x < a$), we have two possible values for $a$: $a = 2$ or $a = -1$.\n\nHowever, we are looking for the largest value of $a$ that still intersects every horizontal line. Since the quadratic part grows faster than the linear part, a larger $a$ will result in the graph intersecting more horizontal lines. Therefore, the largest value of $a$ that ensures the graph intersects every horizontal line at least once is $a = 2$.\n\n\\boxed{a = 2}"
+    ]
+  }
+]

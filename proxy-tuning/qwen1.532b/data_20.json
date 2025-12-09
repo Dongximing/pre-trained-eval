@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Evaluate $(1+2i)6-3i$."
+    ],
+    "answer": "6+9i",
+    "output": [
+      "To evaluate the expression $(1+2i)6 - 3i$, we'll follow the standard arithmetic rules for complex numbers. Here's the step-by-step process:\n\n1. Multiply the complex number (1 + 2i) by 6:\n   $$(1 + 2i) \\times 6 = 1 \\times 6 + 2i \\times 6 = 6 + 12i$$\n\n2. Now, subtract 3i from the result:\n   $$6 + 12i - 3i = 6 + (12i - 3i) = 6 + 9i$$\n\nSo, the final answer is $6 + 9i$. Placing it within a box:\n\n\\boxed{6 + 9i}"
+    ]
+  }
+]

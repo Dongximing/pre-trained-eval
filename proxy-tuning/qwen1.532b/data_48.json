@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What power of 4 is equal to 8? Express your answer as a common fraction."
+    ],
+    "answer": "\\frac{3}{2}",
+    "output": [
+      "To find the power of 4 that is equal to 8, we can set up the equation:\n\n\\[ 4^n = 8 \\]\n\nWe need to express 8 as a power of 4, since 4 is the base. We know that:\n\n\\[ 2^3 = 8 \\]\n\nThis is because \\( 2 \\times 2 \\times 2 = 8 \\). Now, we want to express 8 as a power of 4, which means we need to find a way to write 2 as a power of 4. Since 2 is a square root of 4 (because \\( 4 = 2^2 \\)), we can rewrite 8 as:\n\n\\[ 4^{(\\frac{3}{2})} = 8 \\]\n\nThis is because raising 4 to the power of \\( \\frac{3}{2} \\) is the same as taking the square root of 4 three times, which gives us 8. Therefore:\n\n\\[ \\boxed{\\frac{3}{2}} \\]"
+    ]
+  }
+]

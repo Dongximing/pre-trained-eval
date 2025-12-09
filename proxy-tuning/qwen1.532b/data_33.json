@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Consider the geometric sequence $\\frac{125}{9}, \\frac{25}{3}, 5, 3, \\ldots$. What is the eighth term of the sequence? Express your answer as a common fraction."
+    ],
+    "answer": "\\frac{243}{625}",
+    "output": [
+      "A geometric sequence is a sequence of numbers where each term after the first is found by multiplying the previous term by a constant ratio. To find the common ratio, we can divide any term by the previous term. Let's use the second and first terms to find the ratio:\n\n$$\n\\text{Ratio} = \\frac{\\frac{25}{3}}{\\frac{125}{9}} = \\frac{25}{3} \\times \\frac{9}{125} = \\frac{25 \\times 9}{3 \\times 125} = \\frac{3}{5}\n$$\n\nNow that we have the common ratio, we can find the eighth term by multiplying the first term by the ratio seven times (since the first term is already given). \n\n$$\n\\text{First term} = \\frac{125}{9}\n$$\n\n$$\n\\text{Eighth term} = \\text{First term} \\times \\text{Ratio}^7 = \\frac{125}{9} \\times \\left(\\frac{3}{5}\\right)^7\n$$\n\nLet's calculate this:\n\n$$\n\\text{Eighth term} = \\frac{125}{9} \\times \\left(\\frac{3^7}{5^7}\\right) = \\frac{125 \\times 3^7}{9 \\times 5^7}\n$$\n\nWe can simplify this by factoring out a 5 from both the numerator and the denominator since 5 is a factor of both 125 and 5^7:\n\n$$\n\\text{Eighth term} = \\frac{25 \\times 3^7}{9 \\times 5^6}\n$$\n\nNow, $3^7 = 3 \\times 3^6 = 3 \\times (3^2)^3 = 3 \\times 9^3 = 3 \\times 729$.\n\n$$\n\\text{Eighth term} = \\frac{25 \\times 729}{9 \\times 15625}\n$$\n\n$$\n\\text{Eighth term} = \\frac{18225}{140625}\n$$\n\nThis fraction can be simplified by dividing both the numerator and the denominator by their greatest common divisor (GCD), which is 18225:\n\n$$\n\\text{Eighth term} = \\frac{18225 \\div 18225}{140625 \\div 18225} = \\frac{1}{75}\n$$\n\nSo, the eighth term of the sequence is $\\frac{1}{75}$. Writing this in a box:\n\n\\boxed{\\frac{1}{75}}"
+    ]
+  }
+]

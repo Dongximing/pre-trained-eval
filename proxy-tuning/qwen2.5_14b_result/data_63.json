@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let\n\\[x^8 + 3x^4 - 4 = p_1(x) p_2(x) \\dotsm p_k(x),\\]where each non-constant polynomial $p_i(x)$ is monic with integer coefficients, and cannot be factored further over the integers.  Compute $p_1(1) + p_2(1) + \\dots + p_k(1).$"
+    ],
+    "answer": "10",
+    "output": [
+      "To factor the polynomial \\(x^8 + 3x^4 - 4\\) into irreducible polynomials with integer coefficients, we start by making a substitution. Let \\(y = x^4\\). Then the polynomial becomes a quadratic in \\(y\\):\n\n\\[y^2 + 3y - 4.\\]\n\nWe can factor this quadratic polynomial as follows:\n\n\\[y^2 + 3y - 4 = (y + 4)(y - 1).\\]\n\nSubstituting back \\(y = x^4\\), we get:\n\n\\[x^8 + 3x^4 - 4 = (x^4 + 4)(x^4 - 1).\\]\n\nNext, we need to factor \\(x^4 + 4\\) and \\(x^4 - 1\\) further. Starting with \\(x^4 - 1\\), we recognize it as a difference of squares:\n\n\\[x^4 - 1 = (x^2 + 1)(x^2 - 1) = (x^2 + 1)(x + 1)(x - 1).\\]\n\nNow, we factor \\(x^4 + 4\\). We can rewrite \\(x^4 + 4\\) as:\n\n\\[x^4 + 4 = x^4 + 4x^2 + 4 - 4x^2 = (x^2 + 2)^2 - (2x)^2 = (x^2 + 2x + 2)(x^2 - 2x + 2).\\]\n\nThus, the complete factorization of \\(x^8 + 3x^4 - 4\\) is:\n\n\\[x^8 + 3x^4 - 4 = (x^2 + 1)(x + 1)(x - 1)(x^2 + 2x + 2)(x^2 - 2x + 2).\\]\n\nWe now need to evaluate each of these factors at \\(x = 1\\):\n\n\\[\n\\begin{aligned}\np_1(1) &= (1^2 + 1) = 2, \\\\\np_2(1) &= (1 + 1) = 2, \\\\\np_3(1) &= (1 - 1) = 0, \\\\\np_4(1) &= (1^2 + 2 \\cdot 1 + 2) = 5, \\\\\np_5(1) &= (1^2 - 2 \\cdot 1 + 2) = 1.\n\\end{aligned}\n\\]\n\nSumming these values, we get:\n\n\\[p_1(1) + p_2(1) + p_3(1) + p_4(1) + p_5(1) = 2 + 2 + 0 + 5 + 1 = 10.\\]\n\nTherefore, the final answer is:\n\n\\[\\boxed{10}.\\]"
+    ]
+  }
+]

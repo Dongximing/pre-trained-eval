@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the smallest positive integer $n$ such that all the roots of $z^4 + z^2 + 1 = 0$ are $n^{\\text{th}}$ roots of unity?"
+    ],
+    "answer": "6",
+    "output": [
+      "To determine the smallest positive integer \\( n \\) such that all the roots of the polynomial \\( z^4 + z^2 + 1 = 0 \\) are \\( n \\)-th roots of unity, we start by finding the roots of the polynomial.\n\nFirst, let \\( w = z^2 \\). Then the equation \\( z^4 + z^2 + 1 = 0 \\) becomes \\( w^2 + w + 1 = 0 \\). The roots of this quadratic equation are given by the quadratic formula:\n\\[\nw = \\frac{-1 \\pm \\sqrt{1^2 - 4 \\cdot 1 \\cdot 1}}{2 \\cdot 1} = \\frac{-1 \\pm \\sqrt{-3}}{2} = \\frac{-1 \\pm i\\sqrt{3}}{2}.\n\\]\nThus, the roots are \\( w = \\frac{-1 + i\\sqrt{3}}{2} \\) and \\( w = \\frac{-1 - i\\sqrt{3}}{2} \\). These are the non-real cube roots of unity, which can be written as \\( \\omega \\) and \\( \\omega^2 \\), where \\( \\omega = e^{2\\pi i / 3} = -\\frac{1}{2} + i\\frac{\\sqrt{3}}{2} \\) and \\( \\omega^2 = e^{-2\\pi i / 3} = -\\frac{1}{2} - i\\frac{\\sqrt{3}}{2} \\).\n\nSince \\( w = z^2 \\), we have \\( z^2 = \\omega \\) or \\( z^2 = \\omega^2 \\). The solutions to these equations are:\n\\[\nz = \\pm \\omega^{1/2} \\quad \\text{and} \\quad z = \\pm \\omega^{2/2} = \\pm \\omega.\n\\]\nThe fourth roots of \\( \\omega \\) and \\( \\omega^2 \\) are the eighth roots of unity, because \\( \\omega = e^{2\\pi i / 3} \\) and \\( \\omega^2 = e^{-2\\pi i / 3} \\), and the eighth roots of unity are \\( e^{2k\\pi i / 8} \\) for \\( k = 0, 1, 2, \\ldots, 7 \\). Specifically, the roots of \\( z^4 + z^2 + 1 = 0 \\) are \\( e^{2\\pi i / 8}, e^{6\\pi i / 8}, e^{10\\pi i / 8}, e^{14\\pi i / 8} \\), which simplify to \\( e^{\\pi i / 4}, e^{3\\pi i / 4}, e^{5\\pi i / 4}, e^{7\\pi i / 4} \\).\n\nThese are all eighth roots of unity. Therefore, the smallest positive integer \\( n \\) such that all the roots of \\( z^4 + z^2 + 1 = 0 \\) are \\( n \\)-th roots of unity is \\( n = 8 \\).\n\nThe answer is \\(\\boxed{8}\\)."
+    ]
+  }
+]

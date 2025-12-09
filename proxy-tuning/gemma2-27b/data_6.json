@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the smallest positive perfect cube that can be written as the sum of three consecutive integers?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "27",
+    "output": [
+      "Here's how to solve müşteri strideCelebrate [];\r\n **Understanding the Problem**\n\n* **Perfect Cube:** A perfect cube is a number that can be obtained by cubing an integer (e.g., 8 is a perfect cube because 2 x 2 x 2 = 8).\n* **Consecutive Integers:**  Consecutive integers are numbers that follow each other in order (e.g., 1, 2, 3 or 10, 11, 12).\n\n**Setting up the Equation**\n\nLet's represent the three consecutive integers as:\n\n*  *n*\n*  *n + 1*\n*  *n + 2*\n\nThe problem states that the sum of these integers equals a perfect cube.  So, we have the equation:\n\n*n* + (*n* + 1) + (*n* + 2) = *k*³  (where *k* is an integer)\n\n**Simplifying the Equation**\n\nCombine like terms:\n\n3*n* + 3 = *k*³\n\n**Solving for *n***\n\n1. Subtract 3 from both sides: 3*n* = *k*³ - 3\n2. Divide both sides by 3: *n* = (*k*³ - 3) / 3\n\n**Finding the Smallest Perfect Cube**\n\nTo find"
+    ]
+  }
+]

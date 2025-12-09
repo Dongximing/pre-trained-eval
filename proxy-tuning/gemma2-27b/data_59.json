@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "In a class of 50 students, 28 participate in MATHCOUNTS, 21 participate in science club, and 6 students participate in neither. How many students participate in both MATHCOUNTS and science club?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "5",
+    "output": [
+      "Here's how to solve this problem step-by-step:\n\n**1. Find the total number of students who participate in at least one activity:**\n\n* Subtract the number of students who participate in neither from the total number of students: 50 - 6 = 44 students\n\n**2.  Use the formula:**\n\n*  The formula for the union of two sets is:  |A ∪ B| = |A| + |B| - |A ∩ B|\n   *  Where:\n      * |A ∪ B| is the number of students in either MATHCOUNTS or science club (or both)\n      * |A| is the number of students in MATHCOUNTS\n      * |B| is the number of students in science club\n      * |A ∩ B| is the number of students in both MATHCOUNTS and science club\n\n**3. Plug in the values:**\n\n* 44 = 28 + 21 - |A ∩ B|\n\n**4. Solve for |A ∩ B|:**\n\n* 44 = 49 - |A ∩ B|\n* |A ∩ B| = 49 - 44\n* |A ∩ B| = 5\n\n\n**Answer:**   dedans   machinery"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let $a$ be a positive real number such that all the roots of\n\\[x^3 + ax^2 + ax + 1 = 0\\]are real.  Find the smallest possible value of $a.$"
+    ],
+    "answer": "3",
+    "output": [
+      "To find the smallest possible value of $a$ such that all the roots of the cubic equation are real, we can use the discriminant of a cubic equation. The discriminant of a cubic equation $ax^3 + bx^2 + cx + d = 0$ is given by the expression:\n\n\\[D = b^2c^2 - 4ac^3 - 4b^3d + 18abcd - 27a^2d^2\\]\n\nFor a cubic equation to have all real roots, its discriminant must be non-negative. Let's compute the discriminant for the given equation:\n\n\\[x^3 + ax^2 + ax + 1 = 0\\]\n\nHere, $a = 1$, $b = a$, $c = a$, and $d = 1$. Plugging these values into the discriminant formula, we get:\n\n\\[D = a^2(a^2) - 4(1)(a^3) - 4(a^3) + 18(1)(a)(1) - 27(1)^2(1)^2\\]\n\\[D = a^4 - 4a^3 - 4a^3 + 18a - 27\\]\n\\[D = a^4 - 8a^3 + 18a - 27\\]\n\nFor $D \\geq 0$, we want to find the smallest $a$ that satisfies this inequality. Let's set $D = 0$ and solve for $a$:\n\n\\[a^4 - 8a^3 + 18a - 27 = 0\\]\n\nThis is a quartic equation, which might be difficult to solve analytically. However, we can try to find a rational root using the Rational Root Theorem. The possible rational roots are the factors of the constant term (27) divided by the factors of the leading coefficient (1). The possible rational roots are $\\pm1, \\pm3, \\pm9, \\pm27$. By testing these values, we find that $a = 3$ is a root:\n\n\\[3^4 - 8(3)^3 + 18(3) - 27 = 81 - 216 + 54 - 27 = 0\\]\n\nSince $a = 3$ is a root, we can divide the quartic by $(a - 3)$ to find a simpler polynomial to work with:\n\n\\[\\frac{a^4 - 8a^3 + 18a - 27}{a - 3} = a^3 - 5a^2 + 3a + 9\\]\n\nNow, we need to check if this cubic has a positive root (since $a$ is positive). By Descartes' Rule of Signs, we see that the polynomial has one positive root, which is the same as the number of sign changes in the coefficients (one). Since $a = 3$ is a root, it's the smallest positive root, and thus, the smallest possible value of $a$ that ensures all roots are real is $a = 3$.\n\nTherefore, the answer is:\n\n$$\\boxed{3}$$"
+    ]
+  }
+]
