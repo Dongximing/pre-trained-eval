@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The results of a cross-country team's training run are graphed below. Which student has the greatest average speed? [asy]\nfor ( int i = 1; i <= 7; ++i )\n{\n\ndraw((i,0)--(i,6));\n}\n\nfor ( int i = 1; i <= 5; ++i )\n{\n\ndraw((0,i)--(8,i));\n}\ndraw((-0.5,0)--(8,0), linewidth(1));\ndraw((0,-0.5)--(0,6), linewidth(1));\nlabel(\"$O$\", (0,0), SW);\nlabel(scale(.85)*rotate(90)*\"distance\", (0, 3), W);\nlabel(scale(.85)*\"time\", (4, 0), S);\ndot((1.25, 4.5));\nlabel(scale(.85)*\"Evelyn\", (1.25, 4.8), N);\ndot((2.5, 2.2));\nlabel(scale(.85)*\"Briana\", (2.5, 2.2), S);\ndot((4.25,5.2));\nlabel(scale(.85)*\"Carla\", (4.25, 5.2), SE);\ndot((5.6, 2.8));\nlabel(scale(.85)*\"Debra\", (5.6, 2.8), N);\ndot((6.8, 1.4));\nlabel(scale(.85)*\"Angela\", (6.8, 1.4), E);\n[/asy]Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\text{Evelyn}",
+    "output": [
+      "We can find the average speed of each student by dividing the distance they ran by the time it took them to run that distance.\n\nFor Evelyn, the distance is 1.25 and the time is 4.5, so her average speed is $\\frac{1.25}{4.5}=\\frac{5}{18}$.\n\nFor Briana, the distance is 2.5 and the time is 2.2, so her average speed is $\\frac{2.5}{2.2}=\\frac{25}{11}$.\n\nFor Carla, the distance is 4.25 and the time is 5.2, so her average speed is $\\frac{4.25}{5.2}=\\frac{25}{12}$.\n\nFor Debra, the distance is 5.6 and the time is 2.8, so her average speed is $\\frac{5.6}{2.8}=2$.\n\nFor Angela, the distance is 6.8 and the time is 1.4, so her average speed is $\\frac{6.8}{1.4}=4.86$.\n\nComparing the average speeds, we see that Angela has the greatest average speed, so the answer is $\\boxed{\\text{Angela}}$."
+    ]
+  }
+]

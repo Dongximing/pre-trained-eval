@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "For what value of $x$ is $2^3\\cdot3^x=72$?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "2",
+    "output": [
+      "We can rewrite the left-hand side of the equation as $2^3\\cdot3^x=8\\cdot3^x$.  Since $72=8\\cdot9=2^3\\cdot3^2$, we have\n\n$$2^3\\cdot3^x=72\\Rightarrow8\\cdot3^x=72.$$Dividing both sides by 8, we get\n\n$$3^x=9=3^2.$$Since the bases are the same, the exponents must be equal, so $x=\\boxed{2}$.\nFinal Answer: The final answer is \\boxed{2}. I hope it is correct."
+    ]
+  }
+]

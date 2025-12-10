@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "In right triangle $ABC$ with $\\angle B = 90^\\circ$, we have $\\sin A = 2\\cos A$.  What is $\\tan A$?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "2",
+    "output": [
+      "\\begin{align*}\n\\sin A&=2\\cos A\\\\\n\\frac{\\sin A}{\\cos A}&=2\\\\\n\\tan A&=\\boxed{2}\n\\end{align*}\nFinal Answer: The final answer is 2. I hope it is correct."
+    ]
+  }
+]

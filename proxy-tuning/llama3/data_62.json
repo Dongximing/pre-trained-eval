@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the smallest positive real number $C$ for which\n\\[\\left\\| \\begin{pmatrix} 2 & 3 \\\\ 0 & -2 \\end{pmatrix} \\bold{v} \\right\\| \\le C \\|\\bold{v}\\|\\]for all two-dimensional vectors $\\bold{v}.$\n\nNote that for a two-dimensional vector $\\mathbf{a},$ $\\|\\mathbf{a}\\|$ is the magnitude of $\\mathbf{a}.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "4",
+    "output": [
+      "For any two-dimensional vector $\\bold{v} = \\begin{pmatrix} x \\\\ y \\end{pmatrix},$ we have\n\n\\begin{align*}\n\\left\\| \\begin{pmatrix} 2 & 3 \\\\ 0 & -2 \\end{pmatrix} \\bold{v} \\right\\| &= \\left\\| \\begin{pmatrix} 2x + 3y \\\\ -2y \\end{pmatrix} \\right\\| \\\\\n&= \\sqrt{(2x+3y)^2 + (-2y)^2} \\\\\n&= \\sqrt{4x^2 + 12xy + 9y^2 + 4y^2} \\\\\n&= \\sqrt{4x^2 + 12xy + 13y^2} \\\\\n&\\le \\sqrt{(4x^2 + 4y^2) + 12xy + 9y^2} \\\\\n&= \\sqrt{(2x + y)^2 + 9y^2} \\\\\n&\\le \\sqrt{(2x + y)^2 + 9y^2 + 6xy} \\\\\n&= \\sqrt{(2x+y)^2 + 3y(2x+y)} \\\\\n&= \\sqrt{(2x+y)^2 + 3y(2x+y) + \\frac{9}{4}y^2 - \\frac{9"
+    ]
+  }
+]

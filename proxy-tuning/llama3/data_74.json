@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Simplify\n\\[\\frac{\\sec x}{\\sin x} - \\frac{\\sin x}{\\cos x}.\\]Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\cot x",
+    "output": [
+      "Let's simplify the expression step by step:\n\n\\begin{align*}\n\\frac{\\sec x}{\\sin x} - \\frac{\\sin x}{\\cos x} &= \\frac{\\sec x}{\\sin x} - \\frac{\\sin x}{\\cos x} \\cdot \\frac{\\cos x}{\\cos x} && (\\text{multiply by } \\frac{\\cos x}{\\cos x} \\text{ to get a common denominator}) \\\\\n&= \\frac{\\sec x}{\\sin x} - \\frac{\\sin x \\cos x}{\\cos^2 x} && (\\text{cancel out the } \\cos x \\text{ terms}) \\\\\n&= \\frac{\\frac{1}{\\cos x}}{\\frac{\\sin x}} - \\frac{\\sin x \\cos x}{\\cos^2 x} && (\\text{write } \\sec x \\text{ as } \\frac{1}{\\cos x}) \\\\\n&= \\frac{1}{\\cos x} \\div \\frac{\\sin x} - \\frac{\\sin x \\cos x}{\\cos^2 x} && (\\text{write } \\frac{\\frac{1}{\\cos x}}{\\frac{\\sin x}} \\text{ as } \\frac{1}{\\cos x} \\div \\frac{\\sin x}) \\\\\n&= \\frac{1}{\\cos x} \\cdot \\frac{\\sin x"
+    ]
+  }
+]

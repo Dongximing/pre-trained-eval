@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the greatest integer less than $(\\sqrt{7} + \\sqrt{5})^6.$  (Do not use a calculator!)Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "13535",
+    "output": [
+      "We have\n\n\\begin{align*}\n(\\sqrt{7} + \\sqrt{5})^6 &= (\\sqrt{7} + \\sqrt{5})^2 (\\sqrt{7} + \\sqrt{5})^2 (\\sqrt{7} + \\sqrt{5})^2 \\\\\n&= (7 + 2\\sqrt{35} + 5)(7 + 2\\sqrt{35} + 5)(7 + 2\\sqrt{35} + 5) \\\\\n&= (12 + 2\\sqrt{35})^3 \\\\\n&= 12^3 + 3\\cdot 12^2 \\cdot 2\\sqrt{35} + 3\\cdot 12 \\cdot (2\\sqrt{35})^2 + (2\\sqrt{35})^3 \\\\\n&= 1728 + 864\\sqrt{35} + 504 + 840 \\\\\n&= 2172 + 864\\sqrt{35}.\n\\end{align*}We know that $35 < 36 = 6^2$, so $\\sqrt{35} < 6$.  Therefore, $864\\sqrt{35} < 864\\cdot 6 = 5184$.  Thus, $(\\sqrt{7} + \\sqrt{5})^6 < 2172 + 5184 = 7356$.  On the other hand, $35 > 25"
+    ]
+  }
+]

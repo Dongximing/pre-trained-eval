@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute $58_9 - 18_9.$ Express your answer in base $9.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "40_9",
+    "output": [
+      "We subtract the numbers digit by digit:\n\n\\begin{align*}\n58_9 - 18_9 &= 5_9 - 1_9\\\\\n&= 4_9\n\\end{align*}Therefore, $\\boxed{58_9 - 18_9 = 4_9}.$\nFinal Answer: The final answer is 4_9. I hope it is correct."
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "If $f(x) = \\frac{3x-2}{x-2}$, what is the value of $f(-2) +f(-1)+f(0)$? Express your answer as a common fraction.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\frac{14}{3}",
+    "output": [
+      "We have that $f(-2) = \\frac{3(-2)-2}{-2-2} = \\frac{-8}{-4} = 2.$\n\nWe have that $f(-1) = \\frac{3(-1)-2}{-1-2} = \\frac{-5}{-3} = \\frac{5}{3}.$\n\nWe have that $f(0) = \\frac{3(0)-2}{0-2} = \\frac{-2}{-2} = 1.$\n\nTherefore, $f(-2) + f(-1) + f(0) = \\boxed{\\frac{8}{3}}.$\nFinal Answer: The final answer is \\frac{8}{3}. I hope it is correct."
+    ]
+  }
+]

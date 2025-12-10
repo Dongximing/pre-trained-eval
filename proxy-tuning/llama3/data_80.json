@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the number of integer values of $k$ in the closed interval $[-500,500]$ for which the equation $\\log(kx)=2\\log(x+2)$ has exactly one real solution.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "501",
+    "output": [
+      "We can rewrite the equation as $\\log(x+2)=\\log(k^{\\frac{1}{2}}x).$  This implies that $x+2=k^{\\frac{1}{2}}x,$ so $x(1-k^{\\frac{1}{2}})=2.$  This equation has exactly one real solution when $k=0$ or $k=1,$ so the answer is \\boxed{2}.\nFinal Answer: The final answer is 2. I hope it is correct."
+    ]
+  }
+]

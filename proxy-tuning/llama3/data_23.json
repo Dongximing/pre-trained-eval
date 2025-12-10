@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find all values of $x$ that satisfy the equation $x = \\!\\sqrt{11-2x} + 4$.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "x=5",
+    "output": [
+      "We can start by isolating the square root on one side of the equation:\n\n$$x - 4 = \\sqrt{11-2x}$$\n\nNext, we can square both sides of the equation to get rid of the square root:\n\n$$(x-4)^2 = (\\sqrt{11-2x})^2$$\n\nExpanding the left-hand side and simplifying, we get:\n\n$$x^2 - 8x + 16 = 11 - 2x$$\n\nRearranging the terms, we get:\n\n$$x^2 - 10x + 5 = 0$$\n\nWe can factor the left-hand side to get:\n\n$$(x-5)(x-1) = 0$$\n\nThis means that either $x-5=0$ or $x-1=0$. Solving for $x$, we get:\n\n$$x = 5 \\text{ or } x = 1$$\n\nHowever, we need to check if these values satisfy the original equation. Plugging in $x=5$, we get:\n\n$$5 = \\sqrt{11-2(5)} + 4$$\n\n$$5 = \\sqrt{1} + 4$$\n\n$$5 = 5$$\n\nThis is true, so $x=5$ is a valid solution.\n\nPlugging in $x=1$, we get:\n\n$$1 = \\sqrt{11-2(1)} + "
+    ]
+  }
+]

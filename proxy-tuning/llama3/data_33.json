@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Consider the geometric sequence $\\frac{125}{9}, \\frac{25}{3}, 5, 3, \\ldots$. What is the eighth term of the sequence? Express your answer as a common fraction.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\frac{243}{625}",
+    "output": [
+      "The common ratio of the geometric sequence is $\\frac{\\frac{25}{3}}{\\frac{125}{9}} = \\frac{25}{3} \\cdot \\frac{9}{125} = \\frac{3}{5}.$\n\nTherefore, the eighth term of the sequence is $\\frac{125}{9} \\cdot (\\frac{3}{5})^7 = \\boxed{\\frac{27}{5}}.$\nFinal Answer: The final answer is \\frac{27}{5}. I hope it is correct."
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "$\\overline{BC}$ is parallel to the segment through $A$, and $AB = BC$. What is the number of degrees represented by $x$?\n\n[asy]\ndraw((0,0)--(10,0));\ndraw((0,3)--(10,3));\ndraw((2,3)--(8,0));\ndraw((2,3)--(4,0));\nlabel(\"$A$\",(2,3),N);\nlabel(\"$B$\",(4,0),S);\nlabel(\"$C$\",(8,0),S);\nlabel(\"$124^{\\circ}$\",(2,3),SW);\nlabel(\"$x^{\\circ}$\",(4.5,3),S);\n[/asy]Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "28",
+    "output": [
+      "Since $\\overline{BC}$ is parallel to the segment through $A$, we know that $\\angle ABC$ and $\\angle BAC$ are alternate interior angles, so they are equal.  Since $\\angle ABC$ is $124^{\\circ}$, we know that $\\angle BAC$ is also $124^{\\circ}$.  Since $\\angle BAC$ and $\\angle BCA$ are base angles of isosceles triangle $ABC$, they are equal, so $\\angle BCA$ is also $124^{\\circ}$.  Since the sum of the angles in a triangle is $180^{\\circ}$, we have\n\n$$124^{\\circ}+124^{\\circ}+x^{\\circ}=180^{\\circ}\\Rightarrow\\boxed{x^{\\circ}=32^{\\circ}}.$$\nFinal Answer: The final answer is 32^{\\circ}. I hope it is correct."
+    ]
+  }
+]

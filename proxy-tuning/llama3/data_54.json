@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Write $\\frac{3}{20}$ as a decimal.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "0.15",
+    "output": [
+      "To convert $\\frac{3}{20}$ to a decimal, we can divide the numerator by the denominator:\n\n$$\\frac{3}{20} = 3 \\div 20$$\n\nTo do this, we can perform long division:\n\n```\n 0.15\n20 | 3.00\n  - 20\n  ---\n    0.30\n   - 20\n    ----\n     0.00\n```\n\nSo, $\\boxed{\\frac{3}{20} = 0.15}$."
+    ]
+  }
+]

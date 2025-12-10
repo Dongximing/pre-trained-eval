@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the real roots of\n\\[\\frac{( x+ 1)(x - 3)}{5(x + 2)(x - 4)} + \\frac{(x + 3)(x - 5)}{9(x + 4)(x - 6)} - \\frac{2(x + 5)(x - 7)}{13(x + 6)(x - 8)} = \\frac{92}{585}.\\]Enter the real roots, separated by commas.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "1 \\pm \\sqrt{19}",
+    "output": [
+      "Let's start by simplifying the left-hand side of the equation. We can do this by multiplying both sides by the least common multiple of the denominators, which is 585(x+2)(x-4)(x+4)(x-6)(x+6)(x-8). This gives us:\n\\begin{align*}\n&\\frac{585(x+2)(x-4)(x+4)(x-6)(x+6)(x-8)}{585(x+2)(x-4)(x+4)(x-6)(x+6)(x-8)}\\left(\\frac{(x+1)(x-3)}{5(x+2)(x-4)} + \\frac{(x+3)(x-5)}{9(x+4)(x-6)} - \\frac{2(x+5)(x-7)}{13(x+6)(x-8)}\\right) = \\frac{92}{585} \\\\\n\\Leftrightarrow &\\left((x+1)(x-3)9(x+4)(x-6)(x+6)(x-8) + (x+3)(x-5)5(x+2)(x-4)(x+6)(x-8) - 2(x+5)(x-7)13(x+2)(x-4)(x+4)(x-6)\\right) = 92(x+"
+    ]
+  }
+]

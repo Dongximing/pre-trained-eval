@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "In a class of 50 students, 28 participate in MATHCOUNTS, 21 participate in science club, and 6 students participate in neither. How many students participate in both MATHCOUNTS and science club?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "5",
+    "output": [
+      "Let's break this down step by step:\n\n1. 28 students participate in MATHCOUNTS.\n2. 21 students participate in science club.\n3. 6 students participate in neither MATHCOUNTS nor science club.\n\nWe can use a Venn diagram to visualize the situation:\n\n```\n          +----------------+\n          |  MATHCOUNTS    |\n          |  (28 students)  |\n          +----------------+\n                  |\n                  | 6 students\n                  | participate in\n                  | neither\n                  v\n+----------------+       +----------------+\n|  Science Club  |       |  Both MATHCOUNTS  |\n|  (21 students)  |       |  and Science Club  |\n+----------------+       +----------------+\n```\n\nFrom the Venn diagram, we can see that the total number of students who participate in MATHCOUNTS or science club is:\n\n28 (MATHCOUNTS) + 21 (science club) - x (both MATHCOUNTS and science club) + 6 (neither) = 50\n\nwhere x is the number of students who participate in both MATHCOUNTS and science club.\n\nSimplifying the equation, we get:\n\n28 + 21 - x + 6 = 50\n55 - x = 50\nx = 5\n\nSo, **boxed{5}** students participate in both MATHCOUNTS and science club."
+    ]
+  }
+]

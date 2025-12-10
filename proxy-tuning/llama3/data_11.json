@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let $p(x)$ be a polynomial of degree 5 such that\n\\[p(n) = \\frac{n}{n^2 - 1}\\]for $n = 2,$ 3, 4, $\\dots,$ 7.  Find $p(8).$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\frac{3}{56}",
+    "output": [
+      "We can write $p(x)$ as\n\n$$p(x) = a_5x^5 + a_4x^4 + a_3x^3 + a_2x^2 + a_1x + a_0.$$We are given that\n\n\\begin{align*}\np(2) &= \\frac{2}{2^2-1} = \\frac{2}{3},\\\\\np(3) &= \\frac{3}{3^2-1} = \\frac{3}{8},\\\\\np(4) &= \\frac{4}{4^2-1} = \\frac{4}{15},\\\\\np(5) &= \\frac{5}{5^2-1} = \\frac{5}{24},\\\\\np(6) &= \\frac{6}{6^2-1} = \\frac{6}{35},\\\\\np(7) &= \\frac{7}{7^2-1} = \\frac{7}{48}.\n\\end{align*}Substituting these values into the polynomial, we obtain the system of equations\n\n\\begin{align*}\n32a_5 + 16a_4 + 8a_3 + 4a_2 + 2a_1 + a_0 &= \\frac{2}{3},\\\\\n243a_5 + 81a_4 + 27a"
+    ]
+  }
+]

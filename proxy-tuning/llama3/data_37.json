@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A regular pentagon is rotated counterclockwise about its center. What is the minimum number of degrees it must be rotated until it coincides with its original position?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "72",
+    "output": [
+      "A regular pentagon has 5 sides, so it has 5 vertices. When it is rotated counterclockwise about its center, each vertex will move to the position of the next vertex in the counterclockwise direction.\n\nFor example, if the original position of the pentagon is:\n\n       A\n     /   \\\n    B-----C\n   /       \\\n  D---------E\n\nAfter rotating it counterclockwise by 72 degrees (which is the angle between each vertex), the new position will be:\n\n       E\n     /   \\\n    D-----B\n   /       \\\n  C---------A\n\nAs you can see, each vertex has moved to the position of the next vertex in the counterclockwise direction. To make the pentagon coincide with its original position again, we need to rotate it by another 72 degrees, which will bring it back to its original position.\n\nTherefore, the minimum number of degrees the pentagon must be rotated until it coincides with its original position is \\boxed{72\\cdot 5 = 360 degrees}."
+    ]
+  }
+]

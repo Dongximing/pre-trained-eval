@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "For some value of $x,$ $0 < x < 180,$\n\\[\\tan 53^\\circ \\tan 81^\\circ \\tan x^\\circ = \\tan 53^\\circ + \\tan 81^\\circ + \\tan x^\\circ.\\]Find $x.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "46",
+    "output": [
+      "We can rewrite the equation as\n\n$$\\tan 53^\\circ \\tan 81^\\circ \\tan x^\\circ - \\tan 53^\\circ - \\tan 81^\\circ - \\tan x^\\circ = 0.$$Factoring out $\\tan x^\\circ$ gives\n\n$$\\tan x^\\circ (\\tan 53^\\circ \\tan 81^\\circ - 1) - \\tan 53^\\circ - \\tan 81^\\circ = 0.$$Using the quadratic formula, we have\n\n\\begin{align*}\n\\tan x^\\circ &= \\frac{\\tan 53^\\circ + \\tan 81^\\circ \\pm \\sqrt{(\\tan 53^\\circ + \\tan 81^\\circ)^2 - 4(\\tan 53^\\circ \\tan 81^\\circ - 1)}}{2(\\tan 53^\\circ \\tan 81^\\circ - 1)}\\\\\n&= \\frac{\\tan 53^\\circ + \\tan 81^\\circ \\pm \\sqrt{(\\tan 53^\\circ + \\tan 81^\\circ)^2 - 4\\tan 53^\\circ \\tan 81^\\circ + 4}}{2(\\tan 53^\\circ \\tan 81^\\circ - 1)}\\\\\n&= \\frac{\\tan 53^\\circ + \\tan 81^\\circ \\pm \\sqrt{(\\tan 53^\\circ - \\"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The product of $3t^2+5t+a$ and $4t^2+bt-2$ is $12t^4+26t^3-8t^2-16t+6$. What is $a+b$?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "-1",
+    "output": [
+      "We expand the product of the two polynomials:\n\n\\begin{align*}\n&(3t^2+5t+a)(4t^2+bt-2)\\\\\n&=3t^2(4t^2+bt-2)+5t(4t^2+bt-2)+a(4t^2+bt-2)\\\\\n&=12t^4+3bt^3-6t^2+20t^3+5bt^2-10t+4at^2+abt-2a\\\\\n&=12t^4+(3b+20)t^3+(5b+4a)t^2+(ab-10)t-2a\n\\end{align*}We know that this is equal to $12t^4+26t^3-8t^2-16t+6$, so we can match up the coefficients of each power of $t$:\n\n\\begin{align*}\n3b+20&=26\\\\\n5b+4a&=-8\\\\\nab-10&=-16\\\\\n-2a&=6\n\\end{align*}Solving the last equation, we find that $a=-3$.  Substituting this into the second equation, we find that $5b-12=-8$, so $b=-2$.  Therefore, $\\boxed{a+b=(-3)+(-"
+    ]
+  }
+]

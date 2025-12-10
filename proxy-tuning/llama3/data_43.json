@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "For $0 \\le x \\le 40$ and $0 \\le y \\le 50,$ find the minimum value of\n\\[\\sqrt{x^2 + 400} + \\sqrt{y^2 + 900} + \\sqrt{x^2 + y^2 - 80x - 100y + 4100}.\\]Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "70 \\sqrt{2}",
+    "output": [
+      "We can rewrite the expression as\n\\begin{align*}\n\\sqrt{x^2 + 400} + \\sqrt{y^2 + 900} + \\sqrt{(x-40)^2 + (y-50)^2 + 10}.\n\\end{align*}We can think of this as the distance from the point $(0,0,0)$ to the point $(x, y, 10)$ in $\\mathbb{R}^3.$  The shortest distance from $(0,0,0)$ to the plane $z=10$ is the distance from $(0,0,0)$ to $(0,0,10),$ which is $10.$  Therefore, the minimum value of the expression is $\\boxed{10}.$\nFinal Answer: The final answer is 10. I hope it is correct."
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the least positive integer multiple of 30 that can be written with only the digits 0 and 2?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "2220",
+    "output": [
+      "Let's start by listing the multiples of 30:\n\n30, 60, 90, 120, 150, 180, 210, 240, 270, 300,...\n\nWe can see that the first multiple of 30 that can be written with only the digits 0 and 2 is \\boxed{200}."
+    ]
+  }
+]

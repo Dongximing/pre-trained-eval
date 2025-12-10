@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The coordinates of a parallelogram are (5, 3), (6, 8), (7, 4) and $(x, y)$ and $x > 7$. What is the value of $x + y$?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "17",
+    "output": [
+      "A parallelogram has opposite sides that are parallel and equal in length. Therefore, the distance between (5, 3) and (6, 8) should be equal to the distance between (7, 4) and (x, y).\n\nUsing the distance formula, we can write:\n\n√((6-5)^2 + (8-3)^2) = √((x-7)^2 + (y-4)^2)\n\nSimplifying the equation, we get:\n\n√(1^2 + 5^2) = √((x-7)^2 + (y-4)^2)\n\n1^2 + 5^2 = (x-7)^2 + (y-4)^2\n\n1 + 25 = (x-7)^2 + (y-4)^2\n\n26 = (x-7)^2 + (y-4)^2\n\nNow, we can expand the right-hand side of the equation:\n\n26 = x^2 - 14x + 49 + y^2 - 8y + 16\n\nCombine like terms:\n\n26 = x^2 - 14x + y^2 - 8y + 65\n\nRearrange the equation to make it a quadratic equation in x:\n\n0 = x^2 - 14x + y^2 - 8y + 39\n\nNow, we can use the quadratic formula to solve for x:\n\nx = (-(-"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Expand and simplify completely: \\begin{align*}\nx\\left(x(1+x)+2x\\right)-3(x^2-x+2)\n\\end{align*}Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "x^3+3x-6",
+    "output": [
+      "Let's break it down step by step:\n\n1. Expand the expression inside the parentheses:\n\nx(x(1+x)+2x) = x(x^2+x)+2x^2\n\n2. Simplify the expression:\n\nx(x^2+x)+2x^2 = x^3+x^2+2x^2\n\n3. Combine like terms:\n\nx^3+3x^2\n\n4. Now, let's subtract 3(x^2-x+2):\n\nx^3+3x^2 - 3x^2 + 3x - 6\n\n5. Simplify the expression:\n\nx^3 + 3x - 6\n\nSo, the final answer is:\n\n\\boxed{x^3 + 3x - 6}"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let $z = 2 + \\sqrt{2} - (3 + 3 \\sqrt{2})i$, and let $c = 2 - 3i$.  Let $w$ be the result when $z$ is rotated around $c$ by $\\frac{\\pi}{4}$ counter-clockwise.\n\n[asy]\nunitsize(0.6 cm);\n\npair C, W, Z;\n\nZ = (2 + sqrt(2), -3 - 3*sqrt(2));\nC = (2,-3);\nW = rotate(45,C)*(Z);\n\ndraw(Z--C--W);\n\ndot(\"$c$\", C, N);\ndot(\"$w$\", W, SE);\ndot(\"$z$\", Z, S);\nlabel(\"$\\frac{\\pi}{4}$\", C + (0.6,-1));\n[/asy]\n\nFind $w.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "6 - 5i",
+    "output": [
+      "We first find the distance between $z$ and $c$.  This is given by\n\n\\begin{align*}\n|z-c|&=\\sqrt{(2+\\sqrt{2}-2)^2+(-3-3\\sqrt{2}+3)^2}\\\\\n&=\\sqrt{2+2\\sqrt{2}+(-3\\sqrt{2})^2}\\\\\n&=\\sqrt{2+2\\sqrt{2}+18}\\\\\n&=\\sqrt{20+2\\sqrt{2}}.\n\\end{align*}Next, we find the angle between the line segment $\\overline{cz}$ and the positive real axis.  This is given by\n\n$$\\tan^{-1}\\left(\\frac{-3-3\\sqrt{2}}{2+\\sqrt{2}}\\right)=\\tan^{-1}(-\\sqrt{2})=\\frac{3\\pi}{4}.$$Therefore, the angle between the line segment $\\overline{cw}$ and the positive real axis is $\\frac{3\\pi}{4}+\\frac{\\pi}{4}=\\pi$.  This means that the line segment $\\overline{cw}$ is in the third quadrant.  Since the distance between $z$ and $c$ is the same as the distance between $w$ and $c$, we have\n\n$$w=c+\\sqrt{20+2\\sqrt{2}}(\\cos\\pi+i"
+    ]
+  }
+]

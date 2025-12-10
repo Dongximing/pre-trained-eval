@@ -75,7 +75,7 @@ def generate_completions(
             else:
                 batch_input_ids = batch_input_ids.cuda()
                 attention_mask = attention_mask.cuda()
-        stop_id_sequences = [[tokenizer.eos_token_id]]
+        stop_id_sequences = [[tokenizer.eos_token_id],[128009]]
         stopping_criteria = StoppingCriteriaList([KeyWordsCriteria(stop_id_sequences)]) if stop_id_sequences else None
 
 
@@ -121,7 +121,7 @@ def generate_completions(
 
         generations += batch_generations
         result.append({'prompt':batch_prompts,'answer':answers[i],'output':batch_generations})
-        with open(f'gemma2-27b/data_{i}.json', "w") as f:
+        with open(f'llama3/data_{i}.json', "w") as f:
             json.dump(result, f, indent=2, ensure_ascii=False)
         result = []
         if not disable_tqdm:

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A math club is having a bake sale as a fundraiser to raise money for an upcoming trip. They sell $54$ cookies at three for $\\$1$, and $20$ cupcakes at $\\$2$ each, and $35$ brownies at $\\$1$ each. If it cost the math club $\\$15$ to bake these items, what was their profit?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "78",
+    "output": [
+      "Let's break this down step by step.\n\n1. The math club sells 54 cookies at 3 for $\\$1$, so they sell 18 sets of 3 cookies. Each set costs$\\$1$, so they make $18 \\times \\$1 = \\$18$from the cookies.\n\n2. They sell 20 cupcakes at $\\$2$each, so they make$20 \\times \\$2 = \\$40$from the cupcakes.\n\n3. They sell 35 brownies at $\\$1$each, so they make$35 \\times \\$1 = \\$35$from the brownies.\n\n4. The total amount of money they make is the sum of the money they make from the cookies, cupcakes, and brownies: $\\$18 + \\$40 + \\$35 = \\$93$.\n\n5. It cost the math club $\\$15$to bake these items, so their profit is the total amount of money they make minus the cost: $\\$93 - \\$15 = \\boxed{\\$78}$."
+    ]
+  }
+]

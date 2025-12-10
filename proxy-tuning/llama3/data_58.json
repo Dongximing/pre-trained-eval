@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute $99^2+99+1$ in your head.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "9901",
+    "output": [
+      "A nice problem!\n\nLet's break it down step by step:\n\n1. $99^2 = (100-1)^2 = 10000 - 2\\cdot100 + 1 = 10000 - 200 + 1 = 9981$\n2. Add 99: $9981 + 99 = 10080$\n3. Add 1: $10080 + 1 = \\boxed{10081}$\n\nSo, the final answer is: $\\boxed{10081}$"
+    ]
+  }
+]

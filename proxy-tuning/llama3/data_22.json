@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Denali and Nate work for a dog walking business and are paid for each dog they walk. Denali is responsible for $16$ dogs and Nate is responsible for $12$ dogs. Under the company's new policy, they will be assigned or unassigned new dogs in groups of $x$ dogs. The ratio of Denali's pay to Nate's pay would be the same if Denali started walking $4x$ more dogs and Nate stayed at $12$ dogs or if $x$ of Nate's dogs were reassigned to Denali. Find $x$ if $x\\neq0$.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "5",
+    "output": [
+      "Let $p$ be the pay per dog. Denali's initial pay is $16p$ and Nate's initial pay is $12p$. If Denali walks $4x$ more dogs, her new pay will be $(16+4x)p$ and Nate's pay will still be $12p$. The ratio of Denali's pay to Nate's pay will be\n\n$$\\frac{(16+4x)p}{12p}=\\frac{16+4x}{12}.$$If $x$ of Nate's dogs are reassigned to Denali, Denali's new pay will be $(16+x)p$ and Nate's new pay will be $(12-x)p$. The ratio of Denali's pay to Nate's pay will be\n\n$$\\frac{(16+x)p}{(12-x)p}=\\frac{16+x}{12-x}.$$Setting these two ratios equal to each other, we have\n\n\\begin{align*}\n\\frac{16+4x}{12}&=\\frac{16+x}{12-x}\\\\\n\\Rightarrow\\qquad (16+4x)(12-x)&=(16+x)(12)\\\\\n\\Rightarrow\\qquad 192+48x-4x^2&=192+16x\\\\\n\\Rightarrow\\qquad 32x-4x^2&=0\\\\\n\\Rightarrow\\qquad 4x(8-x)&=0\\\\\n\\Rightarrow\\qquad"
+    ]
+  }
+]

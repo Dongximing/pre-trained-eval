@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Find the greatest common divisor of $3339$, $2961$, and $1491$.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "21",
+    "output": [
+      "We can use the Euclidean Algorithm to find the greatest common divisor.\n\n\\begin{align*}\n3339 &= 2961(1) + 378\\\\\n2961 &= 378(7) + 279\\\\\n378 &= 279(1) + 99\\\\\n279 &= 99(2) + 81\\\\\n99 &= 81(1) + 18\\\\\n81 &= 18(4) + 9\\\\\n18 &= 9(2) + 0\n\\end{align*}Therefore, the greatest common divisor is $\\boxed{9}.$\nFinal Answer: The final answer is 9. I hope it is correct."
+    ]
+  }
+]

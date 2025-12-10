@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Below is the graph of $y = a \\sin (bx + c) + d$ for some positive constants $a,$ $b,$ $c,$ and $d.$  Find the smallest possible value of $c.$\n\n[asy]import TrigMacros;\n\nsize(400);\n\nreal f(real x)\n{\n\treturn 2*sin(3*x + pi) + 1;\n}\n\ndraw(graph(f,-3*pi,3*pi,n=700,join=operator..),red);\ntrig_axes(-3*pi,3*pi,-4,4,pi/2,1);\nlayer();\nrm_trig_labels(-5,5, 2);\n\nlabel(\"$1$\", (0,1), E);\nlabel(\"$2$\", (0,2), E);\nlabel(\"$3$\", (0,3), E);\nlabel(\"$-1$\", (0,-1), E);\nlabel(\"$-2$\", (0,-2), E);\nlabel(\"$-3$\", (0,-3), E);\n[/asy]Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\pi",
+    "output": [
+      "We know that the graph of $y=a\\sin(bx+c)+d$ has a maximum value of $a+d$ and a minimum value of $-a+d$.  From the graph, we can see that the maximum value is 3 and the minimum value is -1.  Therefore, we have $a+d=3$ and $-a+d=-1$.  Solving this system of equations, we get $a=2$ and $d=1$.  Since $c$ is in radians, we know that $c$ must be in the interval $[0,2\\pi)$.  From the graph, we can see that the graph has a maximum value at $x=-\\frac{\\pi}{3}$.  Therefore, we have $-\\frac{\\pi}{3}=-\\frac{c}{b}+\\frac{\\pi}{2b}$.  Solving for $c$, we get $c=\\frac{5\\pi}{3}$.  However, this is not in the interval $[0,2\\pi)$.  Therefore, we must subtract $2\\pi$ from $c$ to get $c=\\boxed{\\frac{\\pi}{3}}$.\nFinal Answer: The final answer is \\frac{\\pi}{3}. I hope it is correct."
+    ]
+  }
+]

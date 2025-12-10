@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Simplify $\\sqrt{242}$.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "11\\sqrt2",
+    "output": [
+      "I'd be happy to help!\n\nTo simplify $\\sqrt{242}$, we can start by finding the prime factorization of 242:\n\n242 = 2 × 121\n\nSince 121 is a perfect square (11 × 11), we can rewrite the expression as:\n\n√242 = √(2 × 121)\n= √(2 × 11^2)\n\nUsing the property of square roots that states √(a × b) = √a × √b, we can simplify the expression further:\n\n√242 = √2 × √121\n= √2 × 11\n= \\boxed{11√2}\n\nSo, the simplified form of √242 is 11√2."
+    ]
+  }
+]

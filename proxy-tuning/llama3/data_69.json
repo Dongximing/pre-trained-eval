@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let $z$ be a complex number such that $z^5 = 1$ and $z \\neq 1.$  Compute\n\\[z + \\frac{1}{z} + z^2 + \\frac{1}{z^2}.\\]Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "-1",
+    "output": [
+      "We know that $z^5 = 1$, so $z$ is a fifth root of unity.  Therefore, $z$ is one of the five points on the unit circle in the complex plane:\n\n\\begin{align*}\nz_1 &= 1,\\\\\nz_2 &= e^{2\\pi i/5},\\\\\nz_3 &= e^{4\\pi i/5},\\\\\nz_4 &= e^{6\\pi i/5} = e^{8\\pi i/5},\\\\\nz_5 &= e^{8\\pi i/5} = e^{4\\pi i/5}.\n\\end{align*}Since $z \\neq 1$, we have $z \\in \\{z_2, z_3, z_4, z_5\\}.$  We can compute\n\n\\begin{align*}\nz + \\frac{1}{z} + z^2 + \\frac{1}{z^2} &= z + \\frac{1}{z} + z^2 + \\frac{1}{z^2} + 1 - 1\\\\\n&= \\left(z + \\frac{1}{z}\\right) + \\left(z^2 + \\frac{1}{z^2}\\right) + 1 - 1\\\\\n&= \\left(z + \\frac{1}{z}\\right) +"
+    ]
+  }
+]

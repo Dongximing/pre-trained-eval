@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "If a snack-size tin of peaches has $40$ calories and is $2\\%$ of a person's daily caloric requirement, how many calories fulfill a person's daily caloric requirement?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "2000",
+    "output": [
+      "Let $x$ be the number of calories that fulfill a person's daily caloric requirement. Since the snack-size tin of peaches has $40$ calories and is $2\\%$ of a person's daily caloric requirement, we have that $40$ is $2\\%$ of $x$. We can write this as an equation:\n\n$$40=0.02x$$\n\nTo solve for $x$, we can divide both sides of the equation by $0.02$:\n\n$$x=\\frac{40}{0.02}=\\boxed{2000}$$\n\nSo, a person's daily caloric requirement is $\\boxed{2000}$ calories."
+    ]
+  }
+]

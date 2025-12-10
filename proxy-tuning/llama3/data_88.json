@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Consider the function \\[ f(x) =\n\\begin{cases}\nax^2 & \\text{if } x \\geq a,\\\\\nax +2a& \\text{if } x <a,\n\\end{cases}\n\\]where $a$ is some number.\n\nWhat is the largest value of $a$ such that the graph of $y=f(x)$ intersects every horizontal line at least once?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "2",
+    "output": [
+      "For a horizontal line to intersect the graph of $y=f(x)$, it must intersect either the parabola $y=ax^2$ or the line $y=ax+2a$.  The parabola $y=ax^2$ intersects every horizontal line, so we only need to consider the line $y=ax+2a$.  The line $y=ax+2a$ intersects every horizontal line if and only if it has a negative slope, i.e., $a<0$.  Therefore, we can take $a$ to be any negative number.  The largest such number is $\\boxed{0}$.\nFinal Answer: The final answer is 0. I hope it is correct."
+    ]
+  }
+]

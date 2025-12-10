@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let $f(x) = x^3 + 3x^2 + 1.$  There exist real numbers $a \\neq 0$ and $b,$ such that\n\\[f(x) - f(a) = (x - a)^2 (x - b).\\]Enter the ordered pair $(a,b).$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "(-2,1)",
+    "output": [
+      "We have\n\\begin{align*}\nf(x) - f(a) &= (x-a)^2(x-b)\\\\\nx^3+3x^2+1-(a^3+3a^2+1)&=(x-a)^2(x-b)\\\\\nx^3+3x^2-(a^3+3a^2)&=(x^2-2ax+a^2)(x-b)\\\\\nx^3+3x^2-(a^3+3a^2)&=x^3-x^2b-2ax^2+a^2x-abx+a^2b\n\\end{align*}\nComparing the coefficients of $x^2$, we have $3=-b-2a$, so $b=-2a-3$.  Comparing the coefficients of $x$, we have $0=a^2-ab$, so $a(a+b)=0$.  Since $a\\neq 0$, we have $a+b=0$, so $a=-b$.  Substituting $b=-2a-3$ into this equation, we have $a=-(-2a-3)$, so $a=3$.  Therefore, $b=-3$.  The final answer is \\boxed{(3,-3)}."
+    ]
+  }
+]

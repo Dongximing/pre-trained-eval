@@ -53,13 +53,18 @@ class DExpertsLlama:
         构造 expert 的 chat 格式输入。
         """
         prompts = self.tokenizer.batch_decode(input_ids, skip_special_tokens=True)
-        tokenizer = AutoTokenizer.from_pretrained("/home/original_models/gemma-2-9b-it")
+        tokenizer = AutoTokenizer.from_pretrained("/home/original_models/Meta-Llama-3-8B-Instruct")
         chat_prompts = []
         for p in prompts:
             problem = p
+            # messages = [
+            #     {"role": "user", "content": problem }
+            # ]
             messages = [
-                {"role": "user", "content": problem }
-            ]
+                    # {"role": "system", "content": ""},
+                    {"role": "system", "content": "You are a helpful assistant."},
+                    {"role": "user", "content": problem},
+                ]
             chat_text = tokenizer.apply_chat_template(
                 messages,
                 tokenize=False,           # 先要字符串

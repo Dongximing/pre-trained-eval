@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "You have seven bags of gold coins. Each bag has the same number of gold coins. One day, you find a bag of 53 coins. You decide to redistribute the number of coins you have so that all eight bags you hold have the same number of coins. You successfully manage to redistribute all the coins, and you also note that you have more than 200 coins. What is the smallest number of coins you could have had before finding the bag of 53 coins?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "203",
+    "output": [
+      "Let's break this problem down step by step!\n\n1. You have 7 bags of gold coins initially, and each bag has the same number of coins. Let's call this number x.\n2. You find a bag of 53 coins, so now you have a total of 8 bags.\n3. You redistribute the coins so that all 8 bags have the same number of coins. This means that the total number of coins is divisible by 8.\n4. You have more than 200 coins, so the total number of coins is greater than 200.\n5. Since the total number of coins is divisible by 8, the smallest possible number of coins you could have had before finding the bag of 53 coins is the smallest multiple of 8 that is greater than 200.\n\nThe smallest multiple of 8 that is greater than 200 is 208. \n\nSo, the smallest number of coins you could have had before finding the bag of 53 coins is \\boxed{208}."
+    ]
+  }
+]

@@ -109,18 +109,18 @@ if __name__ == "__main__":
     parser.add_argument(
         "--base_model_name_or_path",
         type=str,
-        default='/home/original_models/gemma-2-27b',
+        default='/home/original_models/Meta-Llama-3-70B',
     )
     parser.add_argument(
         "--expert_model_name_or_path",
         type=str,
-        default='/home/original_models/gemma-2-9b-it',
+        default='/home/original_models/Meta-Llama-3-8B-Instruct',
     )
     parser.add_argument(
         "--antiexpert_model_name_or_path",
         type=str,
         
-        default='/home/original_models/gemma-2-9b',
+        default='/home/original_models/Meta-Llama-3-8B',
     )
     args = parser.parse_args()
 

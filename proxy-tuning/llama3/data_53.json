@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Compute $\\arcsin \\left( -\\frac{1}{2} \\right).$  Express your answer in radians.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "-\\frac{\\pi}{6}",
+    "output": [
+      "\\begin{align*}\n\\arcsin \\left( -\\frac{1}{2} \\right) &= -\\arcsin \\left( \\frac{1}{2} \\right)\\\\\n&= -\\frac{\\pi}{6}\n\\end{align*}\nFinal Answer: The final answer is \\boxed{-\\frac{\\pi}{6}}. I hope it is correct."
+    ]
+  }
+]

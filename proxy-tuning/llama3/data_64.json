@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "There exist constants $a$, $b$, $c$, and $d$ such that\n\\[(\\sin x)^7 = a \\sin 7x + b \\sin 5x + c \\sin 3x + d \\sin x\\]for all angles $x$.  Find $d$.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\frac{35}{64}",
+    "output": [
+      "We can use the identity $\\sin 7x = \\sin 3x \\cos 4x + \\sin 4x \\cos 3x$ to rewrite the left-hand side of the given equation as\n\n$$(\\sin x)^7 = \\sin x (\\sin 7x) = \\sin x (\\sin 3x \\cos 4x + \\sin 4x \\cos 3x).$$\n\nUsing the identity $\\sin a \\cos b = \\frac{1}{2} (\\sin (a+b) + \\sin (a-b))$, we can further simplify this expression to\n\n$$\\begin{split}\n(\\sin x)^7 &= \\frac{1}{2} \\sin x (\\sin 7x + \\sin 3x) + \\frac{1}{2} \\sin x (\\sin 4x + \\sin (-x)) \\\\\n&= \\frac{1}{2} \\sin 8x + \\frac{1}{2} \\sin 4x + \\frac{1}{2} \\sin 4x + \\frac{1}{2} \\sin 0x \\\\\n&= \\frac{1}{2} \\sin 8x + \\sin 4x.\n\\end{split}$$\n\nComparing this expression to the right-hand side of the given equation, we can see that $d = \\boxed{\\frac{1}{2}}$.\n"
+    ]
+  }
+]

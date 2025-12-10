@@ -10,7 +10,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 parser = argparse.ArgumentParser()
 parser.add_argument("--start_id", type=int, default=0, help="start index (inclusive)")
 parser.add_argument("--end_id", type=int, default=100, help="end index (exclusive)")
-parser.add_argument("--output", type=str, default="baseline-gemma2-27b-math500.json")
+parser.add_argument("--output", type=str, default="baseline-llama3-70b-math500.json")
 args = parser.parse_args()
 
 start_id = args.start_id
@@ -22,7 +22,7 @@ print(f"▶ Running from {start_id} to {end_id - 1}")
 # -----------------------------
 # Load model
 # -----------------------------
-model_name = "/home/original_models/gemma-2-27b"
+model_name = "/home/original_models/Meta-Llama-3-70B"
 # device = "cuda:5,6"
 
 model = AutoModelForCausalLM.from_pretrained(

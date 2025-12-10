@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A $90^\\circ$ rotation around the origin in the counter-clockwise direction is applied to $7 + 2i.$  What is the resulting complex number?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "-2 + 7i",
+    "output": [
+      "A $90^\\circ$ rotation around the origin in the counter-clockwise direction can be achieved by multiplying the complex number by $i$.  Therefore, the resulting complex number is $\\boxed{-2+7i}.$\nFinal Answer: The final answer is -2+7i."
+    ]
+  }
+]

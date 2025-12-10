@@ -10,7 +10,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 parser = argparse.ArgumentParser()
 parser.add_argument("--start_id", type=int, default=0, help="start index (inclusive)")
 parser.add_argument("--end_id", type=int, default=100, help="end index (exclusive)")
-parser.add_argument("--output", type=str, default="qwen2.5-14b-chat.json")
+parser.add_argument("--output", type=str, default="llama3-70b-instruction.json")
 args = parser.parse_args()
 
 start_id = args.start_id
@@ -22,13 +22,13 @@ print(f"▶ Running from {start_id} to {end_id - 1}")
 # -----------------------------
 # Load model
 # -----------------------------
-model_name = "/home/original_models/Qwen2.5-14B-Instruct"
+model_name = "/home/original_models/Meta-Llama-3-70B-Instruct"
 device = "cuda:0"
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
     torch_dtype="auto",
-    device_map={"": device},
+     device_map="auto",
 )
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model.eval()
@@ -76,7 +76,7 @@ for idx in range(start_id, end_id):
         )
 
     gen = outputs[0][inputs.input_ids.shape[1]:]
-    # print(gen)
+    print(gen)
     response = tokenizer.decode(gen, skip_special_tokens=True)
     print(response)
     results.append({

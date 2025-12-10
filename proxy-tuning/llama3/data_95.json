@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The projection of $\\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}$ onto $\\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}$ is\n\\[\\frac{5}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}.\\]Find $y.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "-4",
+    "output": [
+      "The projection of $\\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}$ onto $\\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}$ is\n\\[\\frac{5}{6} \\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix} = \\frac{1}{6}\\begin{pmatrix} 5 \\\\ -10 \\\\ 5 \\end{pmatrix}.\\]\nThe formula for the projection of $\\vec{a}$ onto $\\vec{b}$ is $\\frac{\\vec{a}\\cdot\\vec{b}}{\\|\\vec{b}\\|^2}\\vec{b}.$  Therefore,\n\n\\begin{align*}\n\\frac{1}{6}\\begin{pmatrix} 5 \\\\ -10 \\\\ 5 \\end{pmatrix} &= \\frac{\\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}\\cdot\\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}}{\\left\\|\\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}\\right\\|^2}\\begin{pmatrix} 1 \\\\ -2 \\\\ 1 \\end{pmatrix}\\\\\n&= \\frac{\\begin{pmatrix} 2 \\\\ y \\\\ -5 \\end{pmatrix}\\cdot\\begin{"
+    ]
+  }
+]

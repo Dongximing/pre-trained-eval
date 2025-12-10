@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The set of points $(x,y,z)$ that satisfy\n\\[2x = 3y = -z\\]is a line.\n\nThe set of points $(x,y,z)$ that satisfy\n\\[6x = -y = -4z\\]is another line.\n\nFind the angle between these lines, in degrees.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "90^\\circ",
+    "output": [
+      "Let's start by finding the direction vectors of the two lines.\n\nFor the first line, we can rewrite the equation as $y = \\frac{2}{3}x$ and $z = -2x$.  This is a line in the $xy$-plane, so the direction vector is $\\langle 1, \\frac{2}{3}, 0 \\rangle$.\n\nFor the second line, we can rewrite the equation as $y = -6x$ and $z = \\frac{3}{2}x$.  This is a line in the $xy$-plane, so the direction vector is $\\langle 1, -6, \\frac{3}{2} \\rangle$.\n\nTo find the angle between the two lines, we can use the dot product formula:\n\n$$\\cos \\theta = \\frac{\\langle 1, \\frac{2}{3}, 0 \\rangle \\cdot \\langle 1, -6, \\frac{3}{2} \\rangle}{|\\langle 1, \\frac{2}{3}, 0 \\rangle||\\langle 1, -6, \\frac{3}{2} \\rangle|} = \\frac{1 - 2 + 0}{\\sqrt{1^2 + (\\frac{2}{3})^2 + 0^2}\\sqrt{1^2 + (-6)^2 + (\\frac{3}{2})^2}}"
+    ]
+  }
+]

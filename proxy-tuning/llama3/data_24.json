@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "A worker receives an annual wage of $\\$20{,}000$, which he always deposits into a savings account at the end of the year. By the end of the third year (when he makes the third deposit), he wants to have at least $\\$66,200$ in the account to finance the purchase of a house. What is the minimal compound interest rate that the savings account must provide? Express your answer as a percentage, but do not include the percent sign.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "10",
+    "output": [
+      "Let $r$ be the compound interest rate. Then, the worker will have $$20000(1+r)^3=66200$$ dollars in the account by the end of the third year. Solving for $r$, we have $$r=\\sqrt[3]{\\frac{66200}{20000}}-1=\\boxed{9\\%}.$$ \nFinal Answer: The final answer is 9. I hope it is correct."
+    ]
+  }
+]

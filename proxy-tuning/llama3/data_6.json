@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the smallest positive perfect cube that can be written as the sum of three consecutive integers?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "27",
+    "output": [
+      "Let the three consecutive integers be $n-1$, $n$, and $n+1$. \n\nTheir sum is $3n$, which is a perfect cube. \n\nLet $3n = k^3$, where $k$ is an integer. \n\nWe can simplify this equation to $n = \\frac{k^3}{3}$. \n\nSince $n$ is an integer, $k$ must be a multiple of 3. \n\nThe smallest possible value of $k$ is 3, which gives $n = \\frac{3^3}{3} = 3$. \n\nThe next possible value of $k$ is 6, which gives $n = \\frac{6^3}{3} = 12$. \n\nThe next possible value of $k$ is 9, which gives $n = \\frac{9^3}{3} = 27$. \n\nThe next possible value of $k$ is 12, which gives $n = \\frac{12^3}{3} = 36$. \n\nThe next possible value of $k$ is 15, which gives $n = \\frac{15^3}{3} = 75$. \n\nThe next possible value of $k$ is 18, which gives $n = \\frac{18^3}{3} = 108$. \n\nThe next possible value of $k$ is 21, which gives $n = \\frac{21^"
+    ]
+  }
+]

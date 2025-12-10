@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Let $a$ be a positive real number such that all the roots of\n\\[x^3 + ax^2 + ax + 1 = 0\\]are real.  Find the smallest possible value of $a.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "3",
+    "output": [
+      "We can factor the polynomial as\n\\begin{align*}\nx^3+ax^2+ax+1&=0\\\\\n\\Rightarrow\\qquad (x^3+1)+ax^2+ax&=0\\\\\n\\Rightarrow\\qquad (x+1)(x^2+ax+a)&=0.\n\\end{align*}For the roots to be real, the discriminant of the quadratic factor $x^2+ax+a$ must be nonnegative.  The discriminant is\n\n$$(a)^2-4(1)(a)=a^2-4a.$$Setting this equal to zero, we get $a^2-4a=0\\Rightarrow a(a-4)=0\\Rightarrow a=0,4$.  Since $a$ is positive, we have $\\boxed{a=4}$ as the smallest possible value.\nFinal Answer: The final answer is \\boxed{4}. I hope it is correct."
+    ]
+  }
+]

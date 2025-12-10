@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the result when the greatest common factor of 6432 and 132 is increased by 11?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "23",
+    "output": [
+      "Let's break it down step by step!\n\n1. Find the greatest common factor (GCF) of 6432 and 132:\n\nTo do this, we can list the factors of each number:\n\nFactors of 6432: 1, 2, 3, 4, 6, 8, 12, 16, 32, 64, 128, 256, 6432\nFactors of 132: 1, 2, 3, 4, 6, 11, 22, 33, 44, 66, 132\n\nThe greatest common factor is the largest number that appears in both lists, which is 12.\n\n2. Increase the GCF by 11:\n\n12 + 11 = 23\n\nSo, the result when the greatest common factor of 6432 and 132 is increased by 11 is:\n\n\\boxed{23}"
+    ]
+  }
+]

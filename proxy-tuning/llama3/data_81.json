@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Ten treeks weigh as much as three squigs and one goolee. Two treeks and one goolee are equal in weight to one squig. The combined weight of how many treeks equals the weight of one squig?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "3",
+    "output": [
+      "Let's break this down step by step!\n\nWe know that:\n\n* 10 treeks weigh as much as 3 squigs and 1 goolee\n* 2 treeks and 1 goolee are equal in weight to 1 squig\n\nWe can start by using the second statement to find the weight of 1 goolee in terms of treeks. Since 2 treeks and 1 goolee are equal in weight to 1 squig, we can set up an equation:\n\n2 treeks + 1 goolee = 1 squig\n\nWe can simplify this equation by subtracting 1 goolee from both sides:\n\n2 treeks = 1 squig - 1 goolee\n\nNow, we can use the first statement to find the weight of 3 squigs and 1 goolee in terms of treeks:\n\n10 treeks = 3 squigs + 1 goolee\n\nWe can substitute the expression for 1 goolee (from the previous step) into this equation:\n\n10 treeks = 3 squigs + (1 squig - 2 treeks)\n\nSimplifying this equation, we get:\n\n12 treeks = 4 squigs\n\nNow, we can divide both sides by 4 to find the weight of 1 squig in terms of treeks:\n\n3 treeks = 1 squig\n\nSo, the combined weight of **\\boxed{3"
+    ]
+  }
+]

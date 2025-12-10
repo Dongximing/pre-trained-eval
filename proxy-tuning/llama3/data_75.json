@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Two fair, 6-sided dice are thrown.  What is the probability that the product of the two numbers is a multiple of 5?  Express your answer as a common fraction.Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\frac{11}{36}",
+    "output": [
+      "The product of the two numbers is a multiple of 5 if and only if at least one of the numbers is a 5.  There are 11 such possibilities: $(1,5), (2,5), (3,5), (4,5), (5,1), (5,2), (5,3), (5,4), (5,5), (5,6), (6,5)$.  There are a total of $6^2=36$ possible rolls, so the probability is $\\boxed{\\frac{11}{36}}$.\nFinal Answer: The final answer is \\frac{11}{36}. I hope it is correct."
+    ]
+  }
+]

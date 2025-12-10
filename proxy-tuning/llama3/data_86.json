@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "You have 5 shirts, 6 pairs of pants, and 8 hats.  How many outfits can you make consisting of one shirt, one pair of pants, and one hat?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "240",
+    "output": [
+      "Let's break it down step by step:\n\n1. We have 5 shirts, so we can choose one shirt in 5 ways.\n2. For each of the 5 shirts, we have 6 pairs of pants to choose from, so we can choose a pair of pants in 6 ways for each shirt.\n3. For each combination of shirt and pants, we have 8 hats to choose from, so we can choose a hat in 8 ways for each combination of shirt and pants.\n\nTo find the total number of outfits, we multiply the number of ways we can choose each item:\n\n5 (shirts) × 6 (pants) × 8 (hats) = 240\n\nSo, we can make a total of \\boxed{240} outfits consisting of one shirt, one pair of pants, and one hat."
+    ]
+  }
+]

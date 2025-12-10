@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "The volume of the cylinder shown is $45\\pi$ cubic cm. What is the height in centimeters of the cylinder? [asy]\nsize(120);\ndraw(shift(2.2,0)*yscale(0.3)*Circle((0,0), 1.2));\n\ndraw((1,0)--(1,-2));\ndraw((3.4,0)--(3.4,-2));\n\ndraw((1,-2)..(2.2,-2.36)..(3.4,-2));\n\nlabel(\"$h$\",midpoint((3.4,0)--(3.4,-2)),E);\n\ndraw (((2.2,0)--(3.4,0)));\n\nlabel(\"$r=3$\",midpoint((2.2,0)--(3.4,0)),N);\n\n[/asy]Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "5",
+    "output": [
+      "The volume of a cylinder is given by the formula\n\n$$V=\\pi r^2h,$$where $r$ is the radius of the cylinder and $h$ is its height.  Since the volume is given as $45\\pi$, we have\n\n$$45\\pi=\\pi r^2h.$$Dividing both sides by $\\pi$, we obtain\n\n$$45=r^2h.$$Substituting $r=3$, we have\n\n$$45=3^2h\\Rightarrow\\boxed{h=5}.$$\nFinal Answer: The final answer is 5. I hope it is correct."
+    ]
+  }
+]

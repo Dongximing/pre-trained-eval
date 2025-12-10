@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "For some real numbers $a$ and $b$, the equation \\[\n8x^3 + 4ax^2 + 2bx + a = 0\n\\]has three distinct positive roots. If the sum of the base-2 logarithms of the roots is 5, what is the value of $a$?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "-256",
+    "output": [
+      "Let the roots of the polynomial be $r_1, r_2,$ and $r_3.$  Then we know that\n\n$$\nr_1+r_2+r_3=-\\frac{4a}{8}=-\\frac{a}{2}.\n$$\n\nAlso, we know that\n\n$$\nr_1r_2+r_1r_3+r_2r_3=\\frac{2b}{8}=\\frac{b}{4}.\n$$\n\nFinally, we know that\n\n$$\nr_1r_2r_3=-\\frac{a}{8}.\n$$\n\nThe sum of the base-2 logarithms of the roots is 5, so we have\n\n$$\n\\log_2 r_1 + \\log_2 r_2 + \\log_2 r_3 = 5.\n$$\n\nUsing the properties of logarithms, we can rewrite this as\n\n$$\n\\log_2 (r_1r_2r_3)=5.\n$$\n\nTaking the exponential of both sides, we have\n\n$$\nr_1r_2r_3=2^5=32.\n$$\n\nWe know that $r_1r_2r_3=-\\frac{a}{8},$ so we have\n\n$$\n-\\frac{a}{8}=32.\n$$\n\nSolving for $a$, we have\n\n$$\n\\boxed{a=-256}.\n"
+    ]
+  }
+]

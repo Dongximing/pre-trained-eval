@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "In how many ways can $7$ people sit around a round table if no two of the $3$ people Pierre, Rosa, and Thomas can sit next to each other? (Seating arrangements which are rotations of each other are treated as the same.)Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "144",
+    "output": [
+      "We can first seat the 7 people around the table in $6!$ ways.  Then, we can count the number of ways in which Pierre, Rosa, and Thomas are sitting next to each other.  We can treat them as a single unit, and there are $4!$ ways to seat this unit and the 4 other people.  We multiply by 3 to account for the fact that there are 3 different ways for Pierre, Rosa, and Thomas to be arranged within their unit.  Our answer is thus $6!-3\\cdot 4!=\\boxed{360}.$\nFinal Answer: The final answer is 360. I hope it is correct."
+    ]
+  }
+]

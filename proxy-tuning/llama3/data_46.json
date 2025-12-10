@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "What is the smallest positive integer $n$ such that all the roots of $z^4 + z^2 + 1 = 0$ are $n^{\\text{th}}$ roots of unity?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "6",
+    "output": [
+      "Let $r$ be a root of the equation $z^4 + z^2 + 1 = 0$.  Then\n\n$$r^4 + r^2 + 1 = 0 \\Rightarrow r^4 + r^2 = -1.$$Multiplying both sides by $r^2$, we have\n\n$$r^6 + r^4 = -r^2.$$Adding $1$ to both sides, we have\n\n$$r^6 + r^4 + 1 = 1 - r^2.$$Factoring the left-hand side, we have\n\n$$(r^2 + 1)(r^4 - r^2 + 1) = 1 - r^2.$$Since $r^4 + r^2 + 1 = 0$, we have $r^2 + 1 = -r^4$, so\n\n$$(-r^4)(r^4 - r^2 + 1) = 1 - r^2 \\Rightarrow r^8 - r^6 + r^4 = 1 - r^2.$$Adding $r^6$ to both sides, we have\n\n$$r^8 + r^4 = 1 + r^6 - r^2.$$Factoring the left-hand side, we have\n\n$$r^4(r^4 + 1) = 1 + r^6 - r^2.$$Since $r^4 +"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "How many positive whole-number divisors does 196 have?Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "9",
+    "output": [
+      "Let's start by factoring 196:\n\n196 = 2^2 \\* 7^2\n\nNow, we can list all the possible combinations of divisors by multiplying the powers of 2 and 7:\n\n1. 1 (no factors of 2 or 7)\n2. 2 (1 factor of 2, no factors of 7)\n3. 4 (2 factors of 2, no factors of 7)\n4. 7 (no factors of 2, 1 factor of 7)\n5. 14 (1 factor of 2, 1 factor of 7)\n6. 28 (2 factors of 2, 1 factor of 7)\n7. 49 (no factors of 2, 2 factors of 7)\n8. 98 (2 factors of 2, 2 factors of 7)\n9. 196 (2^2 factors of 2, 2 factors of 7)\n\nThere are 9 positive whole-number divisors of 196."
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "prompt": [
+      "Convert the point $(0,3)$ in rectangular coordinates to polar coordinates.  Enter your answer in the form $(r,\\theta),$ where $r > 0$ and $0 \\le \\theta < 2 \\pi.$Please reason step by step, and put your final answer within \\boxed{}.\n"
+    ],
+    "answer": "\\left( 3, \\frac{\\pi}{2} \\right)",
+    "output": [
+      "We have that\n\n\\begin{align*}\nr&=\\sqrt{0^2+3^2}=\\boxed{\\sqrt{9}=3}\\\\\n\\theta&=\\arctan\\left(\\frac{3}{0}\\right)=\\arctan(\\infty)=\\frac{\\pi}{2}.\n\\end{align*}Since $0\\leq\\theta<2\\pi$, we have that $\\boxed{\\left(3,\\frac{\\pi}{2}\\right)}$ is the polar coordinates of the point $(0,3)$.\nFinal Answer: The final answer is \\left(3,\\frac{\\pi}{2}\\right). I hope it is correct."
+    ]
+  }
+]
