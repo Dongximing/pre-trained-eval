@@ -10,6 +10,9 @@ from transformers import (
     SuppressTokensAtBeginLogitsProcessor
 )
 
+
+from accelerate import infer_auto_device_map
+
 import json
 def ensure_dir(d):
     if not os.path.exists(d):
@@ -38,14 +41,14 @@ def generate_completions(
     model,
     tokenizer,
     prompts_an,
-    batch_size=1,
+    batch_size=2,
     stop_id_sequences=None,
     banned_id_sequences=None,
     banned_begin_ids=None,
     add_special_tokens=True,
     disable_tqdm=False,
     temperature=1.0,
-    top_p=1.0,
+    top_p=0.95,
     **generation_kwargs
 ):
     generations = []
@@ -56,9 +59,9 @@ def generate_completions(
 
     num_return_sequences = generation_kwargs.get("num_return_sequences", 1)
 
-    for i in range(0, len(prompts), batch_size):
+    for i in range(0, len(prompts), 2):
         result = []
-        batch_prompts = prompts[i:i+batch_size]
+        batch_prompts = prompts[i:i+2]
         
 
         tokenized_prompts = tokenizer(
@@ -67,15 +70,16 @@ def generate_completions(
         batch_input_ids = tokenized_prompts['input_ids']
         attention_mask = tokenized_prompts['attention_mask']
 
-        if model.device.type == "cuda":
+        if model.base_device.type == "cuda":
             if isinstance(batch_input_ids, dict):
                 for k in batch_input_ids:
-                    batch_input_ids[k] = batch_input_ids[k].cuda()
-                    attention_mask[k] = attention_mask[k].cuda()
+                    batch_input_ids[k] = batch_input_ids[k].to(model.base.base_device)
+                    attention_mask[k] = attention_mask[k].to(model.base.base_device)
             else:
-                batch_input_ids = batch_input_ids.cuda()
-                attention_mask = attention_mask.cuda()
-        stop_id_sequences = [[tokenizer.eos_token_id],[128009]]
+                first_device = next(model.base.parameters()).device
+                batch_input_ids = batch_input_ids.to(first_device)
+                attention_mask = attention_mask.to(first_device)
+        stop_id_sequences = [[tokenizer.eos_token_id],[151645]] # 151645 for qwen14b 1.5 7b
         stopping_criteria = StoppingCriteriaList([KeyWordsCriteria(stop_id_sequences)]) if stop_id_sequences else None
 
 
@@ -86,10 +90,12 @@ def generate_completions(
             attention_mask=attention_mask,
             stopping_criteria=stopping_criteria,
             logits_processor=logits_processor,
+            do_sample=True,
             temperature=temperature,
             top_p=top_p,
             **generation_kwargs
         )
+        print('batch_outputs',batch_outputs)
 
         # to support the logits processing below when using DExperts with mixed tokenizers
         if isinstance(batch_input_ids, dict):
@@ -120,15 +126,16 @@ def generate_completions(
         ]
 
         generations += batch_generations
-        result.append({'prompt':batch_prompts,'answer':answers[i],'output':batch_generations})
-        with open(f'llama3/data_{i}.json', "w") as f:
-            json.dump(result, f, indent=2, ensure_ascii=False)
-        result = []
+        result.append({'output':batch_generations})
+        # with open(f'llama3/data_{i}.json', "w") as f:
+        #     json.dump(result, f, indent=2, ensure_ascii=False)
+        # result = []
         if not disable_tqdm:
             progress.update(len(batch_prompts)//num_return_sequences)
 
     
     assert len(generations) == len(prompts) * num_return_sequences, "number of generations should be equal to number of prompts * num_return_sequences"
+    print(result)
     return result
 
 
@@ -143,13 +150,13 @@ def load_lm_and_tokenizer(
 ):
 
     from transformers import AutoModelForCausalLM, AutoTokenizer
-
+    
     model_kwargs = {
         'device_map': device_map,
         'offload_folder': 'offload_folder',
-        'torch_dtype': torch.float16,
+        'torch_dtype': "auto",
         'offload_state_dict': True,
-        'load_in_8bit': load_in_8bit
+        # 'load_in_8bit': load_in_8bit
     }
     model = AutoModelForCausalLM.from_pretrained(model_name_or_path, **model_kwargs)
     if convert_to_half:
@@ -189,7 +196,7 @@ def load_dexperts_model_and_tokenizer(
     from dexperts import DExpertsLlama
 
     model_kwargs = {
-        'device_map': device_map,
+        # 'device_map': device_map,
         'offload_folder': 'offload_folder',
         'torch_dtype': torch.bfloat16,
         'offload_state_dict': True,
@@ -201,18 +208,19 @@ def load_dexperts_model_and_tokenizer(
     if not antiexpert_model_name_or_path:
         antiexpert_model_name_or_path = 'meta-llama/Llama-2-7b-hf'
 
+    # model_kwargs = dict(torch_dtype=torch.bfloat16)
+
     model = DExpertsLlama(
-        base_model_name_or_path=base_model_name_or_path,
-        expert_model_name_or_path=expert_model_name_or_path,
-        antiexpert_model_name_or_path=antiexpert_model_name_or_path,
-        tokenizer=tokenizer,
-        system_prompt=system_prompt,
+        base_model_name_or_path,
+        expert_model_name_or_path,
+        antiexpert_model_name_or_path,
+        tokenizer,
         alpha=alpha,
-        chat_response_prefix=chat_response_prefix,
-        model_kwargs=model_kwargs,
+        model_kwargs=model_kwargs
     )
 
     return model, tokenizer
+
 
 
 def dynamic_import_function(function_path):
