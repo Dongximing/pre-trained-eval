@@ -407,38 +407,48 @@ class DExpertsLlama:
         max_new_tokens: int = 100,
         do_sample: bool = False,
         temperature: float = 1.0,
-        stopping_criteria: Optional[StoppingCriteriaList] = None,
+        stopping_criteria: StoppingCriteriaList | None = None,
         **kwargs
     ):
         if stopping_criteria is None:
             stopping_criteria = StoppingCriteriaList()
 
-        # ===== devices =====
         input_ids = input_ids.to(self.base_device)
 
         chat_inputs = self._get_tokenized_chat_inputs(input_ids)
         expert_input_ids = chat_inputs.input_ids.to(self.expert_device)
 
-        # ===== KV cache =====
         base_past = None
         expert_past = None
         anti_past = None
 
-        # ===== unfinished =====
         bsz = input_ids.size(0)
-        unfinished_sequences = torch.ones(
-            bsz, dtype=torch.long, device=self.base_device
-        )
-        eos_id = self.tokenizer.eos_token_id
+        unfinished_sequences = torch.ones(bsz, dtype=torch.long, device=self.base_device)
 
-        # ===== warpers =====
+        pad_id = self.tokenizer.pad_token_id
+
+        # 你指定的“结束 token 集合”
+        eos_ids = torch.tensor([151643, 151645], device=self.base_device)
+
         warpers = LogitsProcessorList([
             TopKLogitsWarper(top_k=20),
             TopPLogitsWarper(top_p=0.95),
         ])
 
-        for step in range(max_new_tokens):
+        def _per_sample_stopped(ids_on_base: torch.Tensor) -> torch.Tensor:
+            """把 transformers 的 stopping_criteria（全局 bool）变成 per-sample 的 [B] bool。"""
+            if len(stopping_criteria) == 0:
+                return torch.zeros(ids_on_base.size(0), device=ids_on_base.device, dtype=torch.bool)
 
+            stopped_list = []
+            for i in range(ids_on_base.size(0)):
+                # 注意：这里返回的是 python bool（transformers 默认行为）
+                s = stopping_criteria(ids_on_base[i:i+1], None)
+                # 强制转成 bool
+                stopped_list.append(bool(s))
+            return torch.tensor(stopped_list, device=ids_on_base.device, dtype=torch.bool)
+
+        for step in range(max_new_tokens):
             # -------- BASE --------
             base_out = self.base(
                 input_ids=input_ids if base_past is None else input_ids[:, -1:],
@@ -470,7 +480,7 @@ class DExpertsLlama:
             e = e[:, : b.size(-1)]
             a = a[:, : b.size(-1)]
 
-            # -------- DExperts --------
+            # -------- DExperts fusion --------
             logits = b + self.alpha * (e - a)
             logits = logits / temperature
             logits = warpers(input_ids, logits)
@@ -478,30 +488,32 @@ class DExpertsLlama:
             # -------- decode --------
             if do_sample:
                 probs = torch.softmax(logits, dim=-1)
-                next_tokens = torch.multinomial(probs, 1)  # [B,1]
+                next_tokens = torch.multinomial(probs, 1)   # [B, 1]
             else:
                 next_tokens = torch.argmax(logits, dim=-1, keepdim=True)  # [B,1]
 
-            # -------- mask finished (SAFE) --------
+            # ⭐ 已结束的 sample 强制 PAD
             next_tokens = torch.where(
                 unfinished_sequences[:, None].bool(),
                 next_tokens,
-                torch.full_like(next_tokens, self.tokenizer.pad_token_id),
+                torch.full_like(next_tokens, pad_id),
             )
+            print(next_tokens)
 
-            # -------- append --------
-            input_ids = torch.cat([input_ids, next_tokens], dim=-1)
-            expert_input_ids = torch.cat([expert_input_ids, next_tokens], dim=-1)
+            # append（注意：expert 在另外的 device 就要搬过去）
+            input_ids = torch.cat([input_ids, next_tokens.to(self.base_device)], dim=-1)
+            expert_input_ids = torch.cat([expert_input_ids, next_tokens.to(self.expert_device)], dim=-1)
 
-            # -------- stopping --------
-            if stopping_criteria(input_ids, None).all():
-                break
+            # ⭐ 多 EOS：151643/151645 任一命中就结束该 sample
+            next_tok = next_tokens.squeeze(-1).to(self.base_device)   # [B]
+            is_eos = torch.isin(next_tok, eos_ids)                    # [B] bool
+            unfinished_sequences = unfinished_sequences.mul((~is_eos).long())
 
-            # -------- update unfinished --------
-            unfinished_sequences = unfinished_sequences.mul(
-                next_tokens.squeeze(-1).ne(eos_id).long()
-            )
+            # ⭐ per-sample stopping_criteria（谁触发谁结束）
+            stopped = _per_sample_stopped(input_ids)                 # [B] bool
+            unfinished_sequences = unfinished_sequences.mul((~stopped).long())
 
+            # ⭐ 全部结束才 break
             if unfinished_sequences.max() == 0:
                 break
 
