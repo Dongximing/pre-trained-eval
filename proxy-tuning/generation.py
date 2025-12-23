@@ -59,9 +59,9 @@ def generate_completions(
 
     num_return_sequences = generation_kwargs.get("num_return_sequences", 1)
 
-    for i in range(0, len(prompts), 2):
+    for i in range(0, len(prompts), 1):
         result = []
-        batch_prompts = prompts[i:i+2]
+        batch_prompts = prompts[i:i+1]
         
 
         tokenized_prompts = tokenizer(
@@ -136,7 +136,7 @@ def generate_completions(
     
     assert len(generations) == len(prompts) * num_return_sequences, "number of generations should be equal to number of prompts * num_return_sequences"
     print(result)
-    return result
+    return batch_generations[0]
 
 
 def load_lm_and_tokenizer(

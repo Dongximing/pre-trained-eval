@@ -298,7 +298,7 @@ from transformers.generation.logits_process import (
     TopPLogitsWarper,
 )
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2,3"
 
 class DExpertsLlama:
     def __init__(
@@ -432,7 +432,7 @@ class DExpertsLlama:
 
         warpers = LogitsProcessorList([
             TopKLogitsWarper(top_k=20),
-            TopPLogitsWarper(top_p=0.95),
+            TopPLogitsWarper(top_p=0.8),
         ])
 
         def _per_sample_stopped(ids_on_base: torch.Tensor) -> torch.Tensor:
@@ -482,7 +482,7 @@ class DExpertsLlama:
 
             # -------- DExperts fusion --------
             logits = b + self.alpha * (e - a)
-            logits = logits / temperature
+            logits = logits / 0.7
             logits = warpers(input_ids, logits)
 
             # -------- decode --------
@@ -498,7 +498,6 @@ class DExpertsLlama:
                 next_tokens,
                 torch.full_like(next_tokens, pad_id),
             )
-            print(next_tokens)
 
             # append（注意：expert 在另外的 device 就要搬过去）
             input_ids = torch.cat([input_ids, next_tokens.to(self.base_device)], dim=-1)
