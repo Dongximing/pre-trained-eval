@@ -15,9 +15,9 @@ def check_math_correctness(ref, generation):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--start', type=int, default=0)
-    parser.add_argument('--end', type=int, default=100)
+    parser.add_argument('--end', type=int, default=200)
 
-    parser.add_argument('--eval_path', type=str, default='/home/ximing/pre-trained-eval/proxy-tuning/qwen2.5-14b-chat.json')
+    parser.add_argument('--eval_path', type=str, default='/home/ximing/pre-trained-eval/proxy-tuning/proxymodel_4b_qwen3_new_method3.json')
     parser.add_argument('--seed', type=int, default=42)
     args = parser.parse_args()
 
@@ -36,8 +36,7 @@ if __name__ == '__main__':
         for idx, number in enumerate(tqdm(range(args.start, args.end))):
             predict = generations[idx].get('output')[0]
             standard = answers[idx]
-            print('predict:', predict)
-            print('standard:', standard)
+
             result = check_math_correctness(standard, predict)
             if result:
                 number_correct += 1
@@ -46,7 +45,7 @@ if __name__ == '__main__':
 
        
 
-    print("correct Number of tokens: ", number_correct/number_correct)
+    print("correct Number of tokens: ", number_correct/total_number)
     print(f'Number_correct: {number_correct}')
     print(f'Total: {total_number}')
     print(f"wrong_list: {wrong_list}")

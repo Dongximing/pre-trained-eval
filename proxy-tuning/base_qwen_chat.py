@@ -2,7 +2,7 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "4"
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 MATH_PROMPT = "You are an expert python programmer. you will be given a question (problem specification) and will generate a correct python program that matches the specification and passes all tests."
 def load_lm_and_tokenizer(
     model_name_or_path,
@@ -35,9 +35,20 @@ def chat_generate(
     max_tokens=16000,
 ):
     # === 拼 prompt（基础版，后面可换 Qwen 官方 template）===
-    print('chat_text',prompts_an[0][0])
+    
+    messages = [
+    {"role": "user", "content":  prompts_an[0][0]}
+]
+
+    text = tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True,
+         enable_thinking=False,
+    )
+    print('chat_text',text)
     inputs = tokenizer(
-        [prompts_an[0][0]],
+        [text],
         return_tensors="pt",
         padding=True
     ).to(model.device)

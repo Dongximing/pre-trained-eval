@@ -15,11 +15,11 @@ from transformers.generation.logits_process import (
     TopPLogitsWarper,
 )
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "6"
+os.environ["CUDA_VISIBLE_DEVICES"] = "4,5"
 import logging
 
 logging.basicConfig(
-    filename="test4.log",      # 日志文件名
+    filename="entropy_07_math_gem.log",      # 日志文件名
     filemode="a",                # 追加写入
     level=logging.INFO,
     format="%(asctime)s | %(levelname)s | %(message)s"
@@ -91,7 +91,7 @@ class DExpertsLlama:
             # 用 Qwen2.5-Coder-14B-Instruct 的 tokenizer 来套 chat_template
             from transformers import AutoModelForCausalLM, AutoTokenizer
             qwen_tok = AutoTokenizer.from_pretrained(
-                "/home/original_models/Qwen3-1.7B"
+                "/home/original_models/gemma-2-9b-it"
             )
 
             chat_prompts = []
@@ -105,7 +105,6 @@ class DExpertsLlama:
                     messages,
                     tokenize=False,        
                     add_generation_prompt=True,
-                     enable_thinking=False,
                 )
                 chat_prompts.append(chat_text)
 
@@ -117,7 +116,6 @@ class DExpertsLlama:
                 chat_prompts,
                 padding="longest",
                 return_tensors="pt",
-               
             )
 
             chat_inputs.input_ids = chat_inputs.input_ids.to(self.expert_device)
@@ -158,7 +156,7 @@ class DExpertsLlama:
         pad_id = self.tokenizer.pad_token_id
 
         # 你指定的“结束 token 集合”
-        eos_ids = torch.tensor([151643, 151645], device=self.base_device)
+        eos_ids = torch.tensor([1], device=self.base_device)
 
         warpers = LogitsProcessorList([
             TopKLogitsWarper(top_k=20),
@@ -224,32 +222,7 @@ class DExpertsLlama:
             prob_b = F.softmax(b, dim=-1)
             prob_e = F.softmax(e, dim=-1)
             prob_a = F.softmax(a, dim=-1)
-
             K = 3
-            def log_topk(name, logits, probs, tokenizer, k=3):
-                # logits, probs: [vocab] 或 [1, vocab]
-                if logits.dim() == 2:
-                    logits = logits[0]
-                    probs  = probs[0]
-
-                topk_logits, topk_ids = torch.topk(logits, k)
-
-                logger.info(f"\n[{name}] top-{k}")
-                for i in range(k):
-                    tid   = topk_ids[i].item()
-                    logit = topk_logits[i].item()
-                    prob  = probs[tid].item()
-                    tok   = tokenizer.decode([tid])
-
-                    logger.info(
-                        f"{i+1:>2d}: id={tid:<6d} "
-                        f"logit={logit:>8.3f} "
-                        f"prob={prob:>7.4f} "
-                        f"token={repr(tok)}"
-                    )
-            log_topk("BASE",   b, prob_b, self.tokenizer, k=3)
-            log_topk("EXPERT", e, prob_e, self.tokenizer, k=3)
-            log_topk("ANTI",   a, prob_a, self.tokenizer, k=3)
 
             topk_prob_b, topk_id_b = torch.topk(prob_b, K, dim=-1)
             topk_prob_e, topk_id_e = torch.topk(prob_e, K, dim=-1)
@@ -283,30 +256,21 @@ class DExpertsLlama:
             top1_e_list.append(topk_prob_e[0][0].mean().item())
             top1_a_list.append(topk_prob_a[0][0].mean().item())
 
-            
+
             # -------- DExperts fusion --------
             if topk_prob_b[0][0] > topk_prob_e[0][0]:
-                logits = b          
+                logits = b 
             else:
                 logits = b + self.alpha * (e - a)
-            # -------- temperature sampling --------
-            prob_logit= F.softmax(logits, dim=-1)
-            topk_logits, topk_id_logits = torch.topk(prob_logit, K, dim=-1)
-            
-     
-            log_topk("real",   logits, prob_logit, self.tokenizer, k=3)
-            
             logits = logits / 0.7
             logits = warpers(input_ids, logits)
-            probs = torch.softmax(logits, dim=-1)
-            next_tokens = torch.multinomial(probs, 1)
 
-            # # -------- decode --------
-            # if do_sample:
-            #     probs = torch.softmax(logits, dim=-1)
-            #     next_tokens = torch.multinomial(probs, 1)   # [B, 1]
-            # else:
-            #     next_tokens = torch.argmax(logits, dim=-1, keepdim=True)  # [B,1]
+            # -------- decode --------
+            if do_sample:
+                probs = torch.softmax(logits, dim=-1)
+                next_tokens = torch.multinomial(probs, 1)   # [B, 1]
+            else:
+                next_tokens = torch.argmax(logits, dim=-1, keepdim=True)  # [B,1]
 
             # ⭐ 已结束的 sample 强制 PAD
             next_tokens = torch.where(
@@ -338,6 +302,11 @@ class DExpertsLlama:
             # ⭐ 全部结束才 break
             if unfinished_sequences.max() == 0:
                 break
+
+
+
+    
+
 
 
         

@@ -1,4 +1,4 @@
-
+ 
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
@@ -6,7 +6,7 @@ import uvicorn
 import os
 import torch
 
-from base_qwen import chat_generate, load_lm_and_tokenizer
+from base_qwen_chat import chat_generate, load_lm_and_tokenizer
 MATH_PROMPT = "You are an expert python programmer. you will be given a question (problem specification) and will generate a correct python program that matches the specification and passes all tests."
 
 
@@ -15,7 +15,7 @@ app = FastAPI()
 
 print("🚀 Loading DExperts...")
 model, tokenizer = load_lm_and_tokenizer(
-    model_name_or_path="/home/original_models/Qwen3-30B-A3B-Base",
+    model_name_or_path="/home/original_models/Qwen3-30B-A3B",
 
 )
 print("🔥 DExperts loaded!")
@@ -49,7 +49,7 @@ def chat_completion(req: ChatCompletionRequest):
  
 
     # 2) 用你已有的 generate_completions 推理
-    print(prompt)
+
     outputs = chat_generate(
         model=model,
         tokenizer=tokenizer,
@@ -79,4 +79,4 @@ def chat_completion(req: ChatCompletionRequest):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8602)
+    uvicorn.run(app, host="0.0.0.0", port=8902)

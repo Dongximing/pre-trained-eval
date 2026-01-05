@@ -1,0 +1,10 @@
+# images
+*.png
+
+# logs
+*.log
+logs/
+log/
+
+# json files
+*.json

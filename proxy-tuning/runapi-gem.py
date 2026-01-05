@@ -5,7 +5,7 @@ import torch
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from generation_qwen3 import load_lm_and_tokenizer, load_dexperts_model_and_tokenizer, generate_completions
+from generation_gem import load_lm_and_tokenizer, load_dexperts_model_and_tokenizer, generate_completions
 # ==================================================
 # Argument Parsing
 # ==================================================
@@ -37,9 +37,9 @@ print(f"▶ Running from {start_id} to {end_id - 1}")
 
 print("🚀 Loading DExperts...")
 model, tokenizer = load_dexperts_model_and_tokenizer(
-    base_model_name_or_path="/home/original_models/Qwen3-4B-base",
-    expert_model_name_or_path="/home/original_models/Qwen3-1.7B",
-    antiexpert_model_name_or_path="/home/original_models/Qwen3-1.7B-Base",
+    base_model_name_or_path="/home/original_models/gemma-2-27b",
+    expert_model_name_or_path="/home/original_models/gemma-2-9b-it",
+    antiexpert_model_name_or_path="/home/original_models/gemma-2-9b",
     alpha=1.0,
 )
 print("🔥 DExperts loaded!")

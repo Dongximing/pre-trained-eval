@@ -1,11 +1,12 @@
 import json
 import argparse
 import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 import torch
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from generation_qwen3 import load_lm_and_tokenizer, load_dexperts_model_and_tokenizer, generate_completions
+
 # ==================================================
 # Argument Parsing
 # ==================================================
@@ -19,7 +20,7 @@ parser.add_argument(
 parser.add_argument(
     "--end_id",
     type=int,
-    default=1,
+    default=200,
     help="end index (exclusive)",
 )
 parser.add_argument(
@@ -35,26 +36,26 @@ output_file = args.output
 
 print(f"▶ Running from {start_id} to {end_id - 1}")
 
-print("🚀 Loading DExperts...")
-model, tokenizer = load_dexperts_model_and_tokenizer(
-    base_model_name_or_path="/home/original_models/Qwen3-4B-base",
-    expert_model_name_or_path="/home/original_models/Qwen3-1.7B",
-    antiexpert_model_name_or_path="/home/original_models/Qwen3-1.7B-Base",
-    alpha=1.0,
+
+# ==================================================
+# Model Loading
+# ==================================================
+model_name = "/home/original_models/Qwen3-4B-base"
+
+
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    torch_dtype="auto",
+    device_map="auto",
 )
-print("🔥 DExperts loaded!")
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model.eval()
+device  = next(model.parameters()).device
 
 
 # ==================================================
 # Dataset Loading
 # ==================================================
-dataset = load_dataset("HuggingFaceH4/math-500")["test"]
-print("Total dataset size:", len(dataset))
-
-assert 0 <= start_id < len(dataset), "start_id out of range"
-assert 0 < end_id <= len(dataset), "end_id out of range"
-assert start_id < end_id, "start_id must be < end_id"
-
 dataset = load_dataset("HuggingFaceH4/math-500")["test"]
 print("Total dataset size:", len(dataset))
 
@@ -76,24 +77,35 @@ for idx in range(start_id, end_id):
         prompt
         + "\nPlease reason step by step, and put your final answer within \\boxed{}."
     )
-    responses = generate_completions(
-        model=model,
-        tokenizer=tokenizer,
-        prompts_an=([messages], [""]),
-        batch_size=1,
-        max_new_tokens=4096,
-        temperature=1.0,
-        top_p=0.9,
-        disable_tqdm=True,
-        run_id=idx,
-    )
+
+    inputs = tokenizer(
+        [messages],
+        return_tensors="pt",
+    ).to(device)
+
+    with torch.inference_mode():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=4096,
+            do_sample=True,
+            temperature=0.7,
+            top_p=0.95,
+            top_k=20,
+            eos_token_id=tokenizer.eos_token_id,
+            pad_token_id=tokenizer.eos_token_id,
+        )
+
+    gen = outputs[0][inputs.input_ids.shape[1]:]
+    response = tokenizer.decode(gen, skip_special_tokens=True)
+
+    print(response)
 
     results.append(
         {
             "current_id": idx,
             "pure_input": prompt,
             "input": messages,
-            "output": [responses],
+            "output": [response],
         }
     )
 
@@ -107,4 +119,3 @@ with open(output_file, "w") as f:
     json.dump(results, f, indent=2, ensure_ascii=False)
 
 print("Saved →", output_file)
-

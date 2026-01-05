@@ -41,14 +41,15 @@ def generate_completions(
     model,
     tokenizer,
     prompts_an,
-    batch_size=1,
+    batch_size=2,
     stop_id_sequences=None,
     banned_id_sequences=None,
     banned_begin_ids=None,
     add_special_tokens=True,
     disable_tqdm=False,
     temperature=1.0,
-    top_p=1.0,
+    top_p=0.95,
+    run_id=None,
     **generation_kwargs
 ):
     generations = []
@@ -59,9 +60,9 @@ def generate_completions(
 
     num_return_sequences = generation_kwargs.get("num_return_sequences", 1)
 
-    for i in range(0, len(prompts), batch_size):
+    for i in range(0, len(prompts), 1):
         result = []
-        batch_prompts = prompts[i:i+batch_size]
+        batch_prompts = prompts[i:i+1]
         
 
         tokenized_prompts = tokenizer(
@@ -88,11 +89,15 @@ def generate_completions(
         batch_outputs = model.generate(
             input_ids=batch_input_ids,
             attention_mask=attention_mask,
-            temperature=0.6,
-
+            stopping_criteria=stopping_criteria,
+            logits_processor=logits_processor,
             do_sample=True,
+            temperature=temperature,
+            top_p=top_p,
+            run_id=run_id,
             **generation_kwargs
         )
+        print('batch_outputs',batch_outputs)
 
         # to support the logits processing below when using DExperts with mixed tokenizers
         if isinstance(batch_input_ids, dict):
@@ -133,7 +138,7 @@ def generate_completions(
     
     assert len(generations) == len(prompts) * num_return_sequences, "number of generations should be equal to number of prompts * num_return_sequences"
     print(result)
-    return result
+    return batch_generations[0]
 
 
 def load_lm_and_tokenizer(
@@ -151,9 +156,9 @@ def load_lm_and_tokenizer(
     model_kwargs = {
         'device_map': device_map,
         'offload_folder': 'offload_folder',
-        'torch_dtype': torch.float16,
+        'torch_dtype': "auto",
         'offload_state_dict': True,
-        'load_in_8bit': load_in_8bit
+        # 'load_in_8bit': load_in_8bit
     }
     model = AutoModelForCausalLM.from_pretrained(model_name_or_path, **model_kwargs)
     if convert_to_half:
@@ -183,20 +188,21 @@ def load_dexperts_model_and_tokenizer(
     antiexpert_model_name_or_path: str = None,
     device_map: str = "auto",
     system_prompt: str = None,
-    alpha: float = 1,
+    alpha: float = 1.0,
     chat_response_prefix: str = None,
     load_in_8bit: bool = False,
     use_fast_tokenizer: bool = True,
     padding_side: str = "left",
 ):
     from transformers import AutoTokenizer
-    from dexperts_qwen3 import DExpertsMultiGPU
+    from dexperts_qwen3 import DExpertsLlama
 
     model_kwargs = {
-        'device_map': device_map,
+        # 'device_map': device_map,
         'offload_folder': 'offload_folder',
         'torch_dtype': torch.bfloat16,
         'offload_state_dict': True,
+        # 'load_in_8bit': load_in_8bit,
     }
 
     tokenizer = AutoTokenizer.from_pretrained(base_model_name_or_path, use_fast_tokenizer=use_fast_tokenizer)
@@ -204,17 +210,14 @@ def load_dexperts_model_and_tokenizer(
     if not antiexpert_model_name_or_path:
         antiexpert_model_name_or_path = 'meta-llama/Llama-2-7b-hf'
 
-    model_kwargs = dict(torch_dtype=torch.bfloat16)
+    # model_kwargs = dict(torch_dtype=torch.bfloat16)
 
-    model = DExpertsMultiGPU(
+    model = DExpertsLlama(
         base_model_name_or_path,
         expert_model_name_or_path,
         antiexpert_model_name_or_path,
         tokenizer,
         alpha=alpha,
-        base_gpu=2,
-        expert_gpu=2,
-        anti_gpu=2,
         model_kwargs=model_kwargs
     )
 

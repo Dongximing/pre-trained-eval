@@ -94,7 +94,7 @@ def generate_completions(
             do_sample=True,
             temperature=temperature,
             top_p=top_p,
-            run_id=run_id,       
+            run_id=run_id,
             **generation_kwargs
         )
         print('batch_outputs',batch_outputs)
@@ -195,7 +195,7 @@ def load_dexperts_model_and_tokenizer(
     padding_side: str = "left",
 ):
     from transformers import AutoTokenizer
-    from dexperts import DExpertsLlama
+    from dexperts_gem import DExpertsLlama
 
     model_kwargs = {
         # 'device_map': device_map,

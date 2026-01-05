@@ -5,6 +5,8 @@ from typing import List, Optional, Dict, Any
 import uvicorn
 import os
 import torch
+import uuid
+
 
 from generation import generate_completions, load_dexperts_model_and_tokenizer
 MATH_PROMPT = "You are an expert python programmer. you will be given a question (problem specification) and will generate a correct python program that matches the specification and passes all tests."
@@ -49,18 +51,19 @@ def chat_completion(req: ChatCompletionRequest):
 
 
  
-
+    request_id = str(uuid.uuid4())[:8]
     # 2) 用你已有的 generate_completions 推理
     print(prompts)
     outputs = generate_completions(
         model=model,
         tokenizer=tokenizer,
         prompts_an=(prompts, [""]),
-        batch_size=2,
+        batch_size=1,
         max_new_tokens=req.max_tokens,
         temperature=req.temperature,
         top_p=req.top_p,
-        disable_tqdm=True
+        disable_tqdm=True,
+        run_id=request_id,
     )
 
  
@@ -84,4 +87,4 @@ def chat_completion(req: ChatCompletionRequest):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8408)
+    uvicorn.run(app, host="0.0.0.0", port=8402)
