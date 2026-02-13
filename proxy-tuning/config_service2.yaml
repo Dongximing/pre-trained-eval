@@ -1,0 +1,29 @@
+# 服务2配置
+models:
+  base:
+    path: "/storage/data/original_models/Qwen2.5-14B"
+    devices: [2, 3]  # 使用GPU 2,3
+  expert:
+    path: "/storage/data/original_models/Qwen3-8B"
+    devices: [2, 3]  # 使用GPU 2,3
+    tokenizer_path: "/storage/data/original_models/Qwen3-8B"
+  antiexpert:
+    path: "/storage/data/original_models/Qwen3-8B-base"
+    devices: [2, 3]  # 使用GPU 2,3
+
+api:
+  host: "0.0.0.0"
+  port: 8400       # 服务2端口（不同端口）
+
+generation:
+  max_new_tokens: 16000
+  temperature: 0.7
+  top_k: 20
+  top_p: 0.8
+  batch_size: 1
+  alpha: 1.0
+
+advanced:
+  torch_dtype: "bfloat16"
+  offload_folder: "offload_folder"
+  use_cache: true

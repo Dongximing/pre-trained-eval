@@ -1,0 +1,88 @@
+analysis_report: false
+api_url: http://127.0.0.1:8401/v1
+chat_template: null
+dataset_args:
+  live_code_bench:
+    aggregation: mean_and_pass_at_k
+    dataset_id: AI-ModelScope/code_generation_lite
+    default_subset: default
+    description: Live Code Bench is a benchmark for evaluating code generation models
+      on real-world coding tasks. It includes a variety of programming problems with
+      test cases to assess the model's ability to generate correct and efficient code
+      solutions. **By default the code is executed in local environment. We recommend
+      using sandbox execution to safely run and evaluate the generated code, please
+      refer to the [documentation](https://evalscope.readthedocs.io/en/latest/user_guides/sandbox.html)
+      for more details.**
+    eval_split: test
+    extra_params:
+      debug: false
+      end_date: null
+      start_date: '2025-01-01'
+    few_shot_num: 0
+    few_shot_prompt_template: null
+    few_shot_random: false
+    filters: null
+    force_redownload: false
+    metric_list:
+    - acc
+    name: live_code_bench
+    output_types:
+    - generation
+    pretty_name: Live-Code-Bench
+    prompt_template: '### Question:
+
+      {question_content}
+
+
+      {format_prompt} ### Answer: (use the provided format with backticks)
+
+
+      '
+    query_template: null
+    review_timeout: 6
+    sandbox_config:
+      image: python:3.11-slim
+      tools_config:
+        python_executor: {}
+        shell_executor: {}
+    shuffle: false
+    shuffle_choices: false
+    subset_list:
+    - release_latest
+    system_prompt: null
+    tags:
+    - Coding
+    train_split: null
+dataset_dir: /home/ximing/.cache/modelscope/hub/datasets
+dataset_hub: modelscope
+datasets:
+- live_code_bench
+debug: false
+eval_backend: Native
+eval_batch_size: 1
+eval_config: null
+eval_type: openai_api
+evalscope_version: 1.4.2
+generation_config:
+  batch_size: 1
+  temperature: 0.0
+ignore_errors: false
+judge_model_args: {}
+judge_strategy: auto
+judge_worker_num: 1
+limit: null
+model: dexperts
+model_args: {}
+model_id: dexperts
+model_task: text_generation
+no_timestamp: false
+repeats: 1
+rerun_review: false
+sandbox_manager_config: {}
+sandbox_type: docker
+seed: 42
+stream: null
+timeout: null
+use_cache: null
+use_sandbox: false
+work_dir: ./outputs/20260213_160653

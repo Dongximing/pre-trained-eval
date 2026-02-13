@@ -1,0 +1,36 @@
+# DExperts Model Configuration
+models:
+  base:
+    path: "/storage/data/original_models/Qwen2.5-32B"
+    devices: [0, 1]  # GPU devices for base model
+  expert:
+    path: "/storage/data/original_models/Qwen3-8B"
+    devices: [2, 3]  # GPU devices for expert model
+    tokenizer_path: "/storage/data/original_models/Qwen3-8B"  # Expert tokenizer for chat template
+  antiexpert:
+    path: "/storage/data/original_models/Qwen3-8B-base"
+    devices: [4, 5]  # GPU devices for antiexpert model
+
+# API Server Configuration
+api:
+  host: "0.0.0.0"
+  port: 8402
+
+# Generation Parameters
+generation:
+  max_new_tokens: 16000
+  temperature: 0.7      # Sampling temperature (lower = more deterministic)
+  top_k: 20            # Top-k sampling (0 = disabled)
+  top_p: 0.8           # Top-p/nucleus sampling
+  batch_size: 1        # Batch size for generation
+  alpha: 1.0           # DExperts alpha parameter (interpolation strength)
+
+  # Advanced generation options
+  use_entropy_gating: false  # Use entropy-based gating between base and expert
+  entropy_threshold: 5.0     # Entropy threshold for gating (only if use_entropy_gating=true)
+
+# Advanced Settings
+advanced:
+  torch_dtype: "bfloat16"  # or "float16", "float32", "auto"
+  offload_folder: "offload_folder"
+  use_cache: true

@@ -86747,4 +86747,7 @@ next_tokens tensor([2392], device='cuda:0')
 next_tokens tensor([198], device='cuda:0')
 next_tokens tensor([310], device='cuda:0')
 next_tokens tensor([421], device='cuda:0')
-next_tokens 
+next_tokens usage: evalscope <command> [<args>]
+EvalScope Command Line tool: error: unrecognized arguments:  
+usage: evalscope <command> [<args>]
+EvalScope Command Line tool: error: unrecognized arguments:  

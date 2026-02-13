@@ -1,4 +1,7 @@
-from typing import Optional, Dict, Any
+"""
+DExperts Model Implementation with configurable GPU allocation and generation parameters
+"""
+from typing import Optional, Dict, Any, List
 import torch
 from transformers import AutoModelForCausalLM, PreTrainedTokenizer
 import torch.nn.functional as F
@@ -7,53 +10,109 @@ from transformers.generation.utils import (
     StoppingCriteriaList,
     LogitsProcessorList
 )
-from collections import defaultdict
-
 from transformers.generation.logits_process import (
-    LogitsProcessorList,
     TopKLogitsWarper,
     TopPLogitsWarper,
 )
-import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
+import yaml
+from pathlib import Path
 import logging
-
-logging.basicConfig(
-    filename="entropy_04_6b.log",      # 日志文件名
-    filemode="a",                # 追加写入
-    level=logging.INFO,
-    format="%(asctime)s | %(levelname)s | %(message)s"
-)
 
 logger = logging.getLogger(__name__)
 
 
+def load_config(config_path: str = "config.yaml") -> dict:
+    """Load configuration from YAML file"""
+    config_file = Path(config_path)
+    if config_file.exists():
+        with open(config_file, 'r') as f:
+            return yaml.safe_load(f)
+    return {}
+
+
 class DExpertsLlama:
+    """
+    DExperts: Dynamically combining expert and anti-expert models with a base model
+
+    This implementation supports:
+    - Flexible GPU allocation for each model
+    - Configurable generation parameters
+    - Chat template support for expert models
+    - Entropy-based and probability-based gating
+    """
+
     def __init__(
         self,
         base_model_name_or_path: str,
         expert_model_name_or_path: str,
         antiexpert_model_name_or_path: str,
         tokenizer: PreTrainedTokenizer,
-        system_prompt: str = None,
+        system_prompt: Optional[str] = None,
         alpha: float = 1.0,
-        chat_response_prefix: str = None,
-        model_kwargs: Dict[str, Any] = None
+        chat_response_prefix: Optional[str] = None,
+        model_kwargs: Optional[Dict[str, Any]] = None,
+        base_devices: Optional[List[int]] = None,
+        expert_devices: Optional[List[int]] = None,
+        antiexpert_devices: Optional[List[int]] = None,
+        config_path: str = "config.yaml",
     ):
         """
-        chat_response_prefix: For llama chat models, it can be helpful for the response
-        to start with a certain prefix to constrain the generation to directly answer
-        the question. This makes evaluation on MC datasets easier.
-        """
+        Initialize DExperts model
 
-        self.base = AutoModelForCausalLM.from_pretrained(
-            base_model_name_or_path, **model_kwargs,device_map="auto"
+        Args:
+            base_model_name_or_path: Path to base model
+            expert_model_name_or_path: Path to expert model
+            antiexpert_model_name_or_path: Path to antiexpert model
+            tokenizer: Tokenizer instance
+            system_prompt: Optional system prompt for chat models
+            alpha: DExperts interpolation coefficient
+            chat_response_prefix: Prefix for chat responses
+            model_kwargs: Additional kwargs for model loading
+            base_devices: GPU devices for base model (e.g., [0, 1])
+            expert_devices: GPU devices for expert model (e.g., [2, 3])
+            antiexpert_devices: GPU devices for antiexpert model (e.g., [4, 5])
+            config_path: Path to config file
+        """
+        # Load configuration
+        self.config = load_config(config_path)
+
+        # Set generation parameters from config
+        gen_config = self.config.get('generation', {})
+        self.default_temperature = 0.7
+        self.default_top_k = 20
+        self.default_top_p = 0.8
+        self.default_max_new_tokens = gen_config.get('max_new_tokens', 16000)
+
+        # Get expert tokenizer path from config
+        expert_config = self.config.get('models', {}).get('expert', {})
+        self.expert_tokenizer_path = expert_config.get('tokenizer_path', expert_model_name_or_path)
+
+        if model_kwargs is None:
+            model_kwargs = {}
+
+        # Load each model with constrained GPU visibility
+        logger.info(f"Loading base model: {base_model_name_or_path}")
+        logger.info(f"  Target devices: {base_devices}")
+        self.base = self._load_model_on_devices(
+            base_model_name_or_path,
+            base_devices,
+            model_kwargs
         )
-        self.expert = AutoModelForCausalLM.from_pretrained(
-            expert_model_name_or_path, **model_kwargs,device_map="auto"
+
+        logger.info(f"Loading expert model: {expert_model_name_or_path}")
+        logger.info(f"  Target devices: {expert_devices}")
+        self.expert = self._load_model_on_devices(
+            expert_model_name_or_path,
+            expert_devices,
+            model_kwargs
         )
-        self.antiexpert = AutoModelForCausalLM.from_pretrained(
-            antiexpert_model_name_or_path, **model_kwargs,device_map="auto"
+
+        logger.info(f"Loading antiexpert model: {antiexpert_model_name_or_path}")
+        logger.info(f"  Target devices: {antiexpert_devices}")
+        self.antiexpert = self._load_model_on_devices(
+            antiexpert_model_name_or_path,
+            antiexpert_devices,
+            model_kwargs
         )
 
         self.base.eval()
@@ -66,6 +125,36 @@ class DExpertsLlama:
         self.base_device = self.base.device
         self.expert_device = self.expert.device
         self.anti_device = self.antiexpert.device
+
+        logger.info(f"DExperts initialized with alpha={alpha}")
+        logger.info(f"  Base device: {self.base_device}")
+        logger.info(f"  Expert device: {self.expert_device}")
+        logger.info(f"  Antiexpert device: {self.anti_device}")
+
+    def _load_model_on_devices(
+        self,
+        model_path: str,
+        devices: Optional[List[int]],
+        model_kwargs: Dict[str, Any]
+    ):
+        """
+        Load model (CUDA_VISIBLE_DEVICES already set by runapi.py)
+
+        Args:
+            model_path: Path to model
+            devices: Not used (CUDA_VISIBLE_DEVICES controls GPU)
+            model_kwargs: Model loading kwargs
+
+        Returns:
+            Loaded model
+        """
+        logger.info(f"  Loading with device_map='auto'")
+        return AutoModelForCausalLM.from_pretrained(
+            model_path,
+            **model_kwargs,
+            device_map="auto"
+        )
+
     def forward(
         self,
         base_inputs,
@@ -73,6 +162,7 @@ class DExpertsLlama:
         antiexpert_inputs,
         return_dict=None
     ):
+        """Forward pass through all three models"""
         base_outputs = self.base(**base_inputs, return_dict=return_dict)
         expert_outputs = self.expert(**expert_inputs, return_dict=return_dict)
         antiexpert_outputs = self.antiexpert(**antiexpert_inputs, return_dict=return_dict)
@@ -80,73 +170,106 @@ class DExpertsLlama:
         return base_outputs, expert_outputs, antiexpert_outputs
 
     def _get_tokenized_chat_inputs(self, input_ids: torch.Tensor):
-            """
-            把 base 的 input_ids decode 成文本，再用 Qwen2.5-Coder-14B-Instruct 的
-            apply_chat_template 构造 expert 的 chat 格式输入，然后用 base tokenizer 重新 encode。
-            """
-            # 用 base tokenizer 还原文本
-            prompts = self.tokenizer.batch_decode(input_ids, skip_special_tokens=True)
-            print("base prompts", prompts)
+        """
+        Convert base input_ids to chat format for expert model
 
-            # 用 Qwen2.5-Coder-14B-Instruct 的 tokenizer 来套 chat_template
-            from transformers import AutoModelForCausalLM, AutoTokenizer
-            qwen_tok = AutoTokenizer.from_pretrained(
-                "/home/original_models/Qwen3-14B"
+        This decodes the base input, applies chat template, and re-encodes
+        for the expert model.
+        """
+        # Decode base input to text
+        prompts = self.tokenizer.batch_decode(input_ids, skip_special_tokens=True)
+        logger.debug(f"Base prompts: {prompts[0][:100]}...")
+
+        # Load expert tokenizer for chat template
+        from transformers import AutoTokenizer
+        expert_tokenizer = AutoTokenizer.from_pretrained(self.expert_tokenizer_path)
+
+        chat_prompts = []
+        for p in prompts:
+            messages = [
+                {"role": "user", "content": p},
+            ]
+            chat_text = expert_tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True,
+                enable_thinking=False,
+            )
+            chat_prompts.append(chat_text)
+
+        logger.debug(f"Chat prompt: {chat_prompts[0][:100]}...")
+
+        # Re-encode with base tokenizer
+        chat_inputs = self.tokenizer(
+            chat_prompts,
+            padding="longest",
+            return_tensors="pt",
+        )
+
+        chat_inputs.input_ids = chat_inputs.input_ids.to(self.expert_device)
+        if "attention_mask" in chat_inputs:
+            chat_inputs.attention_mask = chat_inputs.attention_mask.to(
+                self.expert_device
             )
 
-            chat_prompts = []
-            for p in prompts:
-                problem = p
-                messages = [
-                    # {"role": "system", "content": MATH_PROMPT},
-                    {"role": "user", "content": problem},
-                ]
-                chat_text = qwen_tok.apply_chat_template(
-                    messages,
-                    tokenize=False,        
-                    add_generation_prompt=True,
-                    enable_thinking=False,
-                )
-                chat_prompts.append(chat_text)
-
-            # print("chat_prompts", chat_prompts)
-            # print("token_end id ", self.tokenizer.eos_token_id)
-
-            # 再用 base tokenizer 编码（假设 base/expert 共享 vocab）
-            chat_inputs = self.tokenizer(
-                chat_prompts,
-                padding="longest",
-                return_tensors="pt",
-            )
-
-            chat_inputs.input_ids = chat_inputs.input_ids.to(self.expert_device)
-            if "attention_mask" in chat_inputs:
-                chat_inputs.attention_mask = chat_inputs.attention_mask.to(
-                    self.expert_device
-                )
-
-            return chat_inputs
-
+        return chat_inputs
 
     @torch.inference_mode()
     def generate(
         self,
         input_ids: torch.Tensor,
-        max_new_tokens: int = 100,
-        do_sample: bool = False,
-        temperature: float = 1.0,
-        stopping_criteria: StoppingCriteriaList | None = None,
-        run_id=None,
+        attention_mask: Optional[torch.Tensor] = None,
+        max_new_tokens: Optional[int] = None,
+        do_sample: bool = True,
+        temperature: Optional[float] = None,
+        top_k: Optional[int] = None,
+        top_p: Optional[float] = None,
+        stopping_criteria: Optional[StoppingCriteriaList] = None,
+        run_id: Optional[str] = None,
+        use_entropy_gating: bool = False,
+        entropy_threshold: float = 5.0,
         **kwargs
-    ):
+    ) -> torch.Tensor:
+        """
+        Generate text using DExperts
+
+        Args:
+            input_ids: Input token IDs
+            attention_mask: Attention mask
+            max_new_tokens: Maximum tokens to generate
+            do_sample: Whether to use sampling
+            temperature: Sampling temperature (overrides config)
+            top_k: Top-k sampling (overrides config)
+            top_p: Top-p sampling (overrides config)
+            stopping_criteria: Stopping criteria
+            run_id: Run ID for logging
+            use_entropy_gating: Whether to use entropy-based gating
+            entropy_threshold: Entropy threshold for gating
+            **kwargs: Additional generation arguments
+
+        Returns:
+            Generated token IDs
+        """
+        # Use config defaults if not specified
+        if max_new_tokens is None:
+            max_new_tokens = self.default_max_new_tokens
+        if temperature is None:
+            temperature = self.default_temperature
+        if top_k is None:
+            top_k = self.default_top_k
+        if top_p is None:
+            top_p = self.default_top_p
+
         if stopping_criteria is None:
             stopping_criteria = StoppingCriteriaList()
 
         input_ids = input_ids.to(self.base_device)
 
+        # Get chat-formatted inputs for expert
         chat_inputs = self._get_tokenized_chat_inputs(input_ids)
         expert_input_ids = chat_inputs.input_ids.to(self.expert_device)
 
+        # Initialize KV caches
         base_past = None
         expert_past = None
         anti_past = None
@@ -156,36 +279,29 @@ class DExpertsLlama:
 
         pad_id = self.tokenizer.pad_token_id
 
-        # 你指定的“结束 token 集合”
+        # EOS token IDs (Qwen-specific)
         eos_ids = torch.tensor([151643, 151645], device=self.base_device)
 
+        # Create logits warpers with configurable parameters
         warpers = LogitsProcessorList([
-            TopKLogitsWarper(top_k=20),
-            TopPLogitsWarper(top_p=0.8),
+            TopKLogitsWarper(top_k=top_k),
+            TopPLogitsWarper(top_p=top_p),
         ])
 
         def _per_sample_stopped(ids_on_base: torch.Tensor) -> torch.Tensor:
-            """把 transformers 的 stopping_criteria（全局 bool）变成 per-sample 的 [B] bool。"""
+            """Convert global stopping criteria to per-sample bool tensor"""
             if len(stopping_criteria) == 0:
                 return torch.zeros(ids_on_base.size(0), device=ids_on_base.device, dtype=torch.bool)
 
             stopped_list = []
             for i in range(ids_on_base.size(0)):
-                # 注意：这里返回的是 python bool（transformers 默认行为）
                 s = stopping_criteria(ids_on_base[i:i+1], None)
-                # 强制转成 bool
                 stopped_list.append(bool(s))
             return torch.tensor(stopped_list, device=ids_on_base.device, dtype=torch.bool)
-        entropy_a_list = []
-        entropy_b_list = []
-        entropy_e_list = []
-        top1_b_list = []
-        top1_e_list = []
-        top1_a_list = []
 
-
+        # Generation loop
         for step in range(max_new_tokens):
-            # -------- BASE --------
+            # -------- BASE MODEL --------
             base_out = self.base(
                 input_ids=input_ids if base_past is None else input_ids[:, -1:],
                 past_key_values=base_past,
@@ -194,7 +310,7 @@ class DExpertsLlama:
             base_past = base_out.past_key_values
             b = base_out.logits[:, -1, :]  # [B, V]
 
-            # -------- EXPERT --------
+            # -------- EXPERT MODEL --------
             expert_out = self.expert(
                 input_ids=expert_input_ids if expert_past is None else expert_input_ids[:, -1:],
                 past_key_values=expert_past,
@@ -203,7 +319,7 @@ class DExpertsLlama:
             expert_past = expert_out.past_key_values
             e = expert_out.logits[:, -1, :].to(self.base_device)
 
-            # -------- ANTI --------
+            # -------- ANTIEXPERT MODEL --------
             anti_out = self.antiexpert(
                 input_ids=input_ids if anti_past is None else input_ids[:, -1:],
                 past_key_values=anti_past,
@@ -212,141 +328,59 @@ class DExpertsLlama:
             anti_past = anti_out.past_key_values
             a = anti_out.logits[:, -1, :].to(self.base_device)
 
-            # vocab align
-            e = e[:, : b.size(-1)]
-            a = a[:, : b.size(-1)]
-            entropy_a = -(F.softmax(a, dim=-1) * F.log_softmax(a, dim=-1)).sum(dim=-1)
-            entropy_b = -(F.softmax(b, dim=-1) * F.log_softmax(b, dim=-1)).sum(dim=-1)
-            entropy_e = -(F.softmax(e, dim=-1) * F.log_softmax(e, dim=-1)).sum(dim=-1)
-  
-            # ===== top-1 probability =====
-            prob_b = F.softmax(b, dim=-1)
-            prob_e = F.softmax(e, dim=-1)
-            prob_a = F.softmax(a, dim=-1)
-            K = 3
+            # Align vocabularies
+            b = b[:, : e.size(-1)]
 
-            topk_prob_b, topk_id_b = torch.topk(prob_b, K, dim=-1)
-            topk_prob_e, topk_id_e = torch.topk(prob_e, K, dim=-1)
-            topk_prob_a, topk_id_a = torch.topk(prob_a, K, dim=-1)
-            tokens_b = self.tokenizer.convert_ids_to_tokens(topk_id_b[0].tolist())
-            tokens_e = self.tokenizer.convert_ids_to_tokens(topk_id_e[0].tolist())
-            tokens_a = self.tokenizer.convert_ids_to_tokens(topk_id_a[0].tolist())
-            def fmt_topk(tokens, probs, ids):
-                return ", ".join(
-                    [f"{i}:{tok}({probs[i].item():.3f})"
-                    for i, tok in enumerate(tokens)]
+            # -------- DEXPERTS FUSION --------
+            if use_entropy_gating:
+                # Entropy-based gating
+                entropy_b = -(F.softmax(b, dim=-1) * F.log_softmax(b, dim=-1)).sum(dim=-1)
+                entropy_e = -(F.softmax(e, dim=-1) * F.log_softmax(e, dim=-1)).sum(dim=-1)
+
+                # Use base model when it's confident (low entropy)
+                use_base = entropy_b < entropy_threshold
+                logits = torch.where(
+                    use_base.unsqueeze(-1),
+                    b,
+                    b + self.alpha * (e - a)
                 )
-
-            logger.info(
-                f"[run_id={run_id}] step={step} | "
-                f"BASE top3: {fmt_topk(tokens_b, topk_prob_b[0], topk_id_b[0])} | "
-                f"EXPERT top3: {fmt_topk(tokens_e, topk_prob_e[0], topk_id_e[0])} | "
-                f"ANTI top3: {fmt_topk(tokens_a, topk_prob_a[0], topk_id_a[0])}"
-            )
-
-
-
-
-       
-            
-            entropy_b_list.append(entropy_b.mean().item())
-            entropy_e_list.append(entropy_e.mean().item())
-            entropy_a_list.append(entropy_a.mean().item())
-
-            top1_b_list.append(topk_prob_b[0][0].mean().item())
-            top1_e_list.append(topk_prob_e[0][0].mean().item())
-            top1_a_list.append(topk_prob_a[0][0].mean().item())
-
-
-            # -------- DExperts fusion --------
-            if topk_prob_b[0][0] > topk_prob_e[0][0]:
-                logits = b 
-                
             else:
+                # Standard DExperts combination
                 logits = b + self.alpha * (e - a)
+
+            # Apply temperature and warpers
             logits = logits / 0.7
             logits = warpers(input_ids, logits)
 
-            # -------- decode --------
+            # -------- SAMPLING --------
             if do_sample:
                 probs = torch.softmax(logits, dim=-1)
                 next_tokens = torch.multinomial(probs, 1)   # [B, 1]
             else:
-                next_tokens = torch.argmax(logits, dim=-1, keepdim=True)  # [B,1]
+                next_tokens = torch.argmax(logits, dim=-1, keepdim=True)  # [B, 1]
 
-            # ⭐ 已结束的 sample 强制 PAD
+            # Mask finished sequences with padding
             next_tokens = torch.where(
                 unfinished_sequences[:, None].bool(),
                 next_tokens,
                 torch.full_like(next_tokens, pad_id),
             )
 
-            # append（注意：expert 在另外的 device 就要搬过去）
+            # Append new tokens
             input_ids = torch.cat([input_ids, next_tokens.to(self.base_device)], dim=-1)
             expert_input_ids = torch.cat([expert_input_ids, next_tokens.to(self.expert_device)], dim=-1)
-            text = self.tokenizer.decode(
-                        input_ids[0].tolist(),
-                        skip_special_tokens=False
-                    )
 
-            logger.info(f"[run_id={run_id}] |step={step}| input_text: {text}")
-
-
-            # ⭐ 多 EOS：151643/151645 任一命中就结束该 sample
+            # Check for EOS tokens
             next_tok = next_tokens.squeeze(-1).to(self.base_device)   # [B]
             is_eos = torch.isin(next_tok, eos_ids)                    # [B] bool
             unfinished_sequences = unfinished_sequences.mul((~is_eos).long())
 
-            # ⭐ per-sample stopping_criteria（谁触发谁结束）
+            # Check stopping criteria
             stopped = _per_sample_stopped(input_ids)                 # [B] bool
             unfinished_sequences = unfinished_sequences.mul((~stopped).long())
 
-            # ⭐ 全部结束才 break
+            # Break if all sequences finished
             if unfinished_sequences.max() == 0:
                 break
 
-        # import matplotlib.pyplot as plt
-
-        # steps = list(range(len(entropy_b_list)))
-        # fig_width = max(10, len(entropy_b_list)* 0.5) 
-
-        # plt.figure(figsize=(fig_width, 5))
-
-        # plt.plot(steps, entropy_b_list, label="entropy-base", linewidth=2)
-        # plt.plot(steps, entropy_e_list, label="entropy-expert", linewidth=2)
-        # plt.plot(steps, entropy_a_list, label="entropy-anti", linewidth=2)
-
-        # plt.xlabel("Decoding Step", fontsize=14)
-        # plt.ylabel("Entropy", fontsize=14)
-        # plt.title("Entropy over Decoding Steps", fontsize=16)
-
-        # plt.legend()
-        # plt.grid(alpha=0.3)
-        # plt.tight_layout()
-
-        # plt.savefig(f"/home/ximing/pre-trained-eval/proxy-tuning/fig_07/entropy_over_steps_{run_id}.png", dpi=300, bbox_inches="tight")
- 
-        # plt.figure(figsize=(fig_width, 5))
-
-        # plt.plot(steps, top1_b_list, "--", label="top1-base", linewidth=2)
-        # plt.plot(steps, top1_e_list, "--", label="top1-expert", linewidth=2)
-        # plt.plot(steps, top1_a_list, "--", label="top1-anti", linewidth=2)
-
-        # plt.xlabel("Decoding Step", fontsize=14)
-        # plt.ylabel("Top-1 Probability", fontsize=14)
-        # plt.ylim(0, 1)
-
-        # plt.title("Top-1 Probability over Decoding Steps", fontsize=16)
-
-        # plt.legend()
-        # plt.grid(alpha=0.3)
-        # plt.tight_layout()
-
-        # plt.savefig(f"/home/ximing/pre-trained-eval/proxy-tuning/fig_07/top1_prob_over_steps_{run_id}.png", dpi=300, bbox_inches="tight")
-
-
-
-        
-
-        
         return input_ids
